@@ -19,9 +19,25 @@ namespace PROYECTOQAG5
 
         private void btnagregarproducto_Click(object sender, EventArgs e)
         {
+            using (var form = new PAgregarGanado())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    Dgv_ganado.Rows.Add(new object[]
+                    {
+                        form._Ganado.Arete,
+                        form._Ganado.Nombre,
+                        form._Ganado.Sexo
+                    });
+                }
+            }
+
+
+            /*
             PAgregarGanado Form = new PAgregarGanado();
 
-            Form.ShowDialog();
+            Form.ShowDialog();*/
         }
 
         private void Btn_DetalleBovino_Click(object sender, EventArgs e)
