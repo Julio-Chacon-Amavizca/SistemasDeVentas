@@ -585,6 +585,23 @@ CREATE TABLE MOVIMIENTOS(
 )
 
 
+CREATE TABLE VENTAS(
+IdUPP int references UPP(IdUPP),
+IdGanado int references GANADO (IdGanado),
+FechaVenta datetime default getdate(),
+PrecioVenta int,
+PrecioSubasta int
+)
+
+
+CREATE TABLE MUERTES(
+IdUPP int references UPP (IdUPP),
+IdGanado int references GANADO (IdGanado),
+FechaMuerte datetime default getdate(),
+DescripcionMuerte VARCHAR (255)
+)
+
+
 
 /* SISTEMA DE GANADERIA 
 METODOS: 
