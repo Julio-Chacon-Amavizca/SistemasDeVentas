@@ -547,6 +547,41 @@ from VENTA v
 inner join USUARIO u on u.IdUsuario = v.IdUsuario
 where v.NumeroDocumento = 00001
 
+CREATE TABLE UPP(
+	IdUPP INT PRIMARY KEY,
+	NombreProductor VARCHAR (50),
+	UbicacionRancho VARCHAR (100)
+)
+
+CREATE TABLE GANADO(
+	IdGanado int primary key,
+	Apodo varchar(50),
+	Sexo varchar(6),
+	Peso decimal (3,3),
+	Proposito varchar(50),
+	FechaNacimiento date,
+	FechaAretado datetime default getdate(),
+	UPP int references UPP(IdUPP)
+)
+
+CREATE TABLE VACUNACION(
+	FechaVacunacion datetime default getdate(),
+	VacunadoPor varchar(50)
+)
+
+CREATE TABLE PARTOS(
+	IdGanado int references GANADO(IdGanado),
+	FechaParto datetime default getdate(),
+	Sexo varchar(6),
+	Estado int
+)
+
+CREATE TABLE MOVIMIENTOS(
+	IdMovimiento int identity,
+	FechaMovimiento datetime default getdate(),
+	TipoMovimiento varchar(50),
+	IdGanado int references GANADO(IdGanado)
+)
 /* SISTEMA DE GANADERIA 
 METODOS: 
 BUSCAR
