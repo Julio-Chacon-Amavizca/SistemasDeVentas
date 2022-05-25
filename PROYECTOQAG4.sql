@@ -561,6 +561,7 @@ CREATE TABLE GANADO(
 	Proposito varchar(50),
 	FechaNacimiento date,
 	FechaAretado datetime default getdate(),
+	TipoRegistro varchar(50),
 	UPP int references UPP(IdUPP)
 )
 
@@ -582,6 +583,9 @@ CREATE TABLE MOVIMIENTOS(
 	TipoMovimiento varchar(50),
 	IdGanado int references GANADO(IdGanado)
 )
+
+
+
 /* SISTEMA DE GANADERIA 
 METODOS: 
 BUSCAR
