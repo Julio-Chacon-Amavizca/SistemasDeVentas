@@ -601,6 +601,32 @@ FechaMuerte datetime default getdate(),
 DescripcionMuerte VARCHAR (255)
 )
 
+CREATE PROC SP_INGRESOGANADO(
+	@IdGanado int,
+	@Apodo varchar(50),
+	@Sexo varchar(6),
+	@Peso decimal(4,3),
+	@Proposito varchar(50),
+	@FechaNacimiento date,
+	@FechaAretado datetime,
+	@UPP int
+)
+AS
+BEGIN
+	IF exists (SELECT * FROM UPP WHERE IdUPP = @UPP)
+		BEGIN try
+			BEGIN transaction ingresarGanado
+				INSERT INTO GANADO(IdGanado,Apodo,Sexo,Peso,Proposito,FechaNacimiento,FechaAretado,TipoRegistro,UPP)
+				VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimiento,@FechaAretado,@TipoRegistro,@UPP)
+
+				COMMIT transaction ingresarGanado
+		END try
+		BEGIN catch
+			rollback transaction ingresarGanado
+		END catch		
+		
+END
+
 
 
 /* SISTEMA DE GANADERIA 
