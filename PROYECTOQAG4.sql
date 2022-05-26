@@ -630,6 +630,32 @@ BEGIN
 		
 END
 
+CREATE PROC SP_MUERTEGANADO(
+	@IdGanado int,
+	@IdUPP int,
+	@FechaMuerte datetime,
+	@DescripcionMuerte varchar(255)
+)
+AS
+BEGIN
+	IF exists (SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
+		BEGIN try
+			BEGIN transaction muerteGanado
+				DELETE FROM GANADO WHERE IdGanado = @IdGanado
+
+				INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+				VALUES(getdate(),'Muerte',@IdGanado)
+
+				INSERT INTO MUERTES(IdUPP,IdGanado,FechaMuerte,DescripcionMuerte)
+				VALUES(@IdUPP,@IdGanado,@FechaMuerte,@DescripcionMuerte)
+
+				COMMIT transaction muerteGanado
+		END try
+		BEGIN catch
+			rollback transaction muerteGanado
+		END catch
+END
+
 
 
 /* SISTEMA DE GANADERIA 
