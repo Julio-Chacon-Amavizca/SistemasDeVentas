@@ -589,8 +589,8 @@ CREATE TABLE VENTAS(
 IdUPP int references UPP(IdUPP),
 IdGanado int references GANADO (IdGanado),
 FechaVenta datetime default getdate(),
-PrecioVenta double(10,2),
-PrecioSubasta double(10,2)
+PrecioVenta decimal	(10,2),
+PrecioSubasta decimal (10,2)
 )
 
 
