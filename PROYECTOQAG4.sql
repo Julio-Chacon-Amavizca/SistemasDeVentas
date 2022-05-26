@@ -617,7 +617,10 @@ BEGIN
 		BEGIN try
 			BEGIN transaction ingresarGanado
 				INSERT INTO GANADO(IdGanado,Apodo,Sexo,Peso,Proposito,FechaNacimiento,FechaAretado,TipoRegistro,UPP)
-				VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimiento,@FechaAretado,@TipoRegistro,@UPP)
+				VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimiento,@FechaAretado,'Ingreso',@UPP)
+
+				INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+				VALUES(getdate(),'Ingreso',@IdGanado)
 
 				COMMIT transaction ingresarGanado
 		END try
