@@ -557,7 +557,7 @@ CREATE TABLE GANADO(
 	IdGanado int primary key,
 	Apodo varchar(50),
 	Sexo varchar(6),
-	Peso decimal (3,3),
+	Peso decimal (4,3),
 	Proposito varchar(50),
 	FechaNacimiento date,
 	FechaAretado datetime default getdate(),
@@ -589,8 +589,8 @@ CREATE TABLE VENTAS(
 IdUPP int references UPP(IdUPP),
 IdGanado int references GANADO (IdGanado),
 FechaVenta datetime default getdate(),
-PrecioVenta int,
-PrecioSubasta int
+PrecioVenta double(10,2),
+PrecioSubasta double(10,2)
 )
 
 
