@@ -683,6 +683,24 @@ BEGIN
 			END catch
 END
 
+CREATE PROC SP_AGREGARUPP(
+	@IdUPP int,
+	@NombreProductor varchar(50),
+	@UbicacionRancho varchar(100)
+)
+AS
+BEGIN
+	BEGIN try
+		BEGIN transaction agregarUPP
+			INSERT INTRO UPP(IdUPP,NombreProductor,UbicacionRancho)
+			VALUES(@IdUPP,@NombreProductor,@UbicacionRancho)
+
+			COMMIT transaction agregarUPP
+	END try
+	BEGIN catch
+		ROLLBACK transaction agregarUPP
+	END catch
+END
 
 
 /* SISTEMA DE GANADERIA 
