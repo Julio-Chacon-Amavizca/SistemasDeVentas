@@ -732,6 +732,41 @@ CREATE TABLE COMPRAS(
 )
 
 
+CREATE PROC SP_COMPRAGANADO(
+	@IdUPP INT,
+	@PrecioCompra decimal(10,2),
+	@IdGanado INT,
+	@Apodo varchar(50),
+	@Sexo varchar(6),
+	@Peso decimal(7,3),
+	@Proposito varchar(50),
+	@FechaNacimiento varchar(10),
+	@FechaAretado varchar(10)
+)
+AS
+BEGIN
+	DECLARE FechaNacimientoDate DATE = @FechaNacimiento
+	DECLARE FechaAretadoDatetime DATETIME = @FechaAretado
+	DECLARE FechaMovimiento DATETIME = getdate()
+
+	BEGIN TRANSACTION compraGanado
+		BEGIN TRY
+			INSERT INTO GANADO(IdGanado,Apodo,Sexo,Peso,Proposito,FechaNacimiento,FechaAretado,TipoRegistro,UPP)
+			VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimientoDate,@FechaAretadoDatetime,'Compra',@IdUPP)
+
+			INSERT INTO COMPRAS(IdUPP,IdGanado,FechaCompra,PrecioCompra)
+			VALUES(@IdUPP,@IdGanado,@FechaMovimiento,@PrecioCompra)
+
+			INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+			VALUES(@FechaMovimiento,'Compra',@IdGanado)
+
+			COMMIT TRANSACTION compraGanado
+		END TRY
+		BEGIN CATCH
+			ROLLBACK TRANSACTION compraGanado
+		END CATCH
+END
+GO
 
 /* SISTEMA DE GANADERIA 
 METODOS: 
