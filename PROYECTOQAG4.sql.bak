@@ -571,7 +571,7 @@ CREATE TABLE VACUNACION(
 )
 
 CREATE TABLE PARTOS(
-	IdGanado int references GANADO(IdGanado),
+	IdGanado int,
 	FechaParto datetime default getdate(),
 	Sexo varchar(6),
 	Estado int
@@ -587,7 +587,7 @@ CREATE TABLE MOVIMIENTOS(
 
 CREATE TABLE VENTAS(
 IdUPP int references UPP(IdUPP),
-IdGanado int references GANADO (IdGanado),
+IdGanado int,
 FechaVenta datetime default getdate(),
 PrecioVenta decimal	(10,2),
 PrecioSubasta decimal (10,2)
@@ -596,7 +596,7 @@ PrecioSubasta decimal (10,2)
 
 CREATE TABLE MUERTES(
 IdUPP int references UPP (IdUPP),
-IdGanado int references GANADO (IdGanado),
+IdGanado int,
 FechaMuerte datetime default getdate(),
 DescripcionMuerte VARCHAR (255)
 )
@@ -682,24 +682,28 @@ CREATE PROC SP_VENTAGANADO(
 )
 AS
 BEGIN
+	DECLARE @FechaMovimiento DATETIME = getdate()
+
 	IF exists (SELECT * FROM UPP WHERE IdUPP = @IdUPP)
 		IF exists(SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
-			BEGIN try
 				BEGIN transaction ventaGanado
-					INSERT INTO VENTAS(IdUPP,IdGanado,FechaVenta,PrecioVenta,PrecioSubasta)
-					VALUES(@IdUPP,@IdGanado,getdate(),@PrecioVenta,@PrecioSubasta)
+					BEGIN try
+						INSERT INTO VENTAS(IdUPP,IdGanado,FechaVenta,PrecioVenta,PrecioSubasta)
+						VALUES(@IdUPP,@IdGanado,getdate(),@PrecioVenta,@PrecioSubasta)
 
-					INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
-					VALUES(getdate(),'Venta',@IdGanado)
+						INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+						VALUES(@FechaMovimiento,'Venta',@IdGanado)
 
-					DELETE FROM GANADO WHERE IdGanado = @IdGanado
+						DELETE FROM GANADO WHERE IdGanado = @IdGanado
 
-					COMMIT transaction ventaGanado
-			END try
-			BEGIN catch
-				ROLLBACK transaction ventaGanado
-			END catch
+						COMMIT transaction ventaGanado
+					END try
+					BEGIN catch
+						ROLLBACK transaction ventaGanado
+				END catch
 END
+GO
+
 
 CREATE PROC SP_AGREGARUPP(
 	@IdUPP int,
@@ -720,6 +724,49 @@ BEGIN
 	END catch
 END
 
+CREATE TABLE COMPRAS(
+	IdUPP int references UPP(IdUPP),
+	IdGanado int,
+	FechaCompra datetime default getdate(),
+	PrecioCompra decimal	(10,2),
+)
+
+
+CREATE PROC SP_COMPRAGANADO(
+	@IdUPP INT,
+	@PrecioCompra decimal(10,2),
+	@IdGanado INT,
+	@Apodo varchar(50),
+	@Sexo varchar(6),
+	@Peso decimal(7,3),
+	@Proposito varchar(50),
+	@FechaNacimiento varchar(10),
+	@FechaAretado varchar(10)
+)
+AS
+BEGIN
+	DECLARE FechaNacimientoDate DATE = @FechaNacimiento
+	DECLARE FechaAretadoDatetime DATETIME = @FechaAretado
+	DECLARE FechaMovimiento DATETIME = getdate()
+
+	BEGIN TRANSACTION compraGanado
+		BEGIN TRY
+			INSERT INTO GANADO(IdGanado,Apodo,Sexo,Peso,Proposito,FechaNacimiento,FechaAretado,TipoRegistro,UPP)
+			VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimientoDate,@FechaAretadoDatetime,'Compra',@IdUPP)
+
+			INSERT INTO COMPRAS(IdUPP,IdGanado,FechaCompra,PrecioCompra)
+			VALUES(@IdUPP,@IdGanado,@FechaMovimiento,@PrecioCompra)
+
+			INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+			VALUES(@FechaMovimiento,'Compra',@IdGanado)
+
+			COMMIT TRANSACTION compraGanado
+		END TRY
+		BEGIN CATCH
+			ROLLBACK TRANSACTION compraGanado
+		END CATCH
+END
+GO
 
 /* SISTEMA DE GANADERIA 
 METODOS: 

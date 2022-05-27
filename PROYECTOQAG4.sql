@@ -745,9 +745,9 @@ CREATE PROC SP_COMPRAGANADO(
 )
 AS
 BEGIN
-	DECLARE FechaNacimientoDate DATE = @FechaNacimiento
-	DECLARE FechaAretadoDatetime DATETIME = @FechaAretado
-	DECLARE FechaMovimiento DATETIME = getdate()
+	DECLARE @FechaNacimientoDate DATE = @FechaNacimiento
+	DECLARE @FechaAretadoDatetime DATETIME = @FechaAretado
+	DECLARE @FechaMovimiento DATETIME = getdate()
 
 	BEGIN TRANSACTION compraGanado
 		BEGIN TRY
