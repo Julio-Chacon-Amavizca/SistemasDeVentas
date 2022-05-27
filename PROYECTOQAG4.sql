@@ -768,6 +768,31 @@ BEGIN
 END
 GO
 
+CREATE PROC SP_AGREGARPARTO(
+	@IdGanado INT,
+	@FechaParto VARCHAR(10),
+	@Sexo VARCHAR(6),
+)
+AS
+BEGIN
+	DECLARE @FechaPartoDatetime DATETIME = @FechaParto
+
+	IF EXISTS (SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
+		BEGIN TRANSACTION agregarParto
+			BEGIN TRY
+				INSERT INTO PARTOS(IdGanado,FechaParto,Sexo,Estado)
+				VALUES(@IdGanado,@FechaPartoDatetime,@Sexo,1)
+
+				COMMIT TRANSACTION agregarParto
+			END TRY
+			BEGIN CATCH
+				ROLLBACK TRANSACTION agregarParto
+			END CATCH
+END
+GO
+
+
+
 /* SISTEMA DE GANADERIA 
 METODOS: 
 BUSCAR
