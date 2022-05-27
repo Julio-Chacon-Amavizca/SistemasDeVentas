@@ -724,6 +724,14 @@ BEGIN
 	END catch
 END
 
+CREATE TABLE COMPRAS(
+	IdUPP int references UPP(IdUPP),
+	IdGanado int,
+	FechaCompra datetime default getdate(),
+	PrecioCompra decimal	(10,2),
+)
+
+
 
 /* SISTEMA DE GANADERIA 
 METODOS: 
