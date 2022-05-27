@@ -794,22 +794,24 @@ GO
 
 CREATE PROC SP_AGREGARVACUNACION(
 	@VacunadoPor VARCHAR(50),
-	@FechaVacunacion VARCHAR(10)
+	@FechaVacunacion VARCHAR(10),
+	@IdUPP int
 )
 AS
 BEGIN
 	DECLARE @FechaVacunacionDatetime DATETIME = @FechaVacunacion
+	
+	IF exists (SELECT * FROM UPP WHERE IdUPP = @IdUPP)
+		BEGIN TRANSACTION agregarVacunacion
+			BEGIN TRY
+				INSERT INTO VACUNACION(FechaVacunacion,VacunadoPor,IdUPP)
+				VALUES(@FechaVacunacionDatetime,@VacunadoPor,@IdUPP)
 
-	BEGIN TRANSACTION agregarVacunacion
-		BEGIN TRY
-			INSERT INTO VACUNACION(FechaVacunacion,VacunadoPor)
-			VALUES(@FechaVacunacionDatetime,@VacunadoPor)
-
-			COMMIT TRANSACTION agregarVacunacion
-		END TRY
-		BEGIN CATCH
-			ROLLBACK TRANSACTION agregarVacunacion
-		END CATCH
+				COMMIT TRANSACTION agregarVacunacion
+			END TRY
+			BEGIN CATCH
+				ROLLBACK TRANSACTION agregarVacunacion
+			END CATCH
 END
 GO
 
