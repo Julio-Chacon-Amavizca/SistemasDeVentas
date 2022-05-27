@@ -682,24 +682,28 @@ CREATE PROC SP_VENTAGANADO(
 )
 AS
 BEGIN
+	DECLARE @FechaMovimiento DATETIME = getdate()
+
 	IF exists (SELECT * FROM UPP WHERE IdUPP = @IdUPP)
 		IF exists(SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
-			BEGIN try
 				BEGIN transaction ventaGanado
-					INSERT INTO VENTAS(IdUPP,IdGanado,FechaVenta,PrecioVenta,PrecioSubasta)
-					VALUES(@IdUPP,@IdGanado,getdate(),@PrecioVenta,@PrecioSubasta)
+					BEGIN try
+						INSERT INTO VENTAS(IdUPP,IdGanado,FechaVenta,PrecioVenta,PrecioSubasta)
+						VALUES(@IdUPP,@IdGanado,getdate(),@PrecioVenta,@PrecioSubasta)
 
-					INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
-					VALUES(getdate(),'Venta',@IdGanado)
+						INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+						VALUES(@FechaMovimiento,'Venta',@IdGanado)
 
-					DELETE FROM GANADO WHERE IdGanado = @IdGanado
+						DELETE FROM GANADO WHERE IdGanado = @IdGanado
 
-					COMMIT transaction ventaGanado
-			END try
-			BEGIN catch
-				ROLLBACK transaction ventaGanado
-			END catch
+						COMMIT transaction ventaGanado
+					END try
+					BEGIN catch
+						ROLLBACK transaction ventaGanado
+				END catch
 END
+GO
+
 
 CREATE PROC SP_AGREGARUPP(
 	@IdUPP int,
