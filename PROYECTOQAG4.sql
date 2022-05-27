@@ -791,6 +791,26 @@ BEGIN
 END
 GO
 
+CREATE PROC SP_AGREGARVACUNACION(
+	@VacunadoPor VARCHAR(50),
+	@FechaVacunacion VARCHAR(10)
+)
+AS
+BEGIN
+	DECLARE @FechaVacunacionDatetime DATETIME = @FechaVacunacion
+
+	BEGIN TRANSACTION agregarVacunacion
+		BEGIN TRY
+			INSERT INTO VACUNACION(FechaVacunacion,VacunadoPor)
+			VALUES(@FechaVacunacionDatetime,@VacunadoPor)
+
+			COMMIT TRANSACTION agregarVacunacion
+		END TRY
+		BEGIN CATCH
+			ROLLBACK TRANSACTION agregarVacunacion
+		END CATCH
+END
+GO
 
 
 /* SISTEMA DE GANADERIA 
