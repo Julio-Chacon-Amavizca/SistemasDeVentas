@@ -567,7 +567,8 @@ CREATE TABLE GANADO(
 
 CREATE TABLE VACUNACION(
 	FechaVacunacion datetime default getdate(),
-	VacunadoPor varchar(50)
+	VacunadoPor varchar(50),
+	IdUPP int
 )
 
 CREATE TABLE PARTOS(
@@ -745,9 +746,9 @@ CREATE PROC SP_COMPRAGANADO(
 )
 AS
 BEGIN
-	DECLARE FechaNacimientoDate DATE = @FechaNacimiento
-	DECLARE FechaAretadoDatetime DATETIME = @FechaAretado
-	DECLARE FechaMovimiento DATETIME = getdate()
+	DECLARE @FechaNacimientoDate DATE = @FechaNacimiento
+	DECLARE @FechaAretadoDatetime DATETIME = @FechaAretado
+	DECLARE @FechaMovimiento DATETIME = getdate()
 
 	BEGIN TRANSACTION compraGanado
 		BEGIN TRY
@@ -767,6 +768,51 @@ BEGIN
 		END CATCH
 END
 GO
+
+CREATE PROC SP_AGREGARPARTO(
+	@IdGanado INT,
+	@FechaParto VARCHAR(10),
+	@Sexo VARCHAR(6),
+)
+AS
+BEGIN
+	DECLARE @FechaPartoDatetime DATETIME = @FechaParto
+
+	IF EXISTS (SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
+		BEGIN TRANSACTION agregarParto
+			BEGIN TRY
+				INSERT INTO PARTOS(IdGanado,FechaParto,Sexo,Estado)
+				VALUES(@IdGanado,@FechaPartoDatetime,@Sexo,1)
+
+				COMMIT TRANSACTION agregarParto
+			END TRY
+			BEGIN CATCH
+				ROLLBACK TRANSACTION agregarParto
+			END CATCH
+END
+GO
+
+CREATE PROC SP_AGREGARVACUNACION(
+	@VacunadoPor VARCHAR(50),
+	@FechaVacunacion VARCHAR(10)
+)
+AS
+BEGIN
+	DECLARE @FechaVacunacionDatetime DATETIME = @FechaVacunacion
+
+	BEGIN TRANSACTION agregarVacunacion
+		BEGIN TRY
+			INSERT INTO VACUNACION(FechaVacunacion,VacunadoPor)
+			VALUES(@FechaVacunacionDatetime,@VacunadoPor)
+
+			COMMIT TRANSACTION agregarVacunacion
+		END TRY
+		BEGIN CATCH
+			ROLLBACK TRANSACTION agregarVacunacion
+		END CATCH
+END
+GO
+
 
 /* SISTEMA DE GANADERIA 
 METODOS: 
