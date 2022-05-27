@@ -571,7 +571,7 @@ CREATE TABLE VACUNACION(
 )
 
 CREATE TABLE PARTOS(
-	IdGanado int references GANADO(IdGanado),
+	IdGanado int,
 	FechaParto datetime default getdate(),
 	Sexo varchar(6),
 	Estado int
@@ -581,13 +581,13 @@ CREATE TABLE MOVIMIENTOS(
 	IdMovimiento int identity,
 	FechaMovimiento datetime default getdate(),
 	TipoMovimiento varchar(50),
-	IdGanado int references GANADO(IdGanado)
+	IdGanado int
 )
 
 
 CREATE TABLE VENTAS(
 IdUPP int references UPP(IdUPP),
-IdGanado int references GANADO (IdGanado),
+IdGanado int,
 FechaVenta datetime default getdate(),
 PrecioVenta decimal	(10,2),
 PrecioSubasta decimal (10,2)
@@ -596,7 +596,7 @@ PrecioSubasta decimal (10,2)
 
 CREATE TABLE MUERTES(
 IdUPP int references UPP (IdUPP),
-IdGanado int references GANADO (IdGanado),
+IdGanado int,
 FechaMuerte datetime default getdate(),
 DescripcionMuerte VARCHAR (255)
 )
@@ -607,8 +607,8 @@ CREATE PROC SP_INGRESOGANADO(
 	@Sexo varchar(6),
 	@Peso decimal(7,3),
 	@Proposito varchar(50),
-	@FechaNacimiento varchar(10),
-	@FechaAretado varchar(10),
+	@FechaNacimiento varchar(8),
+	@FechaAretado varchar(8),
 	@UPP int
 )
 AS
@@ -647,28 +647,32 @@ GO
 CREATE PROC SP_MUERTEGANADO(
 	@IdGanado int,
 	@IdUPP int,
-	@FechaMuerte datetime,
+	@FechaMuerte varchar(8),
 	@DescripcionMuerte varchar(255)
 )
 AS
 BEGIN
+	DECLARE @FechaMuerteDatetime DATETIME = @FechaMuerte
+	DECLARE @FechaMovimiento DATETIME = getdate()
+
 	IF exists (SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
-		BEGIN try
-			BEGIN transaction muerteGanado
+		BEGIN TRANSACTION muerteGanado
+			BEGIN try
 				DELETE FROM GANADO WHERE IdGanado = @IdGanado
 
 				INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
-				VALUES(getdate(),'Muerte',@IdGanado)
+				VALUES(@FechaMovimiento,'Muerte',@IdGanado)
 
 				INSERT INTO MUERTES(IdUPP,IdGanado,FechaMuerte,DescripcionMuerte)
 				VALUES(@IdUPP,@IdGanado,@FechaMuerte,@DescripcionMuerte)
 
-				COMMIT transaction muerteGanado
-		END try
-		BEGIN catch
-			rollback transaction muerteGanado
-		END catch
+				COMMIT TRANSACTION muerteGanado
+			END try
+			BEGIN catch
+				ROLLBACK TRANSACTION muerteGanado
+			END catch
 END
+GO 
 
 CREATE PROC SP_VENTAGANADO(
 	@IdUPP int,
