@@ -607,28 +607,42 @@ CREATE PROC SP_INGRESOGANADO(
 	@Sexo varchar(6),
 	@Peso decimal(7,3),
 	@Proposito varchar(50),
-	@FechaNacimiento date,
-	@FechaAretado datetime,
+	@FechaNacimiento varchar(10),
+	@FechaAretado varchar(10),
 	@UPP int
 )
 AS
-BEGIN
+	DECLARE @FechaNacimientoDate DATE = @FechaNacimiento
+	DECLARE @FechaAretadoDatetime DATETIME = @FechaAretado
+	DECLARE @FechaMovimiento DATETIME = getdate()
+	DECLARE @fallo1 VARCHAR(50) = 'fallo el ingreso de ganado'
+	DECLARE @fallo2 VARCHAR(50) = 'fallo el ingreso de movimiento'
+
 	IF exists (SELECT * FROM UPP WHERE IdUPP = @UPP)
-		BEGIN try
-			BEGIN transaction ingresarGanado
+		BEGIN TRANSACTION ingresarGanado
+			BEGIN try
 				INSERT INTO GANADO(IdGanado,Apodo,Sexo,Peso,Proposito,FechaNacimiento,FechaAretado,TipoRegistro,UPP)
-				VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimiento,@FechaAretado,'Ingreso',@UPP)
+				VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimientoDate,@FechaAretadoDatetime,'Ingreso',@UPP)
 
+				COMMIT TRANSACTION ingresarGanado
+			END try
+			BEGIN catch
+				ROLLBACK TRANSACTION ingresarGanado
+				SELECT @fallo1
+			END catch
+
+		BEGIN TRANSACTION ingresarMovimiento
+			BEGIN try
 				INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
-				VALUES(getdate(),'Ingreso',@IdGanado)
+				VALUES(@FechaMovimiento,'Ingreso',@IdGanado)
 
-				COMMIT transaction ingresarGanado
-		END try
-		BEGIN catch
-			rollback transaction ingresarGanado
-		END catch		
-		
-END
+				COMMIT TRANSACTION ingresarMovimiento
+			END try
+			BEGIN catch
+				ROLLBACK TRANSACTION ingresarMovimiento
+				SELECT @fallo2
+			END catch	
+GO
 
 CREATE PROC SP_MUERTEGANADO(
 	@IdGanado int,
