@@ -21,10 +21,12 @@ namespace MODELO
         public int Registrar(Usuario obj,out string Mensaje)
         {
             Mensaje = string.Empty;
-            if (obj.NombreCompleto=="")
+            if (obj.NombreCompleto=="" || obj.NombreCompleto.Length < 3)
             {
                 Mensaje += "Es necesario el nombre completo del usuario\n";
             }
+
+
 
            
             if (obj.Documento == "")
