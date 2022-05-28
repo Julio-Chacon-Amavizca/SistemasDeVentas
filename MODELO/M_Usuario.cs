@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DATOS;
 using CONTROLADOR;
+using System.Text.RegularExpressions;
 
 namespace MODELO
 {
@@ -37,7 +38,17 @@ namespace MODELO
                 Mensaje += "Es necesaria la contraseña del usuario\n";
             }
 
-            if(Mensaje!= string.Empty) 
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(obj.Correo);
+            }
+            catch
+            {
+                Mensaje += "No es una estructura de correo valida\n";
+            }
+            
+
+            if (Mensaje!= string.Empty) 
             {
 
                 return 0;

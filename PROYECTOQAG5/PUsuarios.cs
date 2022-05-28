@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using PROYECTOQAG5.Utilidad;
 using CONTROLADOR;
 using MODELO;
+using System.Text.RegularExpressions;
 
 namespace PROYECTOQAG5
 {
@@ -100,11 +101,11 @@ namespace PROYECTOQAG5
                 if (idusuariogenereado != 0)
                 {
                     Dgv_usuarios.Rows.Add(new object[] {"",idusuariogenereado,txtUsuario.Text,txtNombrecompleto.Text,txtcorreo.Text,txtContraseña.Text,
-                ((OpcionCombo)cbxrolusuario.SelectedItem).valor.ToString(),
-                ((OpcionCombo)cbxrolusuario.SelectedItem).Texto.ToString(),
-                ((OpcionCombo)cbxestadousuario.SelectedItem).valor.ToString(),
-                ((OpcionCombo)cbxestadousuario.SelectedItem).Texto.ToString()
-            });
+                        ((OpcionCombo)cbxrolusuario.SelectedItem).valor.ToString(),
+                        ((OpcionCombo)cbxrolusuario.SelectedItem).Texto.ToString(),
+                        ((OpcionCombo)cbxestadousuario.SelectedItem).valor.ToString(),
+                        ((OpcionCombo)cbxestadousuario.SelectedItem).Texto.ToString()
+                    });
 
                     Limpiar();
                 }
@@ -293,15 +294,6 @@ namespace PROYECTOQAG5
                 row.Visible = true;
             }
         }
-
-
-
-
-
-
-
-
-
 
     }
 }
