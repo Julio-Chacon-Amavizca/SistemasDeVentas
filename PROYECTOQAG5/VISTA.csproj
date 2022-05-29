@@ -178,6 +178,12 @@
     <Compile Include="PModificarInventario.Designer.cs">
       <DependentUpon>PModificarInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="pModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pModificarUsuario.Designer.cs">
+      <DependentUpon>pModificarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="PModificarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PModificarInventario.resx">
       <DependentUpon>PModificarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pModificarUsuario.resx">
+      <DependentUpon>pModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PModificarUsuarios.resx">
       <DependentUpon>PModificarUsuarios.cs</DependentUpon>

@@ -10,11 +10,8 @@ using System.Windows.Forms;
 using PROYECTOQAG5.Utilidad;
 using CONTROLADOR;
 using MODELO;
-<<<<<<< HEAD
 using System.Text.RegularExpressions;
-=======
 using PROYECTOQAG5;
->>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
 
 namespace PROYECTOQAG5
 {
@@ -197,34 +194,52 @@ namespace PROYECTOQAG5
 
             if (Dgv_usuarios.Columns[e.ColumnIndex].Name == "btnseleccionar")
             {
-
                 int indice = e.RowIndex;
                 if (indice>=0)
                 {
-                    txtindice.Text = indice.ToString();
-                    txtid.Text = Dgv_usuarios.Rows[indice].Cells["id"].Value.ToString();
-                    txtUsuario.Text = Dgv_usuarios.Rows[indice].Cells["Usuario"].Value.ToString();
-                    txtNombrecompleto.Text = Dgv_usuarios.Rows[indice].Cells["NombreCompleto"].Value.ToString();
-                    txtcorreo.Text = Dgv_usuarios.Rows[indice].Cells["Correo"].Value.ToString();
-                    txtContraseña.Text = Dgv_usuarios.Rows[indice].Cells["Contraseña"].Value.ToString();
-                    txtconfirmarcontraseña.Text = Dgv_usuarios.Rows[indice].Cells["Contraseña"].Value.ToString();
-                    foreach (OpcionCombo oc in cbxrolusuario.Items)
+                    Usuario objusuario = new Usuario()
                     {
-                        if (Convert.ToInt32(oc.valor) == Convert.ToInt32(Dgv_usuarios.Rows[indice].Cells["IdRol"].Value)) 
-                        {
-                            int indice_combo = cbxrolusuario.Items.IndexOf(oc);
-                            cbxrolusuario.SelectedIndex = indice_combo;
-                            break;
-                        }
-                    }
+                        IdUsuario = Convert.ToInt32(txtid.Text),
+                        Documento = txtUsuario.Text,
+                        NombreCompleto = txtNombrecompleto.Text,
+                        Correo = txtcorreo.Text,
+                        Clave = txtContraseña.Text,
+                        oRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)cbxrolusuario.SelectedItem).valor) },
+                        Estado = Convert.ToInt32(((OpcionCombo)cbxestadousuario.SelectedItem).valor) == 1 ? true : false
+                    };
 
-                    foreach (OpcionCombo oc in cbxestadousuario.Items)
+                    objusuario.IdUsuario = int.Parse(Dgv_usuarios.Rows[indice].Cells["id"].Value.ToString());
+                    objusuario.Documento = Dgv_usuarios.Rows[indice].Cells["Usuario"].Value.ToString();
+                    objusuario.NombreCompleto = Dgv_usuarios.Rows[indice].Cells["NombreCompleto"].Value.ToString();
+                    objusuario.Correo = Dgv_usuarios.Rows[indice].Cells["Correo"].Value.ToString();
+                    objusuario.Clave = Dgv_usuarios.Rows[indice].Cells["Contraseña"].Value.ToString();
+                    objusuario.oRol = new Rol() { IdRol = Convert.ToInt32(Dgv_usuarios.Rows[indice].Cells["IdRol"].Value) };
+                    objusuario.Estado = Convert.ToInt32(Dgv_usuarios.Rows[indice].Cells["EstadoValor"].Value) == 1 ? true : false;
+
+                    using (var form = new pModificarUsuario(objusuario))
                     {
-                        if (Convert.ToInt32(oc.valor) == Convert.ToInt32(Dgv_usuarios.Rows[indice].Cells["EstadoValor"].Value))
+                        var result = form.ShowDialog();
+                        if (result == DialogResult.OK)
                         {
-                            int indice_combo = cbxestadousuario.Items.IndexOf(oc);
-                            cbxestadousuario.SelectedIndex = indice_combo;
-                            break;
+                            //Aqui se tiene que recargar el DataGrid
+                            Dgv_usuarios.Rows.Clear();
+                            List<Usuario> listaUsuario = new M_Usuario().Listar();
+                            foreach (Usuario item in listaUsuario)
+                            {
+                                Dgv_usuarios.Rows.Add(new object[] {
+                                    "",
+                                    item.IdUsuario,
+                                    item.Documento,
+                                    item.NombreCompleto,
+                                    item.Correo,
+                                    item.Clave,
+                                    item.oRol.IdRol,
+                                    item.oRol.Descripcion,
+                                    item.Estado==true ?1:0,
+                                    item.Estado==true ?"Activo":"No Activo"
+
+                                });
+                            }
                         }
                     }
 
@@ -304,8 +319,6 @@ namespace PROYECTOQAG5
             }
         }
 
-<<<<<<< HEAD
-=======
         private void txtNombrecompleto_KeyPress(object sender, KeyPressEventArgs e)
         {          
 
@@ -321,6 +334,5 @@ namespace PROYECTOQAG5
             }
 
         }
->>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
     }
 }
