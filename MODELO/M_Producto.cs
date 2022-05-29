@@ -28,6 +28,21 @@ namespace MODELO
                 Mensaje += "Es necesario el codigo del Producto\n";
             }
 
+            try
+            {
+                int codigoInt = Convert.ToInt32(obj.Codigo);
+            }
+            catch
+            {
+                Mensaje += "El codigo debe ser numerico";
+            }
+
+            if (obj.Codigo.Length != 13)
+            {
+                Mensaje += "El codigo debe ser de 13 digitos";
+            }
+
+
 
             if (obj.Nombre == "")
             {
@@ -60,6 +75,20 @@ namespace MODELO
             if (obj.Codigo == "")
             {
                 Mensaje += "Es necesario el nombre completo del Producto\n";
+            }
+
+            try
+            {
+                int codigoInt = Convert.ToInt32(obj.Codigo);
+            }
+            catch
+            {
+                Mensaje += "El codigo debe ser numerico";
+            }
+
+            if(obj.Codigo.Length != 13)
+            {
+                Mensaje += "El codigo debe ser de 13 digitos";
             }
 
 

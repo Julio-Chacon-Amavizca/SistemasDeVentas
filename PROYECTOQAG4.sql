@@ -314,6 +314,8 @@ create PROC SP_REGISTRARPRODUCTO(
 @Nombre varchar (30),
 @Descripcion varchar(50),
 @IdCategoria int,
+@Stock int,
+@PrecioVenta decimal(10,2),
 @Estado bit,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -322,7 +324,7 @@ begin
 	set @Resultado=0
 	if not exists (SELECT * FROM PRODUCTO WHERE Codigo=@Codigo)
 	begin
-		insert into PRODUCTO(Codigo,Nombre, Descripcion,IdCategoria,Estado)values (@Codigo,@Nombre, @Descripcion,@IdCategoria,@Estado)
+		insert into PRODUCTO(Codigo,Nombre, Descripcion,IdCategoria,Stock,PrecioVenta,Estado)values (@Codigo,@Nombre, @Descripcion,@IdCategoria,@Stock,@PrecioVenta,@Estado)
 		set @Resultado=SCOPE_IDENTITY()
 	end
 	else
@@ -339,6 +341,8 @@ create PROC SP_EDITARPRODUCTO(
 @Nombre varchar (30),
 @Descripcion varchar(50),
 @IdCategoria int,
+@Stock int,
+@PrecioVenta decimal(10,2),
 @Estado bit,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -352,6 +356,8 @@ begin
 		Nombre=@Nombre, 
 		Descripcion=@Descripcion,
 		IdCategoria=@IdCategoria,
+		Stock=@Stock,
+		PrecioVenta=@PrecioVenta,
 		Estado= @Estado
 		where IdProducto=@IdProducto
 
