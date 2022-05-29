@@ -713,16 +713,16 @@ CREATE PROC SP_AGREGARUPP(
 )
 AS
 BEGIN
-	BEGIN try
-		BEGIN transaction agregarUPP
+	BEGIN transaction agregarUPP
+		BEGIN try
 			INSERT INTRO UPP(IdUPP,NombreProductor,UbicacionRancho)
 			VALUES(@IdUPP,@NombreProductor,@UbicacionRancho)
 
 			COMMIT transaction agregarUPP
-	END try
-	BEGIN catch
-		ROLLBACK transaction agregarUPP
-	END catch
+		END try
+		BEGIN catch
+			ROLLBACK transaction agregarUPP
+		END catch
 END
 
 CREATE TABLE COMPRAS(

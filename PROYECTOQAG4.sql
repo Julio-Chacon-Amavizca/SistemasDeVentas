@@ -52,7 +52,7 @@ FechaRegistro datetime default getdate()
 
 CREATE TABLE VENTA(
 IdVenta int primary key identity,
-IdUsuario int references USUARIO(IdUsuario),
+IdUsuario int,
 TipoDocuemnto varchar (50),
 NumeroDocumento varchar (50),
 MontoPago decimal (10,2),
@@ -226,16 +226,6 @@ begin
 	set @Respueta=0
 	set @Mensaje=''
 	declare @pasoreglas bit = 1
-
-	IF exists(Select * from VENTA v
-	INNER JOIN USUARIO u on u.IdUsuario = u.IdUsuario
-	where u.IdUsuario =@IdUsuario
-	)
-	BEGIN
-	set @pasoreglas=0
-	set @Respueta=0
-	set @Mensaje=@Mensaje + 'No se puede eliminar porque el usuario se encuentra relacionado con una VENTA'
-	END
 
 	if(@pasoreglas=1)
 	BEGIN

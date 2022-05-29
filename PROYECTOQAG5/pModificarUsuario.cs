@@ -99,5 +99,31 @@ namespace PROYECTOQAG5
                 }
             
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea elminar el usuario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string mensaje = string.Empty;
+                Usuario objusuario = new Usuario()
+                {
+                    IdUsuario = Convert.ToInt32(txtid.Text)
+                };
+
+
+                bool respuesta = new M_Usuario().Eliminar(objusuario, out mensaje);
+
+                if (respuesta)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
     }
 }

@@ -48,6 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnguardar = new FontAwesome.Sharp.IconButton();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.btneliminar = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label14
@@ -278,11 +279,34 @@
             this.txtid.Text = "0";
             this.txtid.Visible = false;
             // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.Red;
+            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.Color.White;
+            this.btneliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btneliminar.IconColor = System.Drawing.Color.White;
+            this.btneliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btneliminar.IconSize = 35;
+            this.btneliminar.Location = new System.Drawing.Point(26, 500);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(222, 37);
+            this.btneliminar.TabIndex = 140;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
             // pModificarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 529);
+            this.ClientSize = new System.Drawing.Size(273, 559);
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.label14);
@@ -334,5 +358,6 @@
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconButton btnguardar;
         private System.Windows.Forms.TextBox txtid;
+        private FontAwesome.Sharp.IconButton btneliminar;
     }
 }
