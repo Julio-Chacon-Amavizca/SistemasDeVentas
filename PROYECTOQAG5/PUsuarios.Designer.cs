@@ -49,6 +49,9 @@ namespace PROYECTOQAG5
             this.txtindice = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btneliminar = new FontAwesome.Sharp.IconButton();
+            this.btnlimpiardatos = new FontAwesome.Sharp.IconButton();
+            this.btnguardar = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.cbxestadousuario = new System.Windows.Forms.ComboBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
@@ -66,9 +69,6 @@ namespace PROYECTOQAG5
             this.cbxbusquedas = new System.Windows.Forms.ComboBox();
             this.Btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.Btnbuscar = new FontAwesome.Sharp.IconButton();
-            this.btneliminar = new FontAwesome.Sharp.IconButton();
-            this.btnlimpiardatos = new FontAwesome.Sharp.IconButton();
-            this.btnguardar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_usuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -76,17 +76,18 @@ namespace PROYECTOQAG5
             // txtbusqueda
             // 
             this.txtbusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbusqueda.Location = new System.Drawing.Point(786, 86);
-            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtbusqueda.Location = new System.Drawing.Point(590, 70);
+            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbusqueda.Name = "txtbusqueda";
-            this.txtbusqueda.Size = new System.Drawing.Size(218, 27);
+            this.txtbusqueda.Size = new System.Drawing.Size(164, 27);
             this.txtbusqueda.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(782, 59);
+            this.label2.Location = new System.Drawing.Point(586, 48);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 19);
             this.label2.TabIndex = 56;
@@ -96,7 +97,8 @@ namespace PROYECTOQAG5
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(504, 56);
+            this.label6.Location = new System.Drawing.Point(378, 46);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 19);
             this.label6.TabIndex = 53;
@@ -127,8 +129,8 @@ namespace PROYECTOQAG5
             this.Rol,
             this.EstadoValor,
             this.Estado});
-            this.Dgv_usuarios.Location = new System.Drawing.Point(401, 198);
-            this.Dgv_usuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Dgv_usuarios.Location = new System.Drawing.Point(301, 161);
+            this.Dgv_usuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dgv_usuarios.MultiSelect = false;
             this.Dgv_usuarios.Name = "Dgv_usuarios";
             this.Dgv_usuarios.ReadOnly = true;
@@ -142,7 +144,7 @@ namespace PROYECTOQAG5
             this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_usuarios.RowHeadersWidth = 16;
             this.Dgv_usuarios.RowTemplate.Height = 28;
-            this.Dgv_usuarios.Size = new System.Drawing.Size(959, 514);
+            this.Dgv_usuarios.Size = new System.Drawing.Size(719, 418);
             this.Dgv_usuarios.TabIndex = 52;
             this.Dgv_usuarios.TabStop = false;
             this.Dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_usuarios_CellContentClick);
@@ -247,16 +249,18 @@ namespace PROYECTOQAG5
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 970);
+            this.panel1.Size = new System.Drawing.Size(271, 788);
             this.panel1.TabIndex = 61;
             // 
             // txtindice
             // 
-            this.txtindice.Location = new System.Drawing.Point(239, 56);
+            this.txtindice.Location = new System.Drawing.Point(179, 46);
+            this.txtindice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtindice.Name = "txtindice";
             this.txtindice.ReadOnly = true;
-            this.txtindice.Size = new System.Drawing.Size(47, 22);
+            this.txtindice.Size = new System.Drawing.Size(36, 20);
             this.txtindice.TabIndex = 101;
             this.txtindice.TabStop = false;
             this.txtindice.Text = "-1";
@@ -264,10 +268,11 @@ namespace PROYECTOQAG5
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(292, 56);
+            this.txtid.Location = new System.Drawing.Point(219, 46);
+            this.txtid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(47, 22);
+            this.txtid.Size = new System.Drawing.Size(36, 20);
             this.txtid.TabIndex = 100;
             this.txtid.TabStop = false;
             this.txtid.Text = "0";
@@ -277,193 +282,12 @@ namespace PROYECTOQAG5
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(113, 9);
+            this.label7.Location = new System.Drawing.Point(85, 7);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 25);
             this.label7.TabIndex = 114;
             this.label7.Text = "USUARIOS";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(25, 548);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 19);
-            this.label11.TabIndex = 110;
-            this.label11.Text = "Estado:";
-            // 
-            // cbxestadousuario
-            // 
-            this.cbxestadousuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxestadousuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxestadousuario.FormattingEnabled = true;
-            this.cbxestadousuario.Location = new System.Drawing.Point(29, 578);
-            this.cbxestadousuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxestadousuario.Name = "cbxestadousuario";
-            this.cbxestadousuario.Size = new System.Drawing.Size(296, 27);
-            this.cbxestadousuario.TabIndex = 6;
-            // 
-            // txtcorreo
-            // 
-            this.txtcorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcorreo.Location = new System.Drawing.Point(30, 150);
-            this.txtcorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(296, 27);
-            this.txtcorreo.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(30, 120);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 19);
-            this.label10.TabIndex = 108;
-            this.label10.Text = "Correo:";
-            // 
-            // txtconfirmarcontraseña
-            // 
-            this.txtconfirmarcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtconfirmarcontraseña.Location = new System.Drawing.Point(30, 363);
-            this.txtconfirmarcontraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtconfirmarcontraseña.Name = "txtconfirmarcontraseña";
-            this.txtconfirmarcontraseña.PasswordChar = '*';
-            this.txtconfirmarcontraseña.Size = new System.Drawing.Size(296, 27);
-            this.txtconfirmarcontraseña.TabIndex = 4;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 331);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(183, 19);
-            this.label9.TabIndex = 106;
-            this.label9.Text = "Confirmar Contraseña:";
-            // 
-            // cbxrolusuario
-            // 
-            this.cbxrolusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxrolusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxrolusuario.FormattingEnabled = true;
-            this.cbxrolusuario.Location = new System.Drawing.Point(29, 507);
-            this.cbxrolusuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxrolusuario.Name = "cbxrolusuario";
-            this.cbxrolusuario.Size = new System.Drawing.Size(296, 27);
-            this.cbxrolusuario.TabIndex = 5;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(30, 290);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(296, 27);
-            this.txtContraseña.TabIndex = 3;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(30, 221);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(296, 27);
-            this.txtUsuario.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 259);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 19);
-            this.label3.TabIndex = 98;
-            this.label3.Text = "Contraseña:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 19);
-            this.label5.TabIndex = 99;
-            this.label5.Text = "Usuario:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 476);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 19);
-            this.label4.TabIndex = 100;
-            this.label4.Text = "Rol:";
-            // 
-            // txtNombrecompleto
-            // 
-            this.txtNombrecompleto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombrecompleto.Location = new System.Drawing.Point(30, 86);
-            this.txtNombrecompleto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombrecompleto.Name = "txtNombrecompleto";
-            this.txtNombrecompleto.Size = new System.Drawing.Size(296, 27);
-            this.txtNombrecompleto.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 59);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 19);
-            this.label8.TabIndex = 102;
-            this.label8.Text = "Nombre Completo:";
-            // 
-            // cbxbusquedas
-            // 
-            this.cbxbusquedas.BackColor = System.Drawing.Color.White;
-            this.cbxbusquedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxbusquedas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxbusquedas.FormattingEnabled = true;
-            this.cbxbusquedas.Location = new System.Drawing.Point(508, 84);
-            this.cbxbusquedas.Name = "cbxbusquedas";
-            this.cbxbusquedas.Size = new System.Drawing.Size(218, 29);
-            this.cbxbusquedas.TabIndex = 10;
-            // 
-            // Btnlimpiar
-            // 
-            this.Btnlimpiar.BackColor = System.Drawing.Color.SteelBlue;
-            this.Btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btnlimpiar.ForeColor = System.Drawing.Color.White;
-            this.Btnlimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.Btnlimpiar.IconColor = System.Drawing.Color.White;
-            this.Btnlimpiar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.Btnlimpiar.IconSize = 30;
-            this.Btnlimpiar.Location = new System.Drawing.Point(1145, 79);
-            this.Btnlimpiar.Name = "Btnlimpiar";
-            this.Btnlimpiar.Size = new System.Drawing.Size(81, 42);
-            this.Btnlimpiar.TabIndex = 13;
-            this.Btnlimpiar.UseVisualStyleBackColor = false;
-            this.Btnlimpiar.Click += new System.EventHandler(this.Btnlimpiar_Click);
-            // 
-            // Btnbuscar
-            // 
-            this.Btnbuscar.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.Btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btnbuscar.ForeColor = System.Drawing.Color.White;
-            this.Btnbuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.Btnbuscar.IconColor = System.Drawing.Color.White;
-            this.Btnbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Btnbuscar.IconSize = 30;
-            this.Btnbuscar.Location = new System.Drawing.Point(1034, 79);
-            this.Btnbuscar.Name = "Btnbuscar";
-            this.Btnbuscar.Size = new System.Drawing.Size(81, 42);
-            this.Btnbuscar.TabIndex = 12;
-            this.Btnbuscar.UseVisualStyleBackColor = false;
-            this.Btnbuscar.Click += new System.EventHandler(this.Btnbuscar_Click);
             // 
             // btneliminar
             // 
@@ -476,9 +300,10 @@ namespace PROYECTOQAG5
             this.btneliminar.IconColor = System.Drawing.Color.White;
             this.btneliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btneliminar.IconSize = 35;
-            this.btneliminar.Location = new System.Drawing.Point(30, 903);
+            this.btneliminar.Location = new System.Drawing.Point(22, 734);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(296, 46);
+            this.btneliminar.Size = new System.Drawing.Size(222, 37);
             this.btneliminar.TabIndex = 9;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -497,9 +322,10 @@ namespace PROYECTOQAG5
             this.btnlimpiardatos.IconColor = System.Drawing.Color.White;
             this.btnlimpiardatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnlimpiardatos.IconSize = 35;
-            this.btnlimpiardatos.Location = new System.Drawing.Point(30, 851);
+            this.btnlimpiardatos.Location = new System.Drawing.Point(22, 691);
+            this.btnlimpiardatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnlimpiardatos.Name = "btnlimpiardatos";
-            this.btnlimpiardatos.Size = new System.Drawing.Size(296, 46);
+            this.btnlimpiardatos.Size = new System.Drawing.Size(222, 37);
             this.btnlimpiardatos.TabIndex = 8;
             this.btnlimpiardatos.Text = "Limpiar";
             this.btnlimpiardatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -518,9 +344,10 @@ namespace PROYECTOQAG5
             this.btnguardar.IconColor = System.Drawing.Color.White;
             this.btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnguardar.IconSize = 35;
-            this.btnguardar.Location = new System.Drawing.Point(30, 799);
+            this.btnguardar.Location = new System.Drawing.Point(22, 649);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(296, 46);
+            this.btnguardar.Size = new System.Drawing.Size(222, 37);
             this.btnguardar.TabIndex = 7;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -528,12 +355,205 @@ namespace PROYECTOQAG5
             this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 445);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 19);
+            this.label11.TabIndex = 110;
+            this.label11.Text = "Estado:";
+            // 
+            // cbxestadousuario
+            // 
+            this.cbxestadousuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxestadousuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxestadousuario.FormattingEnabled = true;
+            this.cbxestadousuario.Location = new System.Drawing.Point(22, 470);
+            this.cbxestadousuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxestadousuario.Name = "cbxestadousuario";
+            this.cbxestadousuario.Size = new System.Drawing.Size(223, 27);
+            this.cbxestadousuario.TabIndex = 6;
+            // 
+            // txtcorreo
+            // 
+            this.txtcorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcorreo.Location = new System.Drawing.Point(22, 122);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(223, 27);
+            this.txtcorreo.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(22, 98);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 19);
+            this.label10.TabIndex = 108;
+            this.label10.Text = "Correo:";
+            // 
+            // txtconfirmarcontraseña
+            // 
+            this.txtconfirmarcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtconfirmarcontraseña.Location = new System.Drawing.Point(22, 295);
+            this.txtconfirmarcontraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtconfirmarcontraseña.Name = "txtconfirmarcontraseña";
+            this.txtconfirmarcontraseña.PasswordChar = '*';
+            this.txtconfirmarcontraseña.Size = new System.Drawing.Size(223, 27);
+            this.txtconfirmarcontraseña.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(22, 269);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(183, 19);
+            this.label9.TabIndex = 106;
+            this.label9.Text = "Confirmar Contraseña:";
+            // 
+            // cbxrolusuario
+            // 
+            this.cbxrolusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxrolusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxrolusuario.FormattingEnabled = true;
+            this.cbxrolusuario.Location = new System.Drawing.Point(22, 412);
+            this.cbxrolusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxrolusuario.Name = "cbxrolusuario";
+            this.cbxrolusuario.Size = new System.Drawing.Size(223, 27);
+            this.cbxrolusuario.TabIndex = 5;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(22, 236);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(223, 27);
+            this.txtContraseña.TabIndex = 3;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(22, 180);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(223, 27);
+            this.txtUsuario.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 210);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 19);
+            this.label3.TabIndex = 98;
+            this.label3.Text = "Contraseña:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 154);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 19);
+            this.label5.TabIndex = 99;
+            this.label5.Text = "Usuario:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 387);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 19);
+            this.label4.TabIndex = 100;
+            this.label4.Text = "Rol:";
+            // 
+            // txtNombrecompleto
+            // 
+            this.txtNombrecompleto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombrecompleto.Location = new System.Drawing.Point(22, 70);
+            this.txtNombrecompleto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombrecompleto.Name = "txtNombrecompleto";
+            this.txtNombrecompleto.Size = new System.Drawing.Size(223, 27);
+            this.txtNombrecompleto.TabIndex = 0;
+            this.txtNombrecompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombrecompleto_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 48);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 19);
+            this.label8.TabIndex = 102;
+            this.label8.Text = "Nombre Completo:";
+            // 
+            // cbxbusquedas
+            // 
+            this.cbxbusquedas.BackColor = System.Drawing.Color.White;
+            this.cbxbusquedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxbusquedas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxbusquedas.FormattingEnabled = true;
+            this.cbxbusquedas.Location = new System.Drawing.Point(381, 68);
+            this.cbxbusquedas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxbusquedas.Name = "cbxbusquedas";
+            this.cbxbusquedas.Size = new System.Drawing.Size(164, 29);
+            this.cbxbusquedas.TabIndex = 10;
+            // 
+            // Btnlimpiar
+            // 
+            this.Btnlimpiar.BackColor = System.Drawing.Color.SteelBlue;
+            this.Btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btnlimpiar.ForeColor = System.Drawing.Color.White;
+            this.Btnlimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.Btnlimpiar.IconColor = System.Drawing.Color.White;
+            this.Btnlimpiar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.Btnlimpiar.IconSize = 30;
+            this.Btnlimpiar.Location = new System.Drawing.Point(859, 64);
+            this.Btnlimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btnlimpiar.Name = "Btnlimpiar";
+            this.Btnlimpiar.Size = new System.Drawing.Size(61, 34);
+            this.Btnlimpiar.TabIndex = 13;
+            this.Btnlimpiar.UseVisualStyleBackColor = false;
+            this.Btnlimpiar.Click += new System.EventHandler(this.Btnlimpiar_Click);
+            // 
+            // Btnbuscar
+            // 
+            this.Btnbuscar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btnbuscar.ForeColor = System.Drawing.Color.White;
+            this.Btnbuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.Btnbuscar.IconColor = System.Drawing.Color.White;
+            this.Btnbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Btnbuscar.IconSize = 30;
+            this.Btnbuscar.Location = new System.Drawing.Point(776, 64);
+            this.Btnbuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btnbuscar.Name = "Btnbuscar";
+            this.Btnbuscar.Size = new System.Drawing.Size(61, 34);
+            this.Btnbuscar.TabIndex = 12;
+            this.Btnbuscar.UseVisualStyleBackColor = false;
+            this.Btnbuscar.Click += new System.EventHandler(this.Btnbuscar_Click);
+            // 
             // PUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1372, 970);
+            this.ClientSize = new System.Drawing.Size(1029, 788);
             this.Controls.Add(this.cbxbusquedas);
             this.Controls.Add(this.Btnlimpiar);
             this.Controls.Add(this.Btnbuscar);
@@ -543,6 +563,7 @@ namespace PROYECTOQAG5
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Dgv_usuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PUsuarios";
             this.Text = "PUsuarios";
             this.Load += new System.EventHandler(this.PUsuarios_Load);
