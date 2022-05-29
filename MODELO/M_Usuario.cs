@@ -12,7 +12,7 @@ namespace MODELO
     public class M_Usuario
     {
         private C_Usuarios objecd_usuario = new C_Usuarios();
-        
+
         public List<Usuario> Listar()
         {
             return objecd_usuario.Listar();
@@ -21,25 +21,23 @@ namespace MODELO
         public int Registrar(Usuario obj,out string Mensaje)
         {
             Mensaje = string.Empty;
-            if (obj.NombreCompleto=="" || obj.NombreCompleto.Length < 3)
+            if (obj.NombreCompleto == "" || obj.NombreCompleto.Length < 3)
             {
-                Mensaje += "Es necesario el nombre completo del usuario\n";
+                Mensaje += "Es necesario el nombre completo del usuario (Mayor de tres caracteres)\n";
             }
-
-
 
            
-            if (obj.Documento == "")
+            if (obj.Documento == "" )
             {
-                Mensaje += "Es necesario el nombre de usuario de la persona\n";
+                Mensaje += "Es necesario un nombre de usuario \n";
             }
 
 
-            if (obj.Clave == "")
+            if (obj.Clave == "" || obj.Clave.Length < 6)
             {
-                Mensaje += "Es necesaria la contraseña del usuario\n";
+                Mensaje += "Es necesaria una contraseña de 6 caracteres\n";
             }
-
+            
             try
             {
                 var addr = new System.Net.Mail.MailAddress(obj.Correo);
@@ -49,8 +47,9 @@ namespace MODELO
                 Mensaje += "No es una estructura de correo valida\n";
             }
             
+            
 
-            if (Mensaje!= string.Empty) 
+            if (Mensaje != string.Empty)
             {
 
                 return 0;

@@ -69,25 +69,40 @@ namespace PROYECTOQAG5
             this.cbxbusquedas = new System.Windows.Forms.ComboBox();
             this.Btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.Btnbuscar = new FontAwesome.Sharp.IconButton();
+<<<<<<< HEAD
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+=======
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_usuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbusqueda
             // 
+<<<<<<< HEAD
             this.txtbusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbusqueda.Location = new System.Drawing.Point(590, 70);
             this.txtbusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(164, 26);
+=======
+            this.txtbusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbusqueda.Location = new System.Drawing.Point(590, 70);
+            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbusqueda.Name = "txtbusqueda";
+            this.txtbusqueda.Size = new System.Drawing.Size(164, 27);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.txtbusqueda.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label2.Location = new System.Drawing.Point(586, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -98,7 +113,11 @@ namespace PROYECTOQAG5
             // label6
             // 
             this.label6.AutoSize = true;
+<<<<<<< HEAD
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label6.Location = new System.Drawing.Point(378, 46);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
@@ -132,7 +151,11 @@ namespace PROYECTOQAG5
             this.EstadoValor,
             this.Estado});
             this.Dgv_usuarios.Location = new System.Drawing.Point(301, 161);
+<<<<<<< HEAD
             this.Dgv_usuarios.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.Dgv_usuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.Dgv_usuarios.MultiSelect = false;
             this.Dgv_usuarios.Name = "Dgv_usuarios";
             this.Dgv_usuarios.ReadOnly = true;
@@ -253,7 +276,11 @@ namespace PROYECTOQAG5
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(271, 788);
             this.panel1.TabIndex = 61;
@@ -261,7 +288,11 @@ namespace PROYECTOQAG5
             // txtindice
             // 
             this.txtindice.Location = new System.Drawing.Point(179, 46);
+<<<<<<< HEAD
             this.txtindice.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.txtindice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.txtindice.Name = "txtindice";
             this.txtindice.ReadOnly = true;
             this.txtindice.Size = new System.Drawing.Size(36, 20);
@@ -273,7 +304,11 @@ namespace PROYECTOQAG5
             // txtid
             // 
             this.txtid.Location = new System.Drawing.Point(219, 46);
+<<<<<<< HEAD
             this.txtid.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.txtid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
             this.txtid.Size = new System.Drawing.Size(36, 20);
@@ -285,7 +320,11 @@ namespace PROYECTOQAG5
             // label7
             // 
             this.label7.AutoSize = true;
+<<<<<<< HEAD
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label7.Location = new System.Drawing.Point(85, 7);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
@@ -305,7 +344,11 @@ namespace PROYECTOQAG5
             this.btneliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btneliminar.IconSize = 35;
             this.btneliminar.Location = new System.Drawing.Point(22, 734);
+<<<<<<< HEAD
             this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(222, 37);
             this.btneliminar.TabIndex = 9;
@@ -327,7 +370,11 @@ namespace PROYECTOQAG5
             this.btnlimpiardatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnlimpiardatos.IconSize = 35;
             this.btnlimpiardatos.Location = new System.Drawing.Point(22, 691);
+<<<<<<< HEAD
             this.btnlimpiardatos.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnlimpiardatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.btnlimpiardatos.Name = "btnlimpiardatos";
             this.btnlimpiardatos.Size = new System.Drawing.Size(222, 37);
             this.btnlimpiardatos.TabIndex = 8;
@@ -349,7 +396,11 @@ namespace PROYECTOQAG5
             this.btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnguardar.IconSize = 35;
             this.btnguardar.Location = new System.Drawing.Point(22, 649);
+<<<<<<< HEAD
             this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(222, 37);
             this.btnguardar.TabIndex = 7;
@@ -362,146 +413,264 @@ namespace PROYECTOQAG5
             // label11
             // 
             this.label11.AutoSize = true;
+<<<<<<< HEAD
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(19, 445);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 20);
+=======
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 445);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 19);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label11.TabIndex = 110;
             this.label11.Text = "Estado:";
             // 
             // cbxestadousuario
             // 
             this.cbxestadousuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+<<<<<<< HEAD
             this.cbxestadousuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxestadousuario.FormattingEnabled = true;
             this.cbxestadousuario.Location = new System.Drawing.Point(22, 470);
             this.cbxestadousuario.Margin = new System.Windows.Forms.Padding(2);
             this.cbxestadousuario.Name = "cbxestadousuario";
             this.cbxestadousuario.Size = new System.Drawing.Size(223, 28);
+=======
+            this.cbxestadousuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxestadousuario.FormattingEnabled = true;
+            this.cbxestadousuario.Location = new System.Drawing.Point(22, 470);
+            this.cbxestadousuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxestadousuario.Name = "cbxestadousuario";
+            this.cbxestadousuario.Size = new System.Drawing.Size(223, 27);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.cbxestadousuario.TabIndex = 6;
             // 
             // txtcorreo
             // 
+<<<<<<< HEAD
             this.txtcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreo.Location = new System.Drawing.Point(22, 122);
             this.txtcorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(223, 26);
+=======
+            this.txtcorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcorreo.Location = new System.Drawing.Point(22, 122);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(223, 27);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.txtcorreo.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+<<<<<<< HEAD
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(22, 98);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 20);
+=======
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(22, 98);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 19);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label10.TabIndex = 108;
             this.label10.Text = "Correo:";
             // 
             // txtconfirmarcontraseña
             // 
+<<<<<<< HEAD
             this.txtconfirmarcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtconfirmarcontraseña.Location = new System.Drawing.Point(22, 295);
             this.txtconfirmarcontraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtconfirmarcontraseña.Name = "txtconfirmarcontraseña";
             this.txtconfirmarcontraseña.PasswordChar = '*';
             this.txtconfirmarcontraseña.Size = new System.Drawing.Size(223, 26);
+=======
+            this.txtconfirmarcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtconfirmarcontraseña.Location = new System.Drawing.Point(22, 295);
+            this.txtconfirmarcontraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtconfirmarcontraseña.Name = "txtconfirmarcontraseña";
+            this.txtconfirmarcontraseña.PasswordChar = '*';
+            this.txtconfirmarcontraseña.Size = new System.Drawing.Size(223, 27);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.txtconfirmarcontraseña.TabIndex = 4;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+<<<<<<< HEAD
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(22, 269);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(190, 20);
+=======
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(22, 269);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(183, 19);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label9.TabIndex = 106;
             this.label9.Text = "Confirmar Contraseña:";
             // 
             // cbxrolusuario
             // 
             this.cbxrolusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+<<<<<<< HEAD
             this.cbxrolusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxrolusuario.FormattingEnabled = true;
             this.cbxrolusuario.Location = new System.Drawing.Point(22, 412);
             this.cbxrolusuario.Margin = new System.Windows.Forms.Padding(2);
             this.cbxrolusuario.Name = "cbxrolusuario";
             this.cbxrolusuario.Size = new System.Drawing.Size(223, 28);
+=======
+            this.cbxrolusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxrolusuario.FormattingEnabled = true;
+            this.cbxrolusuario.Location = new System.Drawing.Point(22, 412);
+            this.cbxrolusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxrolusuario.Name = "cbxrolusuario";
+            this.cbxrolusuario.Size = new System.Drawing.Size(223, 27);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.cbxrolusuario.TabIndex = 5;
             // 
             // txtContraseña
             // 
+<<<<<<< HEAD
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(22, 236);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(223, 26);
+=======
+            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(22, 236);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(223, 27);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.txtContraseña.TabIndex = 3;
             // 
             // txtUsuario
             // 
+<<<<<<< HEAD
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(22, 180);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(223, 26);
+=======
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(22, 180);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(223, 27);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.txtUsuario.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 210);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
+=======
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 210);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 19);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label3.TabIndex = 98;
             this.label3.Text = "Contraseña:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(22, 154);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 20);
+=======
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 154);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 19);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label5.TabIndex = 99;
             this.label5.Text = "Usuario:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(19, 387);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 20);
+=======
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 387);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 19);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label4.TabIndex = 100;
             this.label4.Text = "Rol:";
             // 
             // txtNombrecompleto
             // 
+<<<<<<< HEAD
             this.txtNombrecompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombrecompleto.Location = new System.Drawing.Point(22, 70);
             this.txtNombrecompleto.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombrecompleto.Name = "txtNombrecompleto";
             this.txtNombrecompleto.Size = new System.Drawing.Size(223, 26);
             this.txtNombrecompleto.TabIndex = 0;
+=======
+            this.txtNombrecompleto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombrecompleto.Location = new System.Drawing.Point(22, 70);
+            this.txtNombrecompleto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombrecompleto.Name = "txtNombrecompleto";
+            this.txtNombrecompleto.Size = new System.Drawing.Size(223, 27);
+            this.txtNombrecompleto.TabIndex = 0;
+            this.txtNombrecompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombrecompleto_KeyPress);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+<<<<<<< HEAD
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(22, 48);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(157, 20);
+=======
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 48);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 19);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.label8.TabIndex = 102;
             this.label8.Text = "Nombre Completo:";
             // 
@@ -509,12 +678,21 @@ namespace PROYECTOQAG5
             // 
             this.cbxbusquedas.BackColor = System.Drawing.Color.White;
             this.cbxbusquedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+<<<<<<< HEAD
             this.cbxbusquedas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxbusquedas.FormattingEnabled = true;
             this.cbxbusquedas.Location = new System.Drawing.Point(381, 68);
             this.cbxbusquedas.Margin = new System.Windows.Forms.Padding(2);
             this.cbxbusquedas.Name = "cbxbusquedas";
             this.cbxbusquedas.Size = new System.Drawing.Size(164, 28);
+=======
+            this.cbxbusquedas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxbusquedas.FormattingEnabled = true;
+            this.cbxbusquedas.Location = new System.Drawing.Point(381, 68);
+            this.cbxbusquedas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxbusquedas.Name = "cbxbusquedas";
+            this.cbxbusquedas.Size = new System.Drawing.Size(164, 29);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.cbxbusquedas.TabIndex = 10;
             // 
             // Btnlimpiar
@@ -527,7 +705,11 @@ namespace PROYECTOQAG5
             this.Btnlimpiar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.Btnlimpiar.IconSize = 30;
             this.Btnlimpiar.Location = new System.Drawing.Point(859, 64);
+<<<<<<< HEAD
             this.Btnlimpiar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.Btnlimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.Btnlimpiar.Name = "Btnlimpiar";
             this.Btnlimpiar.Size = new System.Drawing.Size(61, 34);
             this.Btnlimpiar.TabIndex = 13;
@@ -544,13 +726,18 @@ namespace PROYECTOQAG5
             this.Btnbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btnbuscar.IconSize = 30;
             this.Btnbuscar.Location = new System.Drawing.Point(776, 64);
+<<<<<<< HEAD
             this.Btnbuscar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.Btnbuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.Btnbuscar.Name = "Btnbuscar";
             this.Btnbuscar.Size = new System.Drawing.Size(61, 34);
             this.Btnbuscar.TabIndex = 12;
             this.Btnbuscar.UseVisualStyleBackColor = false;
             this.Btnbuscar.Click += new System.EventHandler(this.Btnbuscar_Click);
             // 
+<<<<<<< HEAD
             // label1
             // 
             this.label1.AutoSize = true;
@@ -575,6 +762,8 @@ namespace PROYECTOQAG5
             this.label12.TabIndex = 115;
             this.label12.Text = "*";
             // 
+=======
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             // PUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,7 +779,11 @@ namespace PROYECTOQAG5
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Dgv_usuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
             this.Name = "PUsuarios";
             this.Text = "PUsuarios";
             this.Load += new System.EventHandler(this.PUsuarios_Load);

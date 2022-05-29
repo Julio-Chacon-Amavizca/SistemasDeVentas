@@ -10,7 +10,11 @@ using System.Windows.Forms;
 using PROYECTOQAG5.Utilidad;
 using CONTROLADOR;
 using MODELO;
+<<<<<<< HEAD
 using System.Text.RegularExpressions;
+=======
+using PROYECTOQAG5;
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
 
 namespace PROYECTOQAG5
 {
@@ -94,8 +98,16 @@ namespace PROYECTOQAG5
                 Estado = Convert.ToInt32(((OpcionCombo)cbxestadousuario.SelectedItem).valor) == 1 ? true : false
             };
 
+            
             if (objusuario.IdUsuario==0)
             {
+                if (txtContraseña.Text != txtconfirmarcontraseña.Text)
+                {
+                    MessageBox.Show("Las contraseñas no coinciden", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    return;
+                }
+                else { 
                 int idusuariogenereado = new M_Usuario().Registrar(objusuario, out mensaje);
 
                 if (idusuariogenereado != 0)
@@ -113,7 +125,7 @@ namespace PROYECTOQAG5
                 {
                     MessageBox.Show(mensaje);
                 }
-
+                }
             }
             else
             {
@@ -139,11 +151,8 @@ namespace PROYECTOQAG5
                 
                 }
             }
-           
+            
 
-
-
-           
         }
 
         private void Limpiar()
@@ -295,5 +304,23 @@ namespace PROYECTOQAG5
             }
         }
 
+<<<<<<< HEAD
+=======
+        private void txtNombrecompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {          
+
+            if((e.KeyChar>=33 && e.KeyChar<=64)||(e.KeyChar>=91 && e.KeyChar<=96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                if (txtNombrecompleto.Text == "" || txtNombrecompleto.Text.Length < 3)
+                {
+                    MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    e.Handled = true;
+                    return;
+                }
+
+            }
+
+        }
+>>>>>>> fdf21948f366a09ad74d3610459b3c6b1ff0eb7d
     }
 }
