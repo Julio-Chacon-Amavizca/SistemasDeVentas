@@ -141,13 +141,13 @@ namespace PROYECTOQAG5
             {
                 FormularioActivo.Close();
             }
-            FormularioActivo = formulario;
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.Dock = DockStyle.Fill;
+                FormularioActivo = formulario;
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                PanelContenedor.Controls.Add(formulario);
+                formulario.Show();
 
-            PanelContenedor.Controls.Add(formulario);
-            formulario.Show();
         }
 
         private void MenuVentas_Click(object sender, EventArgs e)
