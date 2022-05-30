@@ -231,7 +231,48 @@ namespace DATOS
         }
 
 
+        public List<Venta> Listar()
+        {
+            List<Venta> lista = new List<Venta>();
+            using (SqlConnection oconenexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("Select IdVenta,TipoDocuemnto,NumeroDocumento,MontoPago,MontoCambio, MontoTotal, u.NombreCompleto,v.FechaRegistro from VENTA v");
+                    query.AppendLine("inner join USUARIO u on u.IdUsuario= v.IdUsuario");
 
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconenexion);
+                    cmd.CommandType = CommandType.Text;
+
+                    oconenexion.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Venta
+                            {
+                                IdVenta = Convert.ToInt32(dr["IdVenta"]),
+                                oUsuario = new Usuario() { NombreCompleto = dr["NombreCompleto"].ToString() },
+                                NumeroDocumento = dr["NumeroDocumento"].ToString(),
+                                MontoPago = Convert.ToDecimal(dr["MontoPago"]),
+                                MontoCambio = Convert.ToDecimal(dr["MontoCambio"]),
+                                MontoTotal = Convert.ToDecimal(dr["MontoTotal"]),
+                                FechaRegistro = dr["FechaRegistro"].ToString()
+                                
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lista = new List<Venta>();
+                }
+
+            }
+            return lista;
+        }
 
     }
 }

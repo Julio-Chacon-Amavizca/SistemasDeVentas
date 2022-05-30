@@ -18,7 +18,7 @@ namespace PROYECTOQAG5
     {
         private int borderSize = 2;
         private static Usuario usuarioActual;
-        private static IconMenuItem MenuActivo;
+        private static IconButton MenuActivo;
         private static Form FormularioActivo;
         public PPrincipal(Usuario objusuario)
         {
@@ -128,7 +128,7 @@ namespace PROYECTOQAG5
             fh.Show();
             
         }
-        public void AbrirFormulario(IconMenuItem menu,Form formulario)
+        public void AbrirFormulario(IconButton menu,Form formulario)
         {
             if (MenuActivo != null)
             {
@@ -141,18 +141,18 @@ namespace PROYECTOQAG5
             {
                 FormularioActivo.Close();
             }
-            FormularioActivo = formulario;
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.Dock = DockStyle.Fill;
+                FormularioActivo = formulario;
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                PanelContenedor.Controls.Add(formulario);
+                formulario.Show();
 
-            PanelContenedor.Controls.Add(formulario);
-            formulario.Show();
         }
 
         private void MenuVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new PVenta(usuarioActual));
+            //AbrirFormulario((IconMenuItem)sender, new PVenta(usuarioActual));
             //AbrirFormHijo(new PVentas());
         }
 
@@ -164,7 +164,7 @@ namespace PROYECTOQAG5
 
         private void MenuGanaderia_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuGanaderia, new PGanaderia());
+            //AbrirFormulario(MenuGanaderia, new PGanaderia());
             //AbrirFormHijo(new PGanaderia());
         }
 
@@ -176,24 +176,24 @@ namespace PROYECTOQAG5
 
         private void MenuUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuUsuarios, new PUsuarios());
+            //AbrirFormulario(MenuUsuarios, new PUsuarios());
             //AbrirFormHijo(new PUsuarios());
         }
 
         private void MenuPcategoria_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuInventario, new PCategoria());
+            //AbrirFormulario(MenuInventario, new PCategoria());
         }
 
         private void MenuPproducto_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuInventario, new PInventario());
+            //AbrirFormulario(MenuInventario, new PInventario());
         }
 
 
         private void nEGOCIOToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuInventario, new PNegocio());
+            //AbrirFormulario(MenuInventario, new PNegocio());
         }
 
         private void MenuAcercade_Click(object sender, EventArgs e)
@@ -205,7 +205,52 @@ namespace PROYECTOQAG5
 
         private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuContabilidad, new PDetalleVentas());
+            //AbrirFormulario(MenuContabilidad, new PDetalleVentas());
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //AbrirFormulario(MenuContabilidad, new PDetalleVentas());
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            //AbrirFormulario(MenuContabilidad, new PContabilidad());
+        }
+
+        private void Btn_Ventas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new PVenta(usuarioActual));
+        }
+
+        private void Btn_ganaderia_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new PGanaderia());
+        }
+
+        private void Btn_contabilidad_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new PContabilidad());
+        }
+
+        private void Btn_usuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new PUsuarios());
+        }
+
+        private void Btn_categorias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new PCategoria());
+        }
+
+        private void Btn_negocio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new PNegocio());
+        }
+
+        private void Btn_producto_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new PInventario());
         }
     }
 }
