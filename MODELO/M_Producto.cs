@@ -37,9 +37,9 @@ namespace MODELO
                 Mensaje += "El codigo debe ser numerico";
             }
 
-            if (obj.Codigo.Length != 13)
+            if (obj.Codigo.Length != 8)
             {
-                Mensaje += "El codigo debe ser de 13 digitos";
+                Mensaje += "El codigo debe ser de 8 digitos";
             }
 
 
@@ -86,9 +86,9 @@ namespace MODELO
                 Mensaje += "El codigo debe ser numerico";
             }
 
-            if(obj.Codigo.Length != 13)
+            if(obj.Codigo.Length != 8)
             {
-                Mensaje += "El codigo debe ser de 13 digitos";
+                Mensaje += "El codigo debe ser de 8 digitos";
             }
 
 

@@ -27,7 +27,7 @@ namespace PROYECTOQAG5
         {
 
             //MessageBox.Show(_usuario.NombreCompleto);
-            cbxtipodocumento.Items.Add(new OpcionCombo() {valor="Boleta", Texto="Boleta"});
+            cbxtipodocumento.Items.Add(new OpcionCombo() {valor="Ticket", Texto="Ticket"});
             cbxtipodocumento.Items.Add(new OpcionCombo() { valor = "Factura", Texto = "Factura" });
             cbxtipodocumento.DisplayMember = "Texto";
             cbxtipodocumento.ValueMember = "Valor";
@@ -128,11 +128,9 @@ namespace PROYECTOQAG5
                 string mensaje = string.Empty;
                 bool respuesta = new M_Ventas().RestarStock(
                     Convert.ToInt32(txtidproducto.Text),
-                    Convert.ToInt32(txtCantidad.Value.ToString())
-                    
-                    
-                    );
-
+                    Convert.ToInt32(txtCantidad.Value.ToString())    
+                );
+                txtStock.Text = Convert.ToString(Convert.ToInt32(txtStock.Text) - txtCantidad.Value);
                 if (respuesta) {
                     Dgv_usuarios.Rows.Add(new object[] {
                 txtidproducto.Text,
@@ -147,6 +145,26 @@ namespace PROYECTOQAG5
 
                 calcularTotal();
                 LimpiarProducto();
+            }
+            else
+            {
+                string mensaje = string.Empty;
+                bool respuesta = new M_Ventas().RestarStock(
+                    Convert.ToInt32(txtidproducto.Text),
+                    Convert.ToInt32(txtCantidad.Value.ToString())
+                );
+                txtStock.Text = Convert.ToString(Convert.ToInt32(txtStock.Text) - txtCantidad.Value);
+                if (respuesta)
+                {
+                    foreach (DataGridViewRow fila in Dgv_usuarios.Rows)
+                    {
+                        if (fila.Cells["IdProducto"].Value.ToString() == txtidproducto.Text)
+                        {
+                            fila.Cells["Cantidad"].Value = (txtCantidad.Value + Convert.ToInt32(fila.Cells["Cantidad"].Value.ToString()));
+                            break;
+                        }
+                    }
+                }
             }
         }
 
@@ -207,7 +225,7 @@ namespace PROYECTOQAG5
                         Convert.ToInt32(Dgv_usuarios.Rows[indice].Cells["IdProducto"].Value.ToString()),
                          Convert.ToInt32(Dgv_usuarios.Rows[indice].Cells["Cantidad"].Value.ToString())
                         );
-
+                    LimpiarProducto();
                     if (respuesta) {
                         Dgv_usuarios.Rows.RemoveAt(indice);
                         calcularTotal();
