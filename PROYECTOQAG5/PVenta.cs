@@ -108,6 +108,12 @@ namespace PROYECTOQAG5
                 return;
             }
 
+            if (int.Parse(txtStock.Text) < txtCantidad.Value)
+            {
+                MessageBox.Show("No hay stock suficiente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             foreach (DataGridViewRow fila in Dgv_usuarios.Rows)
             {
                 if (fila.Cells["IdProducto"].Value.ToString()==txtidproducto.Text)
@@ -279,7 +285,22 @@ namespace PROYECTOQAG5
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            double aPagar = double.Parse(txttotalapagar.Text);
+            double pagoCon;
+            if (txtpagocon.Text == "")
+            {
+                pagoCon = 0;
+            }
+            else
+            {
+                pagoCon = double.Parse(txtpagocon.Text);
+            }
 
+            if (aPagar > pagoCon)
+            {
+                MessageBox.Show("No cubre el monto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             if (Dgv_usuarios.Rows.Count < 1)
             {
