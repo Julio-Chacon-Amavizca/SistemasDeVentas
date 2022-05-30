@@ -102,15 +102,15 @@ namespace PROYECTOQAG5
         {
             List<Permiso> ListaPermisos = new M_Permiso().Listar(usuarioActual.IdUsuario);
 
-            foreach (IconMenuItem iconmenu in menuStrip.Items) 
-            {
-                bool encontrado = ListaPermisos.Any(m=> m.NombreMenu == iconmenu.Name);
+            //foreach (iconmenuitem iconmenu in menustrip.items) 
+            //{
+            //    bool encontrado = listapermisos.any(m=> m.nombremenu == iconmenu.name);
 
-                if (encontrado == false)
-                {
-                    iconmenu.Visible = false;
-                }
-            }
+            //    if (encontrado == false)
+            //    {
+            //        iconmenu.visible = false;
+            //    }
+            //}
             lbl_Usuario.Text = usuarioActual.NombreCompleto;
         }
 

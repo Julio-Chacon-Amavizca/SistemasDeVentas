@@ -52,7 +52,7 @@ FechaRegistro datetime default getdate()
 
 CREATE TABLE VENTA(
 IdVenta int primary key identity,
-IdUsuario int references USUARIO(IdUsuario),
+IdUsuario int,
 TipoDocuemnto varchar (50),
 NumeroDocumento varchar (50),
 MontoPago decimal (10,2),
@@ -227,16 +227,6 @@ begin
 	set @Mensaje=''
 	declare @pasoreglas bit = 1
 
-	IF exists(Select * from VENTA v
-	INNER JOIN USUARIO u on u.IdUsuario = u.IdUsuario
-	where u.IdUsuario =@IdUsuario
-	)
-	BEGIN
-	set @pasoreglas=0
-	set @Respueta=0
-	set @Mensaje=@Mensaje + 'No se puede eliminar porque el usuario se encuentra relacionado con una VENTA'
-	END
-
 	if(@pasoreglas=1)
 	BEGIN
 		delete FROM USUARIO WHERE IdUsuario= @IdUsuario
@@ -324,6 +314,8 @@ create PROC SP_REGISTRARPRODUCTO(
 @Nombre varchar (30),
 @Descripcion varchar(50),
 @IdCategoria int,
+@Stock int,
+@PrecioVenta decimal(10,2),
 @Estado bit,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -332,7 +324,7 @@ begin
 	set @Resultado=0
 	if not exists (SELECT * FROM PRODUCTO WHERE Codigo=@Codigo)
 	begin
-		insert into PRODUCTO(Codigo,Nombre, Descripcion,IdCategoria,Estado)values (@Codigo,@Nombre, @Descripcion,@IdCategoria,@Estado)
+		insert into PRODUCTO(Codigo,Nombre, Descripcion,IdCategoria,Stock,PrecioVenta,Estado)values (@Codigo,@Nombre, @Descripcion,@IdCategoria,@Stock,@PrecioVenta,@Estado)
 		set @Resultado=SCOPE_IDENTITY()
 	end
 	else
@@ -349,6 +341,8 @@ create PROC SP_EDITARPRODUCTO(
 @Nombre varchar (30),
 @Descripcion varchar(50),
 @IdCategoria int,
+@Stock int,
+@PrecioVenta decimal(10,2),
 @Estado bit,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -362,6 +356,8 @@ begin
 		Nombre=@Nombre, 
 		Descripcion=@Descripcion,
 		IdCategoria=@IdCategoria,
+		Stock=@Stock,
+		PrecioVenta=@PrecioVenta,
 		Estado= @Estado
 		where IdProducto=@IdProducto
 

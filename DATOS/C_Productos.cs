@@ -79,8 +79,8 @@ namespace DATOS
                     cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
                     cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
                     cmd.Parameters.AddWithValue("IdCategoria", obj.oCategoria.IdCategoria);
-                    //cmd.Parameters.AddWithValue("Stock", Convert.ToInt32(obj.Stock));
-                    //cmd.Parameters.AddWithValue("PrecioVenta",Convert.ToDecimal( obj.PrecioVenta));
+                    cmd.Parameters.AddWithValue("Stock", Convert.ToInt32(obj.Stock));
+                    cmd.Parameters.AddWithValue("PrecioVenta",Convert.ToDecimal( obj.PrecioVenta));
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
@@ -120,6 +120,8 @@ namespace DATOS
                     cmd.Parameters.AddWithValue("Nombre ", obj.Nombre);
                     cmd.Parameters.AddWithValue("Descripcion ", obj.Descripcion);
                     cmd.Parameters.AddWithValue("IdCategoria ", obj.oCategoria.IdCategoria);
+                    cmd.Parameters.AddWithValue("Stock", Convert.ToInt32(obj.Stock));
+                    cmd.Parameters.AddWithValue("PrecioVenta", Convert.ToDecimal(obj.PrecioVenta));
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
