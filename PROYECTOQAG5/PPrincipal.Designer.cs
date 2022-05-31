@@ -46,11 +46,30 @@ namespace PROYECTOQAG5
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cerrarSesion = new System.Windows.Forms.Button();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.MenuVentas = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuGanaderia = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuContabilidad = new FontAwesome.Sharp.IconMenuItem();
+            this.reporteDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuUsuarios = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuInventario = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuPcategoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuPproducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEGOCIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuConta = new FontAwesome.Sharp.IconMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
+            this.PanelContenedor.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -128,7 +147,7 @@ namespace PROYECTOQAG5
             // Btn_negocio
             // 
             this.Btn_negocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_negocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_negocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_negocio.ForeColor = System.Drawing.Color.White;
             this.Btn_negocio.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.Btn_negocio.IconColor = System.Drawing.Color.White;
@@ -147,7 +166,7 @@ namespace PROYECTOQAG5
             // Btn_categorias
             // 
             this.Btn_categorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_categorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_categorias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_categorias.ForeColor = System.Drawing.Color.White;
             this.Btn_categorias.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.Btn_categorias.IconColor = System.Drawing.Color.White;
@@ -166,7 +185,7 @@ namespace PROYECTOQAG5
             // Btn_producto
             // 
             this.Btn_producto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_producto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_producto.ForeColor = System.Drawing.Color.White;
             this.Btn_producto.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.Btn_producto.IconColor = System.Drawing.Color.White;
@@ -185,7 +204,7 @@ namespace PROYECTOQAG5
             // Btn_usuarios
             // 
             this.Btn_usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_usuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_usuarios.ForeColor = System.Drawing.Color.White;
             this.Btn_usuarios.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.Btn_usuarios.IconColor = System.Drawing.Color.White;
@@ -204,7 +223,7 @@ namespace PROYECTOQAG5
             // Btn_contabilidad
             // 
             this.Btn_contabilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_contabilidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_contabilidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_contabilidad.ForeColor = System.Drawing.Color.White;
             this.Btn_contabilidad.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.Btn_contabilidad.IconColor = System.Drawing.Color.White;
@@ -223,7 +242,7 @@ namespace PROYECTOQAG5
             // Btn_ganaderia
             // 
             this.Btn_ganaderia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_ganaderia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ganaderia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ganaderia.ForeColor = System.Drawing.Color.White;
             this.Btn_ganaderia.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.Btn_ganaderia.IconColor = System.Drawing.Color.White;
@@ -242,7 +261,7 @@ namespace PROYECTOQAG5
             // Btn_Ventas
             // 
             this.Btn_Ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ventas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ventas.ForeColor = System.Drawing.Color.White;
             this.Btn_Ventas.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.Btn_Ventas.IconColor = System.Drawing.Color.White;
@@ -279,7 +298,7 @@ namespace PROYECTOQAG5
             this.MenuAcercade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.MenuAcercade.FlatAppearance.BorderSize = 0;
             this.MenuAcercade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MenuAcercade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuAcercade.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuAcercade.ForeColor = System.Drawing.Color.Gainsboro;
             this.MenuAcercade.Location = new System.Drawing.Point(81, 679);
             this.MenuAcercade.Margin = new System.Windows.Forms.Padding(2);
@@ -342,8 +361,194 @@ namespace PROYECTOQAG5
             this.btn_cerrarSesion.UseVisualStyleBackColor = false;
             this.btn_cerrarSesion.Click += new System.EventHandler(this.btn_cerrarSesion_Click);
             // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip);
+            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(185, 547);
+            this.toolStripContainer1.Location = new System.Drawing.Point(4, 84);
+            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(2);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(185, 572);
+            this.toolStripContainer1.TabIndex = 9;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            this.toolStripContainer1.Visible = false;
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.menuStrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuVentas,
+            this.MenuGanaderia,
+            this.MenuContabilidad,
+            this.MenuUsuarios,
+            this.MenuInventario,
+            this.MenuConta});
+            this.menuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuStrip.Size = new System.Drawing.Size(185, 547);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip1";
+            this.menuStrip.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
+            this.menuStrip.Visible = false;
+            // 
+            // MenuVentas
+            // 
+            this.MenuVentas.AutoSize = false;
+            this.MenuVentas.ForeColor = System.Drawing.Color.White;
+            this.MenuVentas.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.MenuVentas.IconColor = System.Drawing.Color.White;
+            this.MenuVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuVentas.IconSize = 50;
+            this.MenuVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuVentas.Name = "MenuVentas";
+            this.MenuVentas.Size = new System.Drawing.Size(240, 69);
+            this.MenuVentas.Text = "VENTAS";
+            this.MenuVentas.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuVentas.Click += new System.EventHandler(this.MenuVentas_Click);
+            // 
+            // MenuGanaderia
+            // 
+            this.MenuGanaderia.AutoSize = false;
+            this.MenuGanaderia.ForeColor = System.Drawing.Color.White;
+            this.MenuGanaderia.IconChar = FontAwesome.Sharp.IconChar.HatCowboy;
+            this.MenuGanaderia.IconColor = System.Drawing.Color.White;
+            this.MenuGanaderia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuGanaderia.IconSize = 50;
+            this.MenuGanaderia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuGanaderia.Name = "MenuGanaderia";
+            this.MenuGanaderia.Size = new System.Drawing.Size(240, 69);
+            this.MenuGanaderia.Text = "GANADERIA";
+            this.MenuGanaderia.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuGanaderia.Click += new System.EventHandler(this.MenuGanaderia_Click);
+            // 
+            // MenuContabilidad
+            // 
+            this.MenuContabilidad.AutoSize = false;
+            this.MenuContabilidad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteDeVentasToolStripMenuItem});
+            this.MenuContabilidad.ForeColor = System.Drawing.Color.White;
+            this.MenuContabilidad.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.MenuContabilidad.IconColor = System.Drawing.Color.White;
+            this.MenuContabilidad.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuContabilidad.IconSize = 50;
+            this.MenuContabilidad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuContabilidad.Name = "MenuContabilidad";
+            this.MenuContabilidad.Size = new System.Drawing.Size(240, 69);
+            this.MenuContabilidad.Text = "CONTABILIDAD";
+            this.MenuContabilidad.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuContabilidad.Click += new System.EventHandler(this.MenuContabilidad_Click);
+            // 
+            // reporteDeVentasToolStripMenuItem
+            // 
+            this.reporteDeVentasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reporteDeVentasToolStripMenuItem.Name = "reporteDeVentasToolStripMenuItem";
+            this.reporteDeVentasToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
+            this.reporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas";
+            this.reporteDeVentasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasToolStripMenuItem_Click);
+            // 
+            // MenuUsuarios
+            // 
+            this.MenuUsuarios.AutoSize = false;
+            this.MenuUsuarios.ForeColor = System.Drawing.Color.White;
+            this.MenuUsuarios.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.MenuUsuarios.IconColor = System.Drawing.Color.White;
+            this.MenuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuUsuarios.IconSize = 50;
+            this.MenuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuUsuarios.Name = "MenuUsuarios";
+            this.MenuUsuarios.Size = new System.Drawing.Size(240, 69);
+            this.MenuUsuarios.Text = "USUARIOS";
+            this.MenuUsuarios.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuUsuarios.Click += new System.EventHandler(this.MenuUsuarios_Click);
+            // 
+            // MenuInventario
+            // 
+            this.MenuInventario.AutoSize = false;
+            this.MenuInventario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuPcategoria,
+            this.MenuPproducto,
+            this.nEGOCIOToolStripMenuItem});
+            this.MenuInventario.ForeColor = System.Drawing.Color.White;
+            this.MenuInventario.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.MenuInventario.IconColor = System.Drawing.Color.White;
+            this.MenuInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuInventario.IconSize = 50;
+            this.MenuInventario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuInventario.Name = "MenuInventario";
+            this.MenuInventario.Size = new System.Drawing.Size(240, 69);
+            this.MenuInventario.Text = "CONFIGURACIONES";
+            this.MenuInventario.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuInventario.Click += new System.EventHandler(this.MenuInventario_Click);
+            // 
+            // MenuPcategoria
+            // 
+            this.MenuPcategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPcategoria.Name = "MenuPcategoria";
+            this.MenuPcategoria.Size = new System.Drawing.Size(166, 24);
+            this.MenuPcategoria.Text = "CATEGORIA";
+            this.MenuPcategoria.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuPcategoria.Click += new System.EventHandler(this.MenuPcategoria_Click);
+            // 
+            // MenuPproducto
+            // 
+            this.MenuPproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuPproducto.Name = "MenuPproducto";
+            this.MenuPproducto.Size = new System.Drawing.Size(166, 24);
+            this.MenuPproducto.Text = "PRODUCTO";
+            this.MenuPproducto.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuPproducto.Click += new System.EventHandler(this.MenuPproducto_Click);
+            // 
+            // nEGOCIOToolStripMenuItem
+            // 
+            this.nEGOCIOToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nEGOCIOToolStripMenuItem.Name = "nEGOCIOToolStripMenuItem";
+            this.nEGOCIOToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.nEGOCIOToolStripMenuItem.Text = "NEGOCIO";
+            this.nEGOCIOToolStripMenuItem.Click += new System.EventHandler(this.nEGOCIOToolStripMenuItem_Click_1);
+            // 
+            // MenuConta
+            // 
+            this.MenuConta.AutoSize = false;
+            this.MenuConta.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.MenuConta.ForeColor = System.Drawing.Color.White;
+            this.MenuConta.IconChar = FontAwesome.Sharp.IconChar.Bacteria;
+            this.MenuConta.IconColor = System.Drawing.Color.White;
+            this.MenuConta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuConta.IconSize = 50;
+            this.MenuConta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuConta.Name = "MenuConta";
+            this.MenuConta.Size = new System.Drawing.Size(240, 69);
+            this.MenuConta.Text = "CONTABILIDAD";
+            this.MenuConta.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem1.Text = "REPORTE TICKET";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 22);
+            this.toolStripMenuItem2.Text = "REPORTE GENERAL";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+
+            // 
             // PanelContenedor
             // 
+            this.PanelContenedor.Controls.Add(this.toolStripContainer1);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(219, 33);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(2);
@@ -369,6 +574,13 @@ namespace PROYECTOQAG5
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.PanelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -386,6 +598,20 @@ namespace PROYECTOQAG5
         private System.Windows.Forms.Label lbl_Usuario;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Button MenuAcercade;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private FontAwesome.Sharp.IconMenuItem MenuVentas;
+        private FontAwesome.Sharp.IconMenuItem MenuInventario;
+        private FontAwesome.Sharp.IconMenuItem MenuGanaderia;
+        private FontAwesome.Sharp.IconMenuItem MenuContabilidad;
+        private FontAwesome.Sharp.IconMenuItem MenuUsuarios;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.ToolStripMenuItem MenuPcategoria;
+        private System.Windows.Forms.ToolStripMenuItem MenuPproducto;
+        private System.Windows.Forms.ToolStripMenuItem nEGOCIOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeVentasToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem MenuConta;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         public FontAwesome.Sharp.IconButton Btn_Ventas;
         public FontAwesome.Sharp.IconButton Btn_negocio;
         public FontAwesome.Sharp.IconButton Btn_categorias;

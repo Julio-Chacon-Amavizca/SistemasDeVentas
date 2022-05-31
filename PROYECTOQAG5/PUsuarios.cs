@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using PROYECTOQAG5.Utilidad;
 using CONTROLADOR;
 using MODELO;
-using System.Text.RegularExpressions;
 using PROYECTOQAG5;
 
 namespace PROYECTOQAG5
@@ -293,7 +292,7 @@ namespace PROYECTOQAG5
             {
                 foreach (DataGridViewRow row in Dgv_usuarios.Rows)
                 {
-                    if (row.Cells[columnafiltro].Value.ToString().Trim().Contains(txtbusqueda.Text.Trim().ToUpper()))
+                    if (row.Cells[columnafiltro].Value.ToString().Trim().ToUpper().Contains(txtbusqueda.Text.Trim().ToUpper()))
                     {
                         row.Visible = true;
                     }
@@ -334,5 +333,15 @@ namespace PROYECTOQAG5
             }
 
         }
+
+        private void txtbusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)(Keys.Enter))
+            {
+                e.Handled = true;
+                Btnbuscar_Click(sender, e);
+            }
+        }
+
     }
 }

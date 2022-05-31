@@ -34,7 +34,7 @@ namespace MODELO
 
 
             if (obj.Clave == "" || obj.Clave.Length < 6)
-            {
+
                 Mensaje += "Es necesaria una contraseña de 6 caracteres\n";
             }
             
@@ -47,9 +47,7 @@ namespace MODELO
                 Mensaje += "No es una estructura de correo valida\n";
             }
             
-
             
-
             if (Mensaje != string.Empty)
             {
 

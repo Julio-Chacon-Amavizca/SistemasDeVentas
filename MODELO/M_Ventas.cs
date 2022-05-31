@@ -13,6 +13,11 @@ namespace MODELO
     {
         private C_Ventas objcd_venta = new C_Ventas();
 
+
+        public List<Venta> Listar()
+        {
+            return objcd_venta.Listar();
+        }
         public bool RestarStock(int idproducto, int cantidad)
         {
             return objcd_venta.RestarStock(idproducto, cantidad);
