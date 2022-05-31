@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="C_Categoria.cs" />
+    <Compile Include="C_Contabilidad.cs" />
+    <Compile Include="C_Ganaderia.cs" />
     <Compile Include="C_Negocio.cs" />
     <Compile Include="C_Permisos.cs" />
     <Compile Include="C_Productos.cs" />

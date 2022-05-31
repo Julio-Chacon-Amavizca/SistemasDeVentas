@@ -29,8 +29,8 @@ namespace PROYECTOQAG5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,6 +51,8 @@ namespace PROYECTOQAG5
             this.txtindice = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btneliminar = new FontAwesome.Sharp.IconButton();
+            this.btnlimpiardatos = new FontAwesome.Sharp.IconButton();
             this.btnguardar = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.cbxestadousuario = new System.Windows.Forms.ComboBox();
@@ -69,8 +71,6 @@ namespace PROYECTOQAG5
             this.cbxbusquedas = new System.Windows.Forms.ComboBox();
             this.Btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.Btnbuscar = new FontAwesome.Sharp.IconButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_usuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,7 @@ namespace PROYECTOQAG5
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(164, 26);
             this.txtbusqueda.TabIndex = 11;
+            this.txtbusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbusqueda_KeyPress);
             // 
             // label2
             // 
@@ -102,23 +103,23 @@ namespace PROYECTOQAG5
             this.label6.Location = new System.Drawing.Point(378, 46);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 20);
+            this.label6.Size = new System.Drawing.Size(125, 20);
             this.label6.TabIndex = 53;
-            this.label6.Text = "ORDENAR POR";
+            this.label6.Text = "BUSCAR POR";
             // 
             // Dgv_usuarios
             // 
             this.Dgv_usuarios.AllowUserToAddRows = false;
             this.Dgv_usuarios.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
@@ -131,19 +132,19 @@ namespace PROYECTOQAG5
             this.Rol,
             this.EstadoValor,
             this.Estado});
-            this.Dgv_usuarios.Location = new System.Drawing.Point(301, 161);
+            this.Dgv_usuarios.Location = new System.Drawing.Point(290, 163);
             this.Dgv_usuarios.Margin = new System.Windows.Forms.Padding(2);
             this.Dgv_usuarios.MultiSelect = false;
             this.Dgv_usuarios.Name = "Dgv_usuarios";
             this.Dgv_usuarios.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_usuarios.RowHeadersWidth = 16;
             this.Dgv_usuarios.RowTemplate.Height = 28;
             this.Dgv_usuarios.Size = new System.Drawing.Size(719, 418);
@@ -292,7 +293,6 @@ namespace PROYECTOQAG5
             this.txtindice.TabIndex = 101;
             this.txtindice.TabStop = false;
             this.txtindice.Text = "-1";
-            this.txtindice.Visible = false;
             // 
             // txtid
             // 
@@ -304,7 +304,6 @@ namespace PROYECTOQAG5
             this.txtid.TabIndex = 100;
             this.txtid.TabStop = false;
             this.txtid.Text = "0";
-            this.txtid.Visible = false;
             // 
             // label7
             // 
@@ -316,6 +315,50 @@ namespace PROYECTOQAG5
             this.label7.Size = new System.Drawing.Size(128, 25);
             this.label7.TabIndex = 114;
             this.label7.Text = "USUARIOS";
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.Red;
+            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.Color.White;
+            this.btneliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btneliminar.IconColor = System.Drawing.Color.White;
+            this.btneliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btneliminar.IconSize = 35;
+            this.btneliminar.Location = new System.Drawing.Point(22, 734);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(222, 37);
+            this.btneliminar.TabIndex = 9;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnlimpiardatos
+            // 
+            this.btnlimpiardatos.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnlimpiardatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiardatos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnlimpiardatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiardatos.ForeColor = System.Drawing.Color.White;
+            this.btnlimpiardatos.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnlimpiardatos.IconColor = System.Drawing.Color.White;
+            this.btnlimpiardatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlimpiardatos.IconSize = 35;
+            this.btnlimpiardatos.Location = new System.Drawing.Point(22, 691);
+            this.btnlimpiardatos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlimpiardatos.Name = "btnlimpiardatos";
+            this.btnlimpiardatos.Size = new System.Drawing.Size(222, 37);
+            this.btnlimpiardatos.TabIndex = 8;
+            this.btnlimpiardatos.Text = "Limpiar";
+            this.btnlimpiardatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnlimpiardatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnlimpiardatos.UseVisualStyleBackColor = false;
+            this.btnlimpiardatos.Click += new System.EventHandler(this.btnlimpiardatos_Click);
             // 
             // btnguardar
             // 
@@ -473,6 +516,7 @@ namespace PROYECTOQAG5
             this.txtNombrecompleto.Name = "txtNombrecompleto";
             this.txtNombrecompleto.Size = new System.Drawing.Size(223, 26);
             this.txtNombrecompleto.TabIndex = 0;
+            this.txtNombrecompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombrecompleto_KeyPress);
             // 
             // label8
             // 
@@ -530,30 +574,6 @@ namespace PROYECTOQAG5
             this.Btnbuscar.TabIndex = 12;
             this.Btnbuscar.UseVisualStyleBackColor = false;
             this.Btnbuscar.Click += new System.EventHandler(this.Btnbuscar_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(123, 208);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(16, 20);
-            this.label13.TabIndex = 116;
-            this.label13.Text = "*";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(209, 269);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(16, 20);
-            this.label14.TabIndex = 117;
-            this.label14.Text = "*";
             // 
             // PUsuarios
             // 

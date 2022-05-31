@@ -18,10 +18,7 @@ namespace DATOS
             using (SqlConnection oconenexion = new SqlConnection(Conexion.cadena))
             {
                 try 
-                {
-                    
-
-
+                {                   
                     StringBuilder query = new StringBuilder();
                     query.AppendLine("SELECT u.IdUsuario, u.Documento, u.NombreCompleto, u.Correo, u.Clave, u.Estado, r.IdRol,r.Descripcion FROM USUARIO u");
                     query.AppendLine("inner join rol r on r.IdRol = u.IdRol");

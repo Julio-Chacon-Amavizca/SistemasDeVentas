@@ -16,5 +16,7 @@ namespace PROYECTOQAG5
         {
             InitializeComponent();
         }
+
+
     }
 }

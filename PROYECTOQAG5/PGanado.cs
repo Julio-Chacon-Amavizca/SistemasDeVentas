@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using CONTROLADOR;
+using DATOS;
+
+
 
 namespace PROYECTOQAG5
 {
@@ -29,6 +34,20 @@ namespace PROYECTOQAG5
             PDetalleGanado Form = new PDetalleGanado();
 
             Form.ShowDialog();
+        }
+
+        private void PGanado_Load(object sender, EventArgs e)
+        {
+            SqlConnection oconenexion = new SqlConnection(Conexion.cadena);
+            string query = "select Idganado, Apodo, Proposito, FechaAretado, UPP from GANADO";
+            SqlCommand cmd = new SqlCommand(query, oconenexion);
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+            Dgv_ganado.AutoSizeColumnsMode =
+            DataGridViewAutoSizeColumnsMode.Fill;
+
+            Dgv_ganado.DataSource = tabla;
         }
     }
 }
