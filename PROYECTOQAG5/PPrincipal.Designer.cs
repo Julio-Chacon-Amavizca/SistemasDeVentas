@@ -69,6 +69,7 @@ namespace PROYECTOQAG5
             this.toolStripContainer1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -543,6 +544,7 @@ namespace PROYECTOQAG5
             this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 22);
             this.toolStripMenuItem2.Text = "REPORTE GENERAL";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+
             // 
             // PanelContenedor
             // 

@@ -101,7 +101,7 @@ namespace PROYECTOQAG5
             this.MenuGanados.IconColor = System.Drawing.Color.Black;
             this.MenuGanados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MenuGanados.Name = "MenuGanados";
-            this.MenuGanados.Size = new System.Drawing.Size(184, 26);
+            this.MenuGanados.Size = new System.Drawing.Size(124, 22);
             this.MenuGanados.Text = "GANADO";
             this.MenuGanados.Click += new System.EventHandler(this.MenuGanados_Click);
             // 
@@ -111,7 +111,7 @@ namespace PROYECTOQAG5
             this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem1.Name = "iconMenuItem1";
-            this.iconMenuItem1.Size = new System.Drawing.Size(184, 26);
+            this.iconMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.iconMenuItem1.Text = "RAZA";
             // 
             // iconMenuItem2
@@ -120,7 +120,7 @@ namespace PROYECTOQAG5
             this.iconMenuItem2.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem2.Name = "iconMenuItem2";
-            this.iconMenuItem2.Size = new System.Drawing.Size(184, 26);
+            this.iconMenuItem2.Size = new System.Drawing.Size(124, 22);
             this.iconMenuItem2.Text = "VACUNA";
             // 
             // iconMenuItem3
@@ -129,7 +129,7 @@ namespace PROYECTOQAG5
             this.iconMenuItem3.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem3.Name = "iconMenuItem3";
-            this.iconMenuItem3.Size = new System.Drawing.Size(184, 26);
+            this.iconMenuItem3.Size = new System.Drawing.Size(124, 22);
             this.iconMenuItem3.Text = "CLIENTE";
             // 
             // iconMenuItem4
@@ -138,7 +138,7 @@ namespace PROYECTOQAG5
             this.iconMenuItem4.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem4.Name = "iconMenuItem4";
-            this.iconMenuItem4.Size = new System.Drawing.Size(184, 26);
+            this.iconMenuItem4.Size = new System.Drawing.Size(124, 22);
             this.iconMenuItem4.Text = "RANCHO";
             // 
             // MenuLeche

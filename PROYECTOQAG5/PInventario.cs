@@ -100,7 +100,8 @@ namespace PROYECTOQAG5
                 Codigo = txtcodigo.Text,
                 Nombre = txtnombre.Text,
                 Descripcion = txtdescripcion.Text,
-
+                Stock = Convert.ToInt32(txtstock.Text),
+                PrecioVenta = Convert.ToDecimal(txtprecioventa.Text),
                 oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)cbxcategoria.SelectedItem).valor) },
                 Estado = Convert.ToInt32(((OpcionCombo)cbxestado.SelectedItem).valor) == 1 ? true : false
             };
@@ -147,7 +148,8 @@ namespace PROYECTOQAG5
 
                     row.Cells["IdCategoria"].Value = ((OpcionCombo)cbxcategoria.SelectedItem).valor.ToString();
                     row.Cells["Categoria"].Value = ((OpcionCombo)cbxcategoria.SelectedItem).Texto.ToString();
-
+                    row.Cells["Stock"].Value = txtstock.Text;
+                    row.Cells["PrecioVenta"].Value = txtprecioventa.Text;
 
                     row.Cells["EstadoValor"].Value = ((OpcionCombo)cbxestado.SelectedItem).valor.ToString();
                     row.Cells["Estado"].Value = ((OpcionCombo)cbxestado.SelectedItem).Texto.ToString();
@@ -174,6 +176,8 @@ namespace PROYECTOQAG5
             txtcodigo.Text = "";
             txtnombre.Text = "";
             txtdescripcion.Text = "";
+            txtprecioventa.Text = "";
+            txtstock.Text = "";
 
             cbxcategoria.SelectedIndex = 0;
             cbxestado.SelectedIndex = 0;
@@ -195,6 +199,8 @@ namespace PROYECTOQAG5
                     txtcodigo.Text = Dgv_usuarios.Rows[indice].Cells["Codigo"].Value.ToString();
                     txtnombre.Text = Dgv_usuarios.Rows[indice].Cells["Nombre"].Value.ToString();
                     txtdescripcion.Text = Dgv_usuarios.Rows[indice].Cells["Descripcion"].Value.ToString();
+                    txtstock.Text = Dgv_usuarios.Rows[indice].Cells["Stock"].Value.ToString();
+                    txtprecioventa.Text = Dgv_usuarios.Rows[indice].Cells["PrecioVenta"].Value.ToString();
 
                     foreach (OpcionCombo oc in cbxcategoria.Items)
                     {

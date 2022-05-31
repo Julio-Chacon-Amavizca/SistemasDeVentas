@@ -29,8 +29,8 @@ namespace PROYECTOQAG5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbxbusquedas = new System.Windows.Forms.ComboBox();
             this.Btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.Btnbuscar = new FontAwesome.Sharp.IconButton();
@@ -192,7 +192,6 @@ namespace PROYECTOQAG5
             this.txtprecioventa.Name = "txtprecioventa";
             this.txtprecioventa.Size = new System.Drawing.Size(223, 26);
             this.txtprecioventa.TabIndex = 115;
-            this.txtprecioventa.Visible = false;
             // 
             // label1
             // 
@@ -204,7 +203,6 @@ namespace PROYECTOQAG5
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 118;
             this.label1.Text = "Precio:";
-            this.label1.Visible = false;
             // 
             // txtstock
             // 
@@ -214,7 +212,6 @@ namespace PROYECTOQAG5
             this.txtstock.Name = "txtstock";
             this.txtstock.Size = new System.Drawing.Size(223, 26);
             this.txtstock.TabIndex = 116;
-            this.txtstock.Visible = false;
             // 
             // label3
             // 
@@ -226,7 +223,6 @@ namespace PROYECTOQAG5
             this.label3.Size = new System.Drawing.Size(55, 20);
             this.label3.TabIndex = 117;
             this.label3.Text = "Stock";
-            this.label3.Visible = false;
             // 
             // btneliminar
             // 

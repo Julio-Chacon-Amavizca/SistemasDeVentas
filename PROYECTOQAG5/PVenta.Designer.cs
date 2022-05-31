@@ -78,7 +78,8 @@ namespace PROYECTOQAG5
             // 
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(12, 78);
+            this.label2.Location = new System.Drawing.Point(9, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1327, 852);
             this.label2.TabIndex = 54;
@@ -104,6 +105,7 @@ namespace PROYECTOQAG5
             this.Cantidad,
             this.SubTotal,
             this.btneliminar});
+
             this.Dgv_usuarios.Location = new System.Drawing.Point(109, 430);
             this.Dgv_usuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dgv_usuarios.MultiSelect = false;
@@ -119,7 +121,7 @@ namespace PROYECTOQAG5
             this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_usuarios.RowHeadersWidth = 16;
             this.Dgv_usuarios.RowTemplate.Height = 28;
-            this.Dgv_usuarios.Size = new System.Drawing.Size(959, 356);
+            this.Dgv_usuarios.Size = new System.Drawing.Size(719, 289);
             this.Dgv_usuarios.TabIndex = 56;
             this.Dgv_usuarios.TabStop = false;
             this.Dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_usuarios_CellContentClick);
@@ -216,7 +218,7 @@ namespace PROYECTOQAG5
             this.btnbuscarproducto.Location = new System.Drawing.Point(845, 50);
             this.btnbuscarproducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnbuscarproducto.Name = "btnbuscarproducto";
-            this.btnbuscarproducto.Size = new System.Drawing.Size(84, 38);
+            this.btnbuscarproducto.Size = new System.Drawing.Size(63, 31);
             this.btnbuscarproducto.TabIndex = 103;
             this.btnbuscarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnbuscarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,7 +240,7 @@ namespace PROYECTOQAG5
             this.btnagregarproducto.Location = new System.Drawing.Point(600, 127);
             this.btnagregarproducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnagregarproducto.Name = "btnagregarproducto";
-            this.btnagregarproducto.Size = new System.Drawing.Size(209, 43);
+            this.btnagregarproducto.Size = new System.Drawing.Size(157, 35);
             this.btnagregarproducto.TabIndex = 102;
             this.btnagregarproducto.Text = "Agregar";
             this.btnagregarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,6 +252,7 @@ namespace PROYECTOQAG5
             // 
             this.txtidproducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtidproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtidproducto.Location = new System.Drawing.Point(97, 62);
             this.txtidproducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtidproducto.Name = "txtidproducto";
@@ -260,6 +263,7 @@ namespace PROYECTOQAG5
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtCantidad.Location = new System.Drawing.Point(437, 135);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidad.Maximum = new decimal(new int[] {
@@ -273,6 +277,7 @@ namespace PROYECTOQAG5
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
+
             this.txtCantidad.Size = new System.Drawing.Size(107, 32);
             this.txtCantidad.TabIndex = 8;
             this.txtCantidad.Value = new decimal(new int[] {
@@ -285,8 +290,7 @@ namespace PROYECTOQAG5
             // 
             this.Label12.AutoSize = true;
             this.Label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label12.Location = new System.Drawing.Point(433, 100);
-            this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label12.Location = new System.Drawing.Point(325, 81);
             this.Label12.Name = "Label12";
             this.Label12.Size = new System.Drawing.Size(109, 23);
             this.Label12.TabIndex = 10;
@@ -307,8 +311,7 @@ namespace PROYECTOQAG5
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(139, 100);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(104, 81);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 23);
             this.label14.TabIndex = 8;
@@ -370,8 +373,7 @@ namespace PROYECTOQAG5
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(141, 28);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(106, 23);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(82, 23);
             this.label16.TabIndex = 2;
@@ -402,8 +404,7 @@ namespace PROYECTOQAG5
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 32);
             this.label1.TabIndex = 57;
@@ -416,6 +417,7 @@ namespace PROYECTOQAG5
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtfecha);
+
             this.groupBox1.Location = new System.Drawing.Point(313, 103);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
@@ -440,8 +442,7 @@ namespace PROYECTOQAG5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(237, 37);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(178, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(176, 23);
             this.label5.TabIndex = 8;
@@ -451,8 +452,7 @@ namespace PROYECTOQAG5
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 37);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(16, 30);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 23);
             this.label8.TabIndex = 2;
@@ -462,6 +462,7 @@ namespace PROYECTOQAG5
             // 
             this.txtfecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtfecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtfecha.Location = new System.Drawing.Point(24, 73);
             this.txtfecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtfecha.Name = "txtfecha";
@@ -472,8 +473,7 @@ namespace PROYECTOQAG5
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1095, 497);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(821, 404);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 23);
             this.label3.TabIndex = 102;
@@ -505,7 +505,7 @@ namespace PROYECTOQAG5
             this.iconButton1.Location = new System.Drawing.Point(1092, 742);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(209, 43);
+            this.iconButton1.Size = new System.Drawing.Size(157, 35);
             this.iconButton1.TabIndex = 104;
             this.iconButton1.Text = "Registrar";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -517,8 +517,7 @@ namespace PROYECTOQAG5
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1095, 668);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(821, 543);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 23);
             this.label4.TabIndex = 105;
@@ -527,6 +526,7 @@ namespace PROYECTOQAG5
             // txtcambio
             // 
             this.txtcambio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtcambio.Location = new System.Drawing.Point(1099, 705);
             this.txtcambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcambio.Name = "txtcambio";
@@ -539,8 +539,7 @@ namespace PROYECTOQAG5
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1095, 583);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(821, 474);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 23);
             this.label6.TabIndex = 107;
@@ -560,9 +559,9 @@ namespace PROYECTOQAG5
             // 
             // PVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1372, 970);
+            this.ClientSize = new System.Drawing.Size(1029, 788);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtpagocon);
             this.Controls.Add(this.label4);

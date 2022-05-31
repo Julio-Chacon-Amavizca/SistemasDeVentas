@@ -52,7 +52,7 @@ FechaRegistro datetime default getdate()
 
 CREATE TABLE VENTA(
 IdVenta int primary key identity,
-IdUsuario int references USUARIO(IdUsuario),
+IdUsuario int,
 TipoDocuemnto varchar (50),
 NumeroDocumento varchar (50),
 MontoPago decimal (10,2),
@@ -227,16 +227,6 @@ begin
 	set @Mensaje=''
 	declare @pasoreglas bit = 1
 
-	IF exists(Select * from VENTA v
-	INNER JOIN USUARIO u on u.IdUsuario = u.IdUsuario
-	where u.IdUsuario =@IdUsuario
-	)
-	BEGIN
-	set @pasoreglas=0
-	set @Respueta=0
-	set @Mensaje=@Mensaje + 'No se puede eliminar porque el usuario se encuentra relacionado con una VENTA'
-	END
-
 	if(@pasoreglas=1)
 	BEGIN
 		delete FROM USUARIO WHERE IdUsuario= @IdUsuario
@@ -324,6 +314,8 @@ create PROC SP_REGISTRARPRODUCTO(
 @Nombre varchar (30),
 @Descripcion varchar(50),
 @IdCategoria int,
+@Stock int,
+@PrecioVenta decimal(10,2),
 @Estado bit,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -332,7 +324,7 @@ begin
 	set @Resultado=0
 	if not exists (SELECT * FROM PRODUCTO WHERE Codigo=@Codigo)
 	begin
-		insert into PRODUCTO(Codigo,Nombre, Descripcion,IdCategoria,Estado)values (@Codigo,@Nombre, @Descripcion,@IdCategoria,@Estado)
+		insert into PRODUCTO(Codigo,Nombre, Descripcion,IdCategoria,Stock,PrecioVenta,Estado)values (@Codigo,@Nombre, @Descripcion,@IdCategoria,@Stock,@PrecioVenta,@Estado)
 		set @Resultado=SCOPE_IDENTITY()
 	end
 	else
@@ -349,6 +341,8 @@ create PROC SP_EDITARPRODUCTO(
 @Nombre varchar (30),
 @Descripcion varchar(50),
 @IdCategoria int,
+@Stock int,
+@PrecioVenta decimal(10,2),
 @Estado bit,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -362,6 +356,8 @@ begin
 		Nombre=@Nombre, 
 		Descripcion=@Descripcion,
 		IdCategoria=@IdCategoria,
+		Stock=@Stock,
+		PrecioVenta=@PrecioVenta,
 		Estado= @Estado
 		where IdProducto=@IdProducto
 
@@ -557,7 +553,7 @@ CREATE TABLE GANADO(
 	IdGanado int primary key,
 	Apodo varchar(50),
 	Sexo varchar(6),
-	Peso decimal (4,3),
+	Peso decimal (7,3),
 	Proposito varchar(50),
 	FechaNacimiento date,
 	FechaAretado datetime default getdate(),
@@ -567,11 +563,12 @@ CREATE TABLE GANADO(
 
 CREATE TABLE VACUNACION(
 	FechaVacunacion datetime default getdate(),
-	VacunadoPor varchar(50)
+	VacunadoPor varchar(50),
+	IdUPP int
 )
 
 CREATE TABLE PARTOS(
-	IdGanado int references GANADO(IdGanado),
+	IdGanado int,
 	FechaParto datetime default getdate(),
 	Sexo varchar(6),
 	Estado int
@@ -581,13 +578,13 @@ CREATE TABLE MOVIMIENTOS(
 	IdMovimiento int identity,
 	FechaMovimiento datetime default getdate(),
 	TipoMovimiento varchar(50),
-	IdGanado int references GANADO(IdGanado)
+	IdGanado int
 )
 
 
 CREATE TABLE VENTAS(
 IdUPP int references UPP(IdUPP),
-IdGanado int references GANADO (IdGanado),
+IdGanado int,
 FechaVenta datetime default getdate(),
 PrecioVenta decimal	(10,2),
 PrecioSubasta decimal (10,2)
@@ -596,11 +593,223 @@ PrecioSubasta decimal (10,2)
 
 CREATE TABLE MUERTES(
 IdUPP int references UPP (IdUPP),
-IdGanado int references GANADO (IdGanado),
+IdGanado int,
 FechaMuerte datetime default getdate(),
 DescripcionMuerte VARCHAR (255)
 )
 
+CREATE PROC SP_INGRESOGANADO(
+	@IdGanado int,
+	@Apodo varchar(50),
+	@Sexo varchar(6),
+	@Peso decimal(7,3),
+	@Proposito varchar(50),
+	@FechaNacimiento varchar(8),
+	@FechaAretado varchar(8),
+	@UPP int
+)
+AS
+	DECLARE @FechaNacimientoDate DATE = @FechaNacimiento
+	DECLARE @FechaAretadoDatetime DATETIME = @FechaAretado
+	DECLARE @FechaMovimiento DATETIME = getdate()
+	DECLARE @fallo1 VARCHAR(50) = 'fallo el ingreso de ganado'
+	DECLARE @fallo2 VARCHAR(50) = 'fallo el ingreso de movimiento'
+
+	IF exists (SELECT * FROM UPP WHERE IdUPP = @UPP)
+		BEGIN TRANSACTION ingresarGanado
+			BEGIN try
+				INSERT INTO GANADO(IdGanado,Apodo,Sexo,Peso,Proposito,FechaNacimiento,FechaAretado,TipoRegistro,UPP)
+				VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimientoDate,@FechaAretadoDatetime,'Ingreso',@UPP)
+
+				COMMIT TRANSACTION ingresarGanado
+			END try
+			BEGIN catch
+				ROLLBACK TRANSACTION ingresarGanado
+				SELECT @fallo1
+			END catch
+
+		BEGIN TRANSACTION ingresarMovimiento
+			BEGIN try
+				INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+				VALUES(@FechaMovimiento,'Ingreso',@IdGanado)
+
+				COMMIT TRANSACTION ingresarMovimiento
+			END try
+			BEGIN catch
+				ROLLBACK TRANSACTION ingresarMovimiento
+				SELECT @fallo2
+			END catch	
+GO
+
+CREATE PROC SP_MUERTEGANADO(
+	@IdGanado int,
+	@IdUPP int,
+	@FechaMuerte varchar(8),
+	@DescripcionMuerte varchar(255)
+)
+AS
+BEGIN
+	DECLARE @FechaMuerteDatetime DATETIME = @FechaMuerte
+	DECLARE @FechaMovimiento DATETIME = getdate()
+
+	IF exists (SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
+		BEGIN TRANSACTION muerteGanado
+			BEGIN try
+				DELETE FROM GANADO WHERE IdGanado = @IdGanado
+
+				INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+				VALUES(@FechaMovimiento,'Muerte',@IdGanado)
+
+				INSERT INTO MUERTES(IdUPP,IdGanado,FechaMuerte,DescripcionMuerte)
+				VALUES(@IdUPP,@IdGanado,@FechaMuerte,@DescripcionMuerte)
+
+				COMMIT TRANSACTION muerteGanado
+			END try
+			BEGIN catch
+				ROLLBACK TRANSACTION muerteGanado
+			END catch
+END
+GO 
+
+CREATE PROC SP_VENTAGANADO(
+	@IdUPP int,
+	@IdGanado int,
+	@PrecioVenta decimal(10,2),
+	@PrecioSubasta decimal(10,2)
+)
+AS
+BEGIN
+	DECLARE @FechaMovimiento DATETIME = getdate()
+
+	IF exists (SELECT * FROM UPP WHERE IdUPP = @IdUPP)
+		IF exists(SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
+				BEGIN transaction ventaGanado
+					BEGIN try
+						INSERT INTO VENTAS(IdUPP,IdGanado,FechaVenta,PrecioVenta,PrecioSubasta)
+						VALUES(@IdUPP,@IdGanado,getdate(),@PrecioVenta,@PrecioSubasta)
+
+						INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+						VALUES(@FechaMovimiento,'Venta',@IdGanado)
+
+						DELETE FROM GANADO WHERE IdGanado = @IdGanado
+
+						COMMIT transaction ventaGanado
+					END try
+					BEGIN catch
+						ROLLBACK transaction ventaGanado
+				END catch
+END
+GO
+
+
+CREATE PROC SP_AGREGARUPP(
+	@IdUPP int,
+	@NombreProductor varchar(50),
+	@UbicacionRancho varchar(100)
+)
+AS
+BEGIN
+	BEGIN transaction agregarUPP
+		BEGIN try
+			INSERT INTRO UPP(IdUPP,NombreProductor,UbicacionRancho)
+			VALUES(@IdUPP,@NombreProductor,@UbicacionRancho)
+
+			COMMIT transaction agregarUPP
+		END try
+		BEGIN catch
+			ROLLBACK transaction agregarUPP
+		END catch
+END
+
+CREATE TABLE COMPRAS(
+	IdUPP int references UPP(IdUPP),
+	IdGanado int,
+	FechaCompra datetime default getdate(),
+	PrecioCompra decimal	(10,2),
+)
+
+
+CREATE PROC SP_COMPRAGANADO(
+	@IdUPP INT,
+	@PrecioCompra decimal(10,2),
+	@IdGanado INT,
+	@Apodo varchar(50),
+	@Sexo varchar(6),
+	@Peso decimal(7,3),
+	@Proposito varchar(50),
+	@FechaNacimiento varchar(10),
+	@FechaAretado varchar(10)
+)
+AS
+BEGIN
+	DECLARE @FechaNacimientoDate DATE = @FechaNacimiento
+	DECLARE @FechaAretadoDatetime DATETIME = @FechaAretado
+	DECLARE @FechaMovimiento DATETIME = getdate()
+
+	BEGIN TRANSACTION compraGanado
+		BEGIN TRY
+			INSERT INTO GANADO(IdGanado,Apodo,Sexo,Peso,Proposito,FechaNacimiento,FechaAretado,TipoRegistro,UPP)
+			VALUES(@IdGanado,@Apodo,@Sexo,@Peso,@Proposito,@FechaNacimientoDate,@FechaAretadoDatetime,'Compra',@IdUPP)
+
+			INSERT INTO COMPRAS(IdUPP,IdGanado,FechaCompra,PrecioCompra)
+			VALUES(@IdUPP,@IdGanado,@FechaMovimiento,@PrecioCompra)
+
+			INSERT INTO MOVIMIENTOS(FechaMovimiento,TipoMovimiento,IdGanado)
+			VALUES(@FechaMovimiento,'Compra',@IdGanado)
+
+			COMMIT TRANSACTION compraGanado
+		END TRY
+		BEGIN CATCH
+			ROLLBACK TRANSACTION compraGanado
+		END CATCH
+END
+GO
+
+CREATE PROC SP_AGREGARPARTO(
+	@IdGanado INT,
+	@FechaParto VARCHAR(10),
+	@Sexo VARCHAR(6),
+)
+AS
+BEGIN
+	DECLARE @FechaPartoDatetime DATETIME = @FechaParto
+
+	IF EXISTS (SELECT * FROM GANADO WHERE IdGanado = @IdGanado)
+		BEGIN TRANSACTION agregarParto
+			BEGIN TRY
+				INSERT INTO PARTOS(IdGanado,FechaParto,Sexo,Estado)
+				VALUES(@IdGanado,@FechaPartoDatetime,@Sexo,1)
+
+				COMMIT TRANSACTION agregarParto
+			END TRY
+			BEGIN CATCH
+				ROLLBACK TRANSACTION agregarParto
+			END CATCH
+END
+GO
+
+CREATE PROC SP_AGREGARVACUNACION(
+	@VacunadoPor VARCHAR(50),
+	@FechaVacunacion VARCHAR(10),
+	@IdUPP int
+)
+AS
+BEGIN
+	DECLARE @FechaVacunacionDatetime DATETIME = @FechaVacunacion
+	
+	IF exists (SELECT * FROM UPP WHERE IdUPP = @IdUPP)
+		BEGIN TRANSACTION agregarVacunacion
+			BEGIN TRY
+				INSERT INTO VACUNACION(FechaVacunacion,VacunadoPor,IdUPP)
+				VALUES(@FechaVacunacionDatetime,@VacunadoPor,@IdUPP)
+
+				COMMIT TRANSACTION agregarVacunacion
+			END TRY
+			BEGIN CATCH
+				ROLLBACK TRANSACTION agregarVacunacion
+			END CATCH
+END
+GO
 
 
 /* SISTEMA DE GANADERIA 

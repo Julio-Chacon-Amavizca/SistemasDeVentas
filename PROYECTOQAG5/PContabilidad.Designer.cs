@@ -62,6 +62,7 @@ namespace PROYECTOQAG5
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(119, 72);
+            this.label2.Location = new System.Drawing.Point(352, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 19);
@@ -85,6 +86,7 @@ namespace PROYECTOQAG5
             this.Dgv_ventas.Size = new System.Drawing.Size(1007, 387);
             this.Dgv_ventas.TabIndex = 15;
             this.Dgv_ventas.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.Dgv_ventas_CellPainting);
+
             // 
             // dateTimePicker2
             // 
@@ -100,6 +102,7 @@ namespace PROYECTOQAG5
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.dateTimePicker1.Location = new System.Drawing.Point(28, 100);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -167,6 +170,7 @@ namespace PROYECTOQAG5
             this.BtnInfo.ReadOnly = true;
             this.BtnInfo.Width = 40;
             // 
+
             // NumeroDocumento
             // 
             this.NumeroDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
