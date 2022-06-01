@@ -124,7 +124,7 @@ namespace DATOS
                     }
                 }
             }
-            catch (Exception ex)
+            catch 
             {
 
                 obtenido = false;

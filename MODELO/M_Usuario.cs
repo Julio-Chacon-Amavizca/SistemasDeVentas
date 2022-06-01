@@ -33,7 +33,7 @@ namespace MODELO
             }
 
 
-            if (obj.Clave == "" || obj.Clave.Length < 6)
+            if (obj.Clave == "" || obj.Clave.Length < 6) {
 
                 Mensaje += "Es necesaria una contraseña de 6 caracteres\n";
             }
@@ -58,7 +58,7 @@ namespace MODELO
             {
                 return objecd_usuario.Registrar(obj, out Mensaje);
             }
-            
+           
         }
 
         public bool Editar(Usuario obj, out string Mensaje)

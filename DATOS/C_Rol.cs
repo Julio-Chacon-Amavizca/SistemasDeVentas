@@ -40,7 +40,7 @@ namespace DATOS
                         }
                     }
                 }
-                catch (Exception ex)
+                catch
                 {
                     lista = new List<Rol>();
                 }

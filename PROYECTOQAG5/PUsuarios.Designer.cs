@@ -51,8 +51,6 @@ namespace PROYECTOQAG5
             this.txtindice = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btneliminar = new FontAwesome.Sharp.IconButton();
-            this.btnlimpiardatos = new FontAwesome.Sharp.IconButton();
             this.btnguardar = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.cbxestadousuario = new System.Windows.Forms.ComboBox();
@@ -315,50 +313,6 @@ namespace PROYECTOQAG5
             this.label7.Size = new System.Drawing.Size(128, 25);
             this.label7.TabIndex = 114;
             this.label7.Text = "USUARIOS";
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.BackColor = System.Drawing.Color.Red;
-            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btneliminar.IconColor = System.Drawing.Color.White;
-            this.btneliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btneliminar.IconSize = 35;
-            this.btneliminar.Location = new System.Drawing.Point(22, 734);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(222, 37);
-            this.btneliminar.TabIndex = 9;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btneliminar.UseVisualStyleBackColor = false;
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
-            // 
-            // btnlimpiardatos
-            // 
-            this.btnlimpiardatos.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnlimpiardatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpiardatos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnlimpiardatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlimpiardatos.ForeColor = System.Drawing.Color.White;
-            this.btnlimpiardatos.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.btnlimpiardatos.IconColor = System.Drawing.Color.White;
-            this.btnlimpiardatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnlimpiardatos.IconSize = 35;
-            this.btnlimpiardatos.Location = new System.Drawing.Point(22, 691);
-            this.btnlimpiardatos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnlimpiardatos.Name = "btnlimpiardatos";
-            this.btnlimpiardatos.Size = new System.Drawing.Size(222, 37);
-            this.btnlimpiardatos.TabIndex = 8;
-            this.btnlimpiardatos.Text = "Limpiar";
-            this.btnlimpiardatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnlimpiardatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnlimpiardatos.UseVisualStyleBackColor = false;
-            this.btnlimpiardatos.Click += new System.EventHandler(this.btnlimpiardatos_Click);
             // 
             // btnguardar
             // 

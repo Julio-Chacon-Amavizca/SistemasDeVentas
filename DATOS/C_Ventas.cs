@@ -30,7 +30,7 @@ namespace DATOS
                     idcorrelativo = Convert.ToInt32(cmd.ExecuteScalar());
 
                 }
-                catch (Exception ex)
+                catch
                 {
                     idcorrelativo = 0;
                 }
@@ -59,7 +59,7 @@ namespace DATOS
 
                     respuesta = cmd.ExecuteNonQuery() > 0 ? true : false;
                 }
-                catch (Exception ex)
+                catch
                 {
                     respuesta = false;
                 }
@@ -86,7 +86,7 @@ namespace DATOS
 
                     respuesta = cmd.ExecuteNonQuery() > 0 ? true : false;
                 }
-                catch (Exception ex)
+                catch
                 {
                     respuesta = false;
                 }
@@ -265,7 +265,7 @@ namespace DATOS
                         }
                     }
                 }
-                catch (Exception ex)
+                catch
                 {
                     lista = new List<Venta>();
                 }
