@@ -228,8 +228,6 @@ namespace PROYECTOQAG5
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtindice);
@@ -596,7 +594,5 @@ namespace PROYECTOQAG5
         private System.Windows.Forms.TextBox txtindice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
     }
 }
