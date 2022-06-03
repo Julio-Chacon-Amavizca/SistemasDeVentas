@@ -114,7 +114,7 @@ namespace PROYECTOQAG5
                 }
 
                 SaveFileDialog savefile = new SaveFileDialog();
-                savefile.FileName = string.Format("ReporteProducto_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+                savefile.FileName = string.Format("ReporteUPP_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));
                 savefile.Filter = "Excel Files | *.xlsx";
 
                 if (savefile.ShowDialog() == DialogResult.OK)

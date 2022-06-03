@@ -29,8 +29,8 @@ namespace PROYECTOQAG5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.Dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +40,6 @@ namespace PROYECTOQAG5
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btneliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.GroupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnbuscarproducto = new FontAwesome.Sharp.IconButton();
-            this.btnagregarproducto = new FontAwesome.Sharp.IconButton();
             this.txtidproducto = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.Label12 = new System.Windows.Forms.Label();
@@ -68,6 +66,8 @@ namespace PROYECTOQAG5
             this.label6 = new System.Windows.Forms.Label();
             this.txtpagocon = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnbuscarproducto = new FontAwesome.Sharp.IconButton();
+            this.btnagregarproducto = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_usuarios)).BeginInit();
             this.GroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -76,6 +76,9 @@ namespace PROYECTOQAG5
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Location = new System.Drawing.Point(-64, 52);
@@ -87,15 +90,15 @@ namespace PROYECTOQAG5
             // 
             this.Dgv_usuarios.AllowUserToAddRows = false;
             this.Dgv_usuarios.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
@@ -109,14 +112,14 @@ namespace PROYECTOQAG5
             this.Dgv_usuarios.MultiSelect = false;
             this.Dgv_usuarios.Name = "Dgv_usuarios";
             this.Dgv_usuarios.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_usuarios.RowHeadersWidth = 16;
             this.Dgv_usuarios.RowTemplate.Height = 28;
             this.Dgv_usuarios.Size = new System.Drawing.Size(959, 356);
@@ -202,50 +205,6 @@ namespace PROYECTOQAG5
             this.GroupBox5.TabStop = false;
             this.GroupBox5.Text = "Informacion Producto";
             // 
-            // btnbuscarproducto
-            // 
-            this.btnbuscarproducto.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnbuscarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnbuscarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnbuscarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscarproducto.ForeColor = System.Drawing.Color.White;
-            this.btnbuscarproducto.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnbuscarproducto.IconColor = System.Drawing.Color.White;
-            this.btnbuscarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnbuscarproducto.IconSize = 30;
-            this.btnbuscarproducto.Location = new System.Drawing.Point(1127, 62);
-            this.btnbuscarproducto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnbuscarproducto.Name = "btnbuscarproducto";
-            this.btnbuscarproducto.Size = new System.Drawing.Size(84, 38);
-            this.btnbuscarproducto.TabIndex = 103;
-            this.btnbuscarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnbuscarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnbuscarproducto.UseVisualStyleBackColor = false;
-            this.btnbuscarproducto.Click += new System.EventHandler(this.btnbuscarproducto_Click);
-            // 
-            // btnagregarproducto
-            // 
-            this.btnagregarproducto.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnagregarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnagregarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnagregarproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregarproducto.ForeColor = System.Drawing.Color.White;
-            this.btnagregarproducto.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnagregarproducto.IconColor = System.Drawing.Color.White;
-            this.btnagregarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnagregarproducto.IconSize = 35;
-            this.btnagregarproducto.Location = new System.Drawing.Point(800, 156);
-            this.btnagregarproducto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnagregarproducto.Name = "btnagregarproducto";
-            this.btnagregarproducto.Size = new System.Drawing.Size(209, 43);
-            this.btnagregarproducto.TabIndex = 102;
-            this.btnagregarproducto.Text = "Agregar";
-            this.btnagregarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnagregarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnagregarproducto.UseVisualStyleBackColor = false;
-            this.btnagregarproducto.Click += new System.EventHandler(this.btnagregarproducto_Click);
-            // 
             // txtidproducto
             // 
             this.txtidproducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -256,6 +215,7 @@ namespace PROYECTOQAG5
             this.txtidproducto.Size = new System.Drawing.Size(50, 27);
             this.txtidproducto.TabIndex = 21;
             this.txtidproducto.TabStop = false;
+            this.txtidproducto.Visible = false;
             // 
             // txtCantidad
             // 
@@ -430,7 +390,7 @@ namespace PROYECTOQAG5
             this.cbxtipodocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxtipodocumento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxtipodocumento.FormattingEnabled = true;
-            this.cbxtipodocumento.Location = new System.Drawing.Point(321, 87);
+            this.cbxtipodocumento.Location = new System.Drawing.Point(359, 88);
             this.cbxtipodocumento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbxtipodocumento.Name = "cbxtipodocumento";
             this.cbxtipodocumento.Size = new System.Drawing.Size(256, 29);
@@ -441,7 +401,7 @@ namespace PROYECTOQAG5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(237, 37);
+            this.label5.Location = new System.Drawing.Point(412, 37);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 21);
@@ -453,7 +413,7 @@ namespace PROYECTOQAG5
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 37);
+            this.label8.Location = new System.Drawing.Point(248, 37);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 21);
@@ -464,9 +424,10 @@ namespace PROYECTOQAG5
             // 
             this.txtfecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtfecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfecha.Location = new System.Drawing.Point(32, 90);
+            this.txtfecha.Location = new System.Drawing.Point(154, 79);
             this.txtfecha.Margin = new System.Windows.Forms.Padding(5);
             this.txtfecha.Name = "txtfecha";
+            this.txtfecha.ReadOnly = true;
             this.txtfecha.Size = new System.Drawing.Size(258, 27);
             this.txtfecha.TabIndex = 0;
             // 
@@ -559,6 +520,50 @@ namespace PROYECTOQAG5
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btnbuscarproducto
+            // 
+            this.btnbuscarproducto.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnbuscarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnbuscarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnbuscarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscarproducto.ForeColor = System.Drawing.Color.White;
+            this.btnbuscarproducto.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnbuscarproducto.IconColor = System.Drawing.Color.White;
+            this.btnbuscarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnbuscarproducto.IconSize = 30;
+            this.btnbuscarproducto.Location = new System.Drawing.Point(1127, 62);
+            this.btnbuscarproducto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnbuscarproducto.Name = "btnbuscarproducto";
+            this.btnbuscarproducto.Size = new System.Drawing.Size(84, 38);
+            this.btnbuscarproducto.TabIndex = 103;
+            this.btnbuscarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnbuscarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnbuscarproducto.UseVisualStyleBackColor = false;
+            this.btnbuscarproducto.Click += new System.EventHandler(this.btnbuscarproducto_Click);
+            // 
+            // btnagregarproducto
+            // 
+            this.btnagregarproducto.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnagregarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnagregarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnagregarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregarproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregarproducto.ForeColor = System.Drawing.Color.White;
+            this.btnagregarproducto.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnagregarproducto.IconColor = System.Drawing.Color.White;
+            this.btnagregarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnagregarproducto.IconSize = 35;
+            this.btnagregarproducto.Location = new System.Drawing.Point(800, 156);
+            this.btnagregarproducto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnagregarproducto.Name = "btnagregarproducto";
+            this.btnagregarproducto.Size = new System.Drawing.Size(209, 43);
+            this.btnagregarproducto.TabIndex = 102;
+            this.btnagregarproducto.Text = "Agregar";
+            this.btnagregarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnagregarproducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnagregarproducto.UseVisualStyleBackColor = false;
+            this.btnagregarproducto.Click += new System.EventHandler(this.btnagregarproducto_Click);
             // 
             // PVenta
             // 

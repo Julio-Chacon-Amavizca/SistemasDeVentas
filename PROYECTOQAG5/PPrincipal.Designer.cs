@@ -69,7 +69,6 @@ namespace PROYECTOQAG5
             this.toolStripContainer1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
-
             this.SuspendLayout();
             // 
             // panel1
@@ -80,8 +79,9 @@ namespace PROYECTOQAG5
             this.panel1.Controls.Add(this.Btn_close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1248, 33);
+            this.panel1.Size = new System.Drawing.Size(1664, 41);
             this.panel1.TabIndex = 6;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -95,9 +95,10 @@ namespace PROYECTOQAG5
             this.btn_minimizar.IconColor = System.Drawing.Color.White;
             this.btn_minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_minimizar.IconSize = 20;
-            this.btn_minimizar.Location = new System.Drawing.Point(1182, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(1576, 0);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(33, 33);
+            this.btn_minimizar.Size = new System.Drawing.Size(44, 41);
             this.btn_minimizar.TabIndex = 101;
             this.btn_minimizar.TabStop = false;
             this.btn_minimizar.UseVisualStyleBackColor = false;
@@ -113,9 +114,10 @@ namespace PROYECTOQAG5
             this.Btn_close.IconColor = System.Drawing.Color.White;
             this.Btn_close.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_close.IconSize = 20;
-            this.Btn_close.Location = new System.Drawing.Point(1215, 0);
+            this.Btn_close.Location = new System.Drawing.Point(1620, 0);
+            this.Btn_close.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_close.Name = "Btn_close";
-            this.Btn_close.Size = new System.Drawing.Size(33, 33);
+            this.Btn_close.Size = new System.Drawing.Size(44, 41);
             this.Btn_close.TabIndex = 100;
             this.Btn_close.TabStop = false;
             this.Btn_close.UseVisualStyleBackColor = false;
@@ -138,10 +140,10 @@ namespace PROYECTOQAG5
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btn_cerrarSesion);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 33);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 41);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 788);
+            this.panel2.Size = new System.Drawing.Size(292, 969);
             this.panel2.TabIndex = 7;
             // 
             // Btn_negocio
@@ -154,10 +156,10 @@ namespace PROYECTOQAG5
             this.Btn_negocio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_negocio.IconSize = 40;
             this.Btn_negocio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_negocio.Location = new System.Drawing.Point(9, 479);
+            this.Btn_negocio.Location = new System.Drawing.Point(12, 590);
             this.Btn_negocio.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_negocio.Name = "Btn_negocio";
-            this.Btn_negocio.Size = new System.Drawing.Size(197, 55);
+            this.Btn_negocio.Size = new System.Drawing.Size(263, 68);
             this.Btn_negocio.TabIndex = 31;
             this.Btn_negocio.Text = "NEGOCIO";
             this.Btn_negocio.UseVisualStyleBackColor = true;
@@ -173,10 +175,10 @@ namespace PROYECTOQAG5
             this.Btn_categorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_categorias.IconSize = 40;
             this.Btn_categorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_categorias.Location = new System.Drawing.Point(9, 424);
+            this.Btn_categorias.Location = new System.Drawing.Point(12, 522);
             this.Btn_categorias.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_categorias.Name = "Btn_categorias";
-            this.Btn_categorias.Size = new System.Drawing.Size(197, 55);
+            this.Btn_categorias.Size = new System.Drawing.Size(263, 68);
             this.Btn_categorias.TabIndex = 30;
             this.Btn_categorias.Text = "CATEGORIAS";
             this.Btn_categorias.UseVisualStyleBackColor = true;
@@ -192,10 +194,10 @@ namespace PROYECTOQAG5
             this.Btn_producto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_producto.IconSize = 40;
             this.Btn_producto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_producto.Location = new System.Drawing.Point(9, 369);
+            this.Btn_producto.Location = new System.Drawing.Point(12, 454);
             this.Btn_producto.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_producto.Name = "Btn_producto";
-            this.Btn_producto.Size = new System.Drawing.Size(197, 55);
+            this.Btn_producto.Size = new System.Drawing.Size(263, 68);
             this.Btn_producto.TabIndex = 29;
             this.Btn_producto.Text = "PRODUCTO";
             this.Btn_producto.UseVisualStyleBackColor = true;
@@ -211,10 +213,10 @@ namespace PROYECTOQAG5
             this.Btn_usuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_usuarios.IconSize = 40;
             this.Btn_usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_usuarios.Location = new System.Drawing.Point(9, 314);
+            this.Btn_usuarios.Location = new System.Drawing.Point(12, 386);
             this.Btn_usuarios.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_usuarios.Name = "Btn_usuarios";
-            this.Btn_usuarios.Size = new System.Drawing.Size(197, 55);
+            this.Btn_usuarios.Size = new System.Drawing.Size(263, 68);
             this.Btn_usuarios.TabIndex = 28;
             this.Btn_usuarios.Text = "USUARIOS";
             this.Btn_usuarios.UseVisualStyleBackColor = true;
@@ -230,10 +232,10 @@ namespace PROYECTOQAG5
             this.Btn_contabilidad.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_contabilidad.IconSize = 40;
             this.Btn_contabilidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_contabilidad.Location = new System.Drawing.Point(9, 259);
+            this.Btn_contabilidad.Location = new System.Drawing.Point(12, 319);
             this.Btn_contabilidad.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_contabilidad.Name = "Btn_contabilidad";
-            this.Btn_contabilidad.Size = new System.Drawing.Size(197, 55);
+            this.Btn_contabilidad.Size = new System.Drawing.Size(263, 68);
             this.Btn_contabilidad.TabIndex = 27;
             this.Btn_contabilidad.Text = "CONTABILIDAD";
             this.Btn_contabilidad.UseVisualStyleBackColor = true;
@@ -249,10 +251,10 @@ namespace PROYECTOQAG5
             this.Btn_ganaderia.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_ganaderia.IconSize = 40;
             this.Btn_ganaderia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_ganaderia.Location = new System.Drawing.Point(9, 204);
+            this.Btn_ganaderia.Location = new System.Drawing.Point(12, 251);
             this.Btn_ganaderia.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_ganaderia.Name = "Btn_ganaderia";
-            this.Btn_ganaderia.Size = new System.Drawing.Size(197, 55);
+            this.Btn_ganaderia.Size = new System.Drawing.Size(263, 68);
             this.Btn_ganaderia.TabIndex = 26;
             this.Btn_ganaderia.Text = "GANADERIA";
             this.Btn_ganaderia.UseVisualStyleBackColor = true;
@@ -268,10 +270,10 @@ namespace PROYECTOQAG5
             this.Btn_Ventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_Ventas.IconSize = 40;
             this.Btn_Ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Ventas.Location = new System.Drawing.Point(9, 149);
+            this.Btn_Ventas.Location = new System.Drawing.Point(12, 183);
             this.Btn_Ventas.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Ventas.Name = "Btn_Ventas";
-            this.Btn_Ventas.Size = new System.Drawing.Size(197, 55);
+            this.Btn_Ventas.Size = new System.Drawing.Size(263, 68);
             this.Btn_Ventas.TabIndex = 25;
             this.Btn_Ventas.Text = "VENTAS";
             this.Btn_Ventas.UseVisualStyleBackColor = true;
@@ -284,10 +286,11 @@ namespace PROYECTOQAG5
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 44;
-            this.iconPictureBox1.Location = new System.Drawing.Point(21, 679);
+            this.iconPictureBox1.IconSize = 54;
+            this.iconPictureBox1.Location = new System.Drawing.Point(28, 835);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(55, 44);
+            this.iconPictureBox1.Size = new System.Drawing.Size(73, 54);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 24;
             this.iconPictureBox1.TabStop = false;
@@ -300,10 +303,10 @@ namespace PROYECTOQAG5
             this.MenuAcercade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.MenuAcercade.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuAcercade.ForeColor = System.Drawing.Color.Gainsboro;
-            this.MenuAcercade.Location = new System.Drawing.Point(81, 679);
-            this.MenuAcercade.Margin = new System.Windows.Forms.Padding(2);
+            this.MenuAcercade.Location = new System.Drawing.Point(108, 835);
+            this.MenuAcercade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuAcercade.Name = "MenuAcercade";
-            this.MenuAcercade.Size = new System.Drawing.Size(125, 44);
+            this.MenuAcercade.Size = new System.Drawing.Size(167, 54);
             this.MenuAcercade.TabIndex = 23;
             this.MenuAcercade.Text = "Acerca de";
             this.MenuAcercade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -314,10 +317,9 @@ namespace PROYECTOQAG5
             // 
             this.lbl_Usuario.AutoSize = true;
             this.lbl_Usuario.ForeColor = System.Drawing.Color.White;
-            this.lbl_Usuario.Location = new System.Drawing.Point(27, 120);
-            this.lbl_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Usuario.Location = new System.Drawing.Point(36, 148);
             this.lbl_Usuario.Name = "lbl_Usuario";
-            this.lbl_Usuario.Size = new System.Drawing.Size(63, 13);
+            this.lbl_Usuario.Size = new System.Drawing.Size(81, 16);
             this.lbl_Usuario.TabIndex = 22;
             this.lbl_Usuario.Text = "labelusuario";
             // 
@@ -325,10 +327,9 @@ namespace PROYECTOQAG5
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(79, 98);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(105, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 21;
             this.label1.Text = "Bienvenido";
             // 
@@ -336,10 +337,10 @@ namespace PROYECTOQAG5
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::PROYECTOQAG5.Properties.Resources.png_transparent_logo_business_logistics_service_business_angle_hand_service;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(53, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -352,10 +353,10 @@ namespace PROYECTOQAG5
             this.btn_cerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrarSesion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_cerrarSesion.Location = new System.Drawing.Point(0, 735);
-            this.btn_cerrarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cerrarSesion.Location = new System.Drawing.Point(0, 904);
+            this.btn_cerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cerrarSesion.Name = "btn_cerrarSesion";
-            this.btn_cerrarSesion.Size = new System.Drawing.Size(219, 53);
+            this.btn_cerrarSesion.Size = new System.Drawing.Size(292, 65);
             this.btn_cerrarSesion.TabIndex = 5;
             this.btn_cerrarSesion.Text = "Cerrar Sesion";
             this.btn_cerrarSesion.UseVisualStyleBackColor = false;
@@ -367,12 +368,12 @@ namespace PROYECTOQAG5
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip);
-            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(185, 547);
-            this.toolStripContainer1.Location = new System.Drawing.Point(4, 84);
-            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(2);
+            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(222, 679);
+            this.toolStripContainer1.Location = new System.Drawing.Point(5, 103);
+            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(185, 572);
+            this.toolStripContainer1.Size = new System.Drawing.Size(247, 704);
             this.toolStripContainer1.TabIndex = 9;
             this.toolStripContainer1.Text = "toolStripContainer1";
             this.toolStripContainer1.Visible = false;
@@ -391,9 +392,9 @@ namespace PROYECTOQAG5
             this.menuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip.Size = new System.Drawing.Size(185, 547);
+            this.menuStrip.Size = new System.Drawing.Size(247, 673);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             this.menuStrip.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
@@ -544,26 +545,26 @@ namespace PROYECTOQAG5
             this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 22);
             this.toolStripMenuItem2.Text = "REPORTE GENERAL";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-
             // 
             // PanelContenedor
             // 
             this.PanelContenedor.Controls.Add(this.toolStripContainer1);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(219, 33);
-            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelContenedor.Location = new System.Drawing.Point(292, 41);
+            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1029, 788);
+            this.PanelContenedor.Size = new System.Drawing.Size(1372, 969);
             this.PanelContenedor.TabIndex = 8;
             // 
             // PPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 821);
+            this.ClientSize = new System.Drawing.Size(1664, 1010);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PPrincipal";

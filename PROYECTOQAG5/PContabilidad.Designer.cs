@@ -29,13 +29,12 @@ namespace PROYECTOQAG5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnbuscarproducto = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.cbxbusquedas = new System.Windows.Forms.ComboBox();
@@ -48,6 +47,7 @@ namespace PROYECTOQAG5
             this.MontoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnDescargar = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,15 +90,6 @@ namespace PROYECTOQAG5
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(303, 27);
             this.dateTimePicker1.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(619, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "CONTABILIDAD";
             // 
             // btnbuscarproducto
             // 
@@ -169,15 +160,15 @@ namespace PROYECTOQAG5
             this.Dgv_ventas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dgv_ventas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_ventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
@@ -190,14 +181,14 @@ namespace PROYECTOQAG5
             this.Dgv_ventas.MultiSelect = false;
             this.Dgv_ventas.Name = "Dgv_ventas";
             this.Dgv_ventas.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_ventas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_ventas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_ventas.RowHeadersWidth = 16;
             this.Dgv_ventas.RowTemplate.Height = 28;
             this.Dgv_ventas.Size = new System.Drawing.Size(1348, 514);
@@ -261,12 +252,24 @@ namespace PROYECTOQAG5
             this.BtnDescargar.UseVisualStyleBackColor = true;
             this.BtnDescargar.Click += new System.EventHandler(this.BtnDescargar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 17);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 25);
+            this.label5.TabIndex = 115;
+            this.label5.Text = "CONTABILIDAD";
+            // 
             // PContabilidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1372, 970);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnDescargar);
             this.Controls.Add(this.Dgv_ventas);
             this.Controls.Add(this.txtbusqueda);
@@ -278,7 +281,6 @@ namespace PROYECTOQAG5
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PContabilidad";
@@ -296,7 +298,6 @@ namespace PROYECTOQAG5
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnbuscarproducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbxbusquedas;
@@ -309,5 +310,6 @@ namespace PROYECTOQAG5
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
         private FontAwesome.Sharp.IconButton BtnDescargar;
+        internal System.Windows.Forms.Label label5;
     }
 }

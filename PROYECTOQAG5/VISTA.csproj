@@ -196,6 +196,12 @@
     <Compile Include="PNegocio.Designer.cs">
       <DependentUpon>PNegocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="PPartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPartos.Designer.cs">
+      <DependentUpon>PPartos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PPesajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PNegocio.resx">
       <DependentUpon>PNegocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPartos.resx">
+      <DependentUpon>PPartos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPesajes.resx">
       <DependentUpon>PPesajes.cs</DependentUpon>

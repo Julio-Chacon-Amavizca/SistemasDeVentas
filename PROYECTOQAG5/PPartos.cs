@@ -1,13 +1,11 @@
 ﻿using ClosedXML.Excel;
 using CONTROLADOR;
-using DATOS;
 using MODELO;
 using PROYECTOQAG5.Utilidad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,17 +14,15 @@ using System.Windows.Forms;
 
 namespace PROYECTOQAG5
 {
-    public partial class PVentaGanado : Form
+    public partial class PPartos : Form
     {
-        public PVentaGanado()
+        public PPartos()
         {
             InitializeComponent();
         }
 
-        private void PVentaGanado_Load(object sender, EventArgs e)
+        private void PPartos_Load(object sender, EventArgs e)
         {
-
-
             foreach (DataGridViewColumn columna in Dgv_usuarios.Columns)
             {
                 if (columna.Visible == true && columna.Name != "btnseleccionar")
@@ -39,27 +35,16 @@ namespace PROYECTOQAG5
             cbxbusquedas.SelectedIndex = 0;
 
 
-            //Mostrar los Venta de ganado en datagridView
-            List<VentaGanado> listaUsuario = new M_VentaGanaderia().Listar();
-            foreach (VentaGanado item in listaUsuario)
+
+            //Mostrar los partos en datagridView
+            List<Partos> listaUsuario = new M_Partos().Listar();
+            foreach (Partos item in listaUsuario)
             {
-                Dgv_usuarios.Rows.Add(new object[] {"",item.oUPP.IdUPP,item.IdGanado.IdGanado,item.FechaVenta,item.PrecioVenta,item.PrecioSubasta
+                Dgv_usuarios.Rows.Add(new object[] {"",item.IdGanado.IdGanado,item.FechaParto,item.Sexo,item.Estado
 
             });
 
             }
-
-            /*
-            SqlConnection oconenexion = new SqlConnection(Conexion.cadena);
-            string query = "select * FROM VENTAS";
-            SqlCommand cmd = new SqlCommand(query, oconenexion);
-            SqlDataAdapter data = new SqlDataAdapter(cmd);
-            DataTable tabla = new DataTable();
-            data.Fill(tabla);
-            Dgv_usuarios.AutoSizeColumnsMode =
-            DataGridViewAutoSizeColumnsMode.Fill;
-
-            Dgv_usuarios.DataSource = tabla;*/
         }
 
         private void Dgv_usuarios_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -105,13 +90,12 @@ namespace PROYECTOQAG5
                             Row.Cells[1].Value.ToString(),
                             Row.Cells[2].Value.ToString(),
                             Row.Cells[3].Value.ToString(),
-                            Row.Cells[4].Value.ToString(),
-                            Row.Cells[5].Value.ToString()
+                            Row.Cells[4].Value.ToString()
                     });
                 }
 
                 SaveFileDialog savefile = new SaveFileDialog();
-                savefile.FileName = string.Format("ReporteVentaGanado_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+                savefile.FileName = string.Format("ReportePartos_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));
                 savefile.Filter = "Excel Files | *.xlsx";
 
                 if (savefile.ShowDialog() == DialogResult.OK)

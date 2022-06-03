@@ -34,13 +34,13 @@ namespace PROYECTOQAG5
             this.MenuGanados = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
             this.uPPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hACERVENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuManejo = new FontAwesome.Sharp.IconMenuItem();
             this.fERTILIDADToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuAvisos = new FontAwesome.Sharp.IconMenuItem();
             this.MenuReportes = new FontAwesome.Sharp.IconMenuItem();
             this.vENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.hACERVENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuGanaderia.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +89,7 @@ namespace PROYECTOQAG5
             this.MenuGanados.IconColor = System.Drawing.Color.Black;
             this.MenuGanados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MenuGanados.Name = "MenuGanados";
-            this.MenuGanados.Size = new System.Drawing.Size(128, 26);
+            this.MenuGanados.Size = new System.Drawing.Size(150, 22);
             this.MenuGanados.Text = "GANADO";
             this.MenuGanados.Click += new System.EventHandler(this.MenuGanados_Click);
             // 
@@ -99,16 +99,22 @@ namespace PROYECTOQAG5
             this.iconMenuItem2.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem2.Name = "iconMenuItem2";
-            this.iconMenuItem2.Size = new System.Drawing.Size(128, 26);
+            this.iconMenuItem2.Size = new System.Drawing.Size(150, 22);
             this.iconMenuItem2.Text = "VACUNA";
             this.iconMenuItem2.Click += new System.EventHandler(this.iconMenuItem2_Click);
             // 
             // uPPToolStripMenuItem
             // 
             this.uPPToolStripMenuItem.Name = "uPPToolStripMenuItem";
-            this.uPPToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.uPPToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.uPPToolStripMenuItem.Text = "UPP";
             this.uPPToolStripMenuItem.Click += new System.EventHandler(this.uPPToolStripMenuItem_Click);
+            // 
+            // hACERVENTAToolStripMenuItem
+            // 
+            this.hACERVENTAToolStripMenuItem.Name = "hACERVENTAToolStripMenuItem";
+            this.hACERVENTAToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.hACERVENTAToolStripMenuItem.Text = "HACER VENTA";
             // 
             // MenuManejo
             // 
@@ -131,6 +137,7 @@ namespace PROYECTOQAG5
             this.fERTILIDADToolStripMenuItem.Name = "fERTILIDADToolStripMenuItem";
             this.fERTILIDADToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fERTILIDADToolStripMenuItem.Text = "PARTOS";
+            this.fERTILIDADToolStripMenuItem.Click += new System.EventHandler(this.fERTILIDADToolStripMenuItem_Click);
             // 
             // MenuAvisos
             // 
@@ -165,7 +172,7 @@ namespace PROYECTOQAG5
             // vENTASToolStripMenuItem
             // 
             this.vENTASToolStripMenuItem.Name = "vENTASToolStripMenuItem";
-            this.vENTASToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vENTASToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.vENTASToolStripMenuItem.Text = "VENTAS";
             this.vENTASToolStripMenuItem.Click += new System.EventHandler(this.vENTASToolStripMenuItem_Click);
             // 
@@ -177,12 +184,6 @@ namespace PROYECTOQAG5
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1372, 818);
             this.PanelContenedor.TabIndex = 11;
-            // 
-            // hACERVENTAToolStripMenuItem
-            // 
-            this.hACERVENTAToolStripMenuItem.Name = "hACERVENTAToolStripMenuItem";
-            this.hACERVENTAToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.hACERVENTAToolStripMenuItem.Text = "HACER VENTA";
             // 
             // PGanaderia
             // 

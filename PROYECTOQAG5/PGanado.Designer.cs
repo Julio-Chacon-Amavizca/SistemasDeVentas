@@ -252,6 +252,7 @@
             this.txtindice.TabIndex = 120;
             this.txtindice.TabStop = false;
             this.txtindice.Text = "-1";
+            this.txtindice.Visible = false;
             // 
             // txtid
             // 
@@ -263,6 +264,7 @@
             this.txtid.TabIndex = 119;
             this.txtid.TabStop = false;
             this.txtid.Text = "0";
+            this.txtid.Visible = false;
             // 
             // BtnDescargar
             // 

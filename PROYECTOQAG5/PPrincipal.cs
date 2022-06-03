@@ -100,17 +100,17 @@ namespace PROYECTOQAG5
 
         private void PPrincipal_Load(object sender, EventArgs e)
         {
-            List<Permiso> ListaPermisos = new M_Permiso().Listar(usuarioActual.IdUsuario);
+          /*  List<Permiso> ListaPermisos = new M_Permiso().Listar(usuarioActual.IdUsuario);
 
-            //foreach (iconmenuitem iconmenu in menustrip.items) 
-            //{
-            //    bool encontrado = listapermisos.any(m=> m.nombremenu == iconmenu.name);
+            foreach (IconButton iconmenu in panel2.i) 
+            {
+                bool encontrado = listapermisos.any(m=> m.nombremenu == iconmenu.name);
 
-            //    if (encontrado == false)
-            //    {
-            //        iconmenu.visible = false;
-            //    }
-            //}
+               if (encontrado == false)
+                {
+                    iconmenu.visible = false;
+                }
+            }*/
             lbl_Usuario.Text = usuarioActual.NombreCompleto;
         }
 
@@ -252,5 +252,7 @@ namespace PROYECTOQAG5
         {
             AbrirFormulario((IconButton)sender, new PInventario());
         }
+
+
     }
 }

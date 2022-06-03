@@ -62,5 +62,10 @@ namespace PROYECTOQAG5
         {
             AbrirFormularioGanaderia(MenuGanados, new PVacunacion());
         }
+
+        private void fERTILIDADToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioGanaderia(MenuGanados, new PPartos());
+        }
     }
 }
