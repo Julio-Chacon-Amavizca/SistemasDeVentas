@@ -22,7 +22,7 @@ namespace DATOS
                 {
 
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("Select IdCategoria,Descripcion, Estado from CATEGORIA");
+                    query.AppendLine("SELECT IdGanado, Apodo, Proposito, FechaAretado, UPP FROM GANADO g inner join UPP u on u.IdUPP = g.UPP");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconenexion);
                     cmd.CommandType = CommandType.Text;
@@ -31,15 +31,18 @@ namespace DATOS
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
-                       /* while (dr.Read())
+                        while (dr.Read())
                         {
                             lista.Add(new Ganado
                             {
-                                /*IdCategoria = Convert.ToInt32(dr["IdCategoria"]),
-                                Descripcion = dr["Descripcion"].ToString(),
-                                Estado = Convert.ToBoolean(dr["Estado"])
+                                IdGanado = Convert.ToInt32(dr["Idganado"]),
+                                Apodo = dr["Apodo"].ToString(),
+                                Proposito = dr["Proposito"].ToString(),
+                                FechaAretado = dr["FechaAretado"].ToString()/*
+                                ,
+                                oUPP = new UPP() { IdUPP = Convert.ToInt32(dr["IdUPP"])},*/
                             });
-                        }*/
+                        }
                     }
                 }
                 catch

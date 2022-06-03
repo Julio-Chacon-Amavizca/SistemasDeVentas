@@ -196,6 +196,12 @@
     <Compile Include="PNegocio.Designer.cs">
       <DependentUpon>PNegocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="PPesajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPesajes.Designer.cs">
+      <DependentUpon>PPesajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="PPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,17 +216,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PUPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PUPP.Designer.cs">
+      <DependentUpon>PUPP.cs</DependentUpon>
+    </Compile>
     <Compile Include="PUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PUsuarios.Designer.cs">
       <DependentUpon>PUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="PVacunacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVacunacion.Designer.cs">
+      <DependentUpon>PVacunacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PVenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PVenta.Designer.cs">
       <DependentUpon>PVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVentaGanado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVentaGanado.Designer.cs">
+      <DependentUpon>PVentaGanado.cs</DependentUpon>
     </Compile>
     <Compile Include="PVentas.cs">
       <SubType>Form</SubType>
@@ -283,6 +307,9 @@
     <EmbeddedResource Include="PNegocio.resx">
       <DependentUpon>PNegocio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PPesajes.resx">
+      <DependentUpon>PPesajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PPrincipal.resx">
       <DependentUpon>PPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,11 +326,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PUPP.resx">
+      <DependentUpon>PUPP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PUsuarios.resx">
       <DependentUpon>PUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PVacunacion.resx">
+      <DependentUpon>PVacunacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PVenta.resx">
       <DependentUpon>PVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVentaGanado.resx">
+      <DependentUpon>PVentaGanado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PVentas.resx">
       <DependentUpon>PVentas.cs</DependentUpon>

@@ -79,7 +79,7 @@ namespace PROYECTOQAG5
             this.panel1.Controls.Add(this.Btn_registrar);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 892);
+            this.panel1.Location = new System.Drawing.Point(0, 806);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1372, 78);
             this.panel1.TabIndex = 1;
@@ -126,7 +126,7 @@ namespace PROYECTOQAG5
             this.panel2.Controls.Add(this.GroupBox5);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1372, 892);
+            this.panel2.Size = new System.Drawing.Size(1372, 806);
             this.panel2.TabIndex = 2;
             // 
             // panel3
@@ -146,7 +146,7 @@ namespace PROYECTOQAG5
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 133);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1372, 759);
+            this.panel3.Size = new System.Drawing.Size(1372, 673);
             this.panel3.TabIndex = 49;
             // 
             // lblSubTotal
@@ -294,6 +294,7 @@ namespace PROYECTOQAG5
             this.IdProducto.HeaderText = "Id Producto";
             this.IdProducto.MinimumWidth = 6;
             this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
             // 
             // NombreProducto
             // 
@@ -301,6 +302,7 @@ namespace PROYECTOQAG5
             this.NombreProducto.HeaderText = "Nombre";
             this.NombreProducto.MinimumWidth = 6;
             this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
             // 
             // Cantidad_item
             // 
@@ -308,6 +310,7 @@ namespace PROYECTOQAG5
             this.Cantidad_item.HeaderText = "Cantidad";
             this.Cantidad_item.MinimumWidth = 6;
             this.Cantidad_item.Name = "Cantidad_item";
+            this.Cantidad_item.ReadOnly = true;
             // 
             // Precio_item
             // 
@@ -315,11 +318,13 @@ namespace PROYECTOQAG5
             this.Precio_item.HeaderText = "Precio";
             this.Precio_item.MinimumWidth = 6;
             this.Precio_item.Name = "Precio_item";
+            this.Precio_item.ReadOnly = true;
             // 
             // ImporteTotal
             // 
             this.ImporteTotal.HeaderText = "Importe Total";
             this.ImporteTotal.Name = "ImporteTotal";
+            this.ImporteTotal.ReadOnly = true;
             // 
             // GroupBox5
             // 
@@ -391,7 +396,7 @@ namespace PROYECTOQAG5
             this.Label12.Location = new System.Drawing.Point(658, 62);
             this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(65, 16);
+            this.Label12.Size = new System.Drawing.Size(64, 16);
             this.Label12.TabIndex = 10;
             this.Label12.Text = "Cantidad:";
             // 
@@ -401,7 +406,7 @@ namespace PROYECTOQAG5
             this.label13.Location = new System.Drawing.Point(512, 62);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 16);
+            this.label13.Size = new System.Drawing.Size(96, 16);
             this.label13.TabIndex = 9;
             this.label13.Text = "Precio Unidad:";
             // 
@@ -411,7 +416,7 @@ namespace PROYECTOQAG5
             this.label14.Location = new System.Drawing.Point(383, 62);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 16);
+            this.label14.Size = new System.Drawing.Size(44, 16);
             this.label14.TabIndex = 8;
             this.label14.Text = "Stock:";
             // 
@@ -454,7 +459,7 @@ namespace PROYECTOQAG5
             this.label17.Location = new System.Drawing.Point(720, 10);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 16);
+            this.label17.Size = new System.Drawing.Size(79, 16);
             this.label17.TabIndex = 3;
             this.label17.Text = "Descripción";
             // 
@@ -464,7 +469,7 @@ namespace PROYECTOQAG5
             this.label15.Location = new System.Drawing.Point(512, 10);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 16);
+            this.label15.Size = new System.Drawing.Size(56, 16);
             this.label15.TabIndex = 3;
             this.label15.Text = "Nombre";
             // 
@@ -483,7 +488,7 @@ namespace PROYECTOQAG5
             this.label16.Location = new System.Drawing.Point(383, 10);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 16);
+            this.label16.Size = new System.Drawing.Size(51, 16);
             this.label16.TabIndex = 2;
             this.label16.Text = "Codigo";
             // 
@@ -510,7 +515,7 @@ namespace PROYECTOQAG5
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1372, 970);
+            this.ClientSize = new System.Drawing.Size(1372, 884);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

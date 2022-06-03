@@ -47,5 +47,20 @@ namespace PROYECTOQAG5
         {
             AbrirFormularioGanaderia(MenuGanados, new PGanado());
         }
+
+        private void uPPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioGanaderia(MenuGanados, new PUPP());
+        }
+
+        private void vENTASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioGanaderia(MenuGanados, new PVentaGanado());
+        }
+
+        private void iconMenuItem2_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioGanaderia(MenuGanados, new PVacunacion());
+        }
     }
 }

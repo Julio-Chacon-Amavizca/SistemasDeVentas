@@ -12,7 +12,7 @@ namespace CONTROLADOR
         public string Apodo{ get; set; }
         public string Sexo { get; set; }
         public decimal Peso { get; set; }
-        public string Propostio { get; set; }
+        public string Proposito { get; set; }
         public string FechaNacimineto { get; set; }
         public string FechaAretado { get; set; }
         public string FechaRegistro { get; set; }

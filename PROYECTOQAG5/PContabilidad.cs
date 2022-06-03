@@ -55,7 +55,7 @@ namespace PROYECTOQAG5
 
             foreach (DataGridViewColumn columna in Dgv_ventas.Columns)
             {
-                if (columna.Visible == true && columna.Name != "BtnInfo")
+                if (columna.Visible == true && columna.Name != "btnseleccionar")
                 {
                     cbxbusquedas.Items.Add(new OpcionCombo() { valor = columna.Name, Texto = columna.HeaderText });
                 }
@@ -72,37 +72,38 @@ namespace PROYECTOQAG5
                  });
 
              }
-            /*List<Usuario> listaUsuario = new M_Usuario().Listar();
-            foreach (Usuario item in listaUsuario)
-            {
-                Dgv_ventas.Rows.Add(new object[] {"",item.IdUsuario,item.Documento,item.NombreCompleto,item.Correo,item.Clave,
-                    item.oRol.IdRol,
-                    item.oRol.Descripcion,
-                    item.Estado==true ?1:0,
-                    item.Estado==true ?"Activo":"No Activo"
 
-            });
-
-            }*/
         }
 
-        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        private void btnbuscarproducto_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex < 0)
-            { return; }
+            string columnafiltro = ((OpcionCombo)cbxbusquedas.SelectedItem).valor.ToString();
 
-            if (e.ColumnIndex == 5)
+            if (Dgv_ventas.Rows.Count > 0)
             {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                var w = Properties.Resources.deleteicon.Width;
-                var h = Properties.Resources.deleteicon.Height;
+                foreach (DataGridViewRow row in Dgv_ventas.Rows)
+                {
+                    if (row.Cells[columnafiltro].Value.ToString().Trim().ToUpper().Contains(txtbusqueda.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                    {
 
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                        row.Visible = false;
 
-                e.Graphics.DrawImage(Properties.Resources.deleteicon, new Rectangle(x, y, w, h));
+                    }
+                }
+
+            }
+        }
+
+        private void txtbusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)(Keys.Enter))
+            {
                 e.Handled = true;
-
+                btnbuscarproducto_Click(sender, e);
             }
         }
     }
