@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
 using CONTROLADOR;
 using MODELO;
 using PROYECTOQAG5;
@@ -104,6 +105,58 @@ namespace PROYECTOQAG5
             {
                 e.Handled = true;
                 btnbuscarproducto_Click(sender, e);
+            }
+        }
+
+        private void BtnDescargar_Click(object sender, EventArgs e)
+        {
+            if (Dgv_ventas.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay datos para exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                foreach (DataGridViewColumn columna in Dgv_ventas.Columns)
+                {
+                    if (columna.HeaderText != "" && columna.Visible)
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                }
+
+                foreach (DataGridViewRow Row in Dgv_ventas.Rows)
+                {
+                    if (Row.Visible)
+                        dt.Rows.Add(new object[]{
+                            Row.Cells[1].Value.ToString(),
+                            Row.Cells[2].Value.ToString(),
+                            Row.Cells[3].Value.ToString(),
+                            Row.Cells[4].Value.ToString()
+                    });
+                }
+
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format("ReporteProducto_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+                savefile.Filter = "Excel Files | *.xlsx";
+
+                if (savefile.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        XLWorkbook wb = new XLWorkbook();
+                        var hoja = wb.Worksheets.Add(dt, "Informe");
+                        hoja.ColumnsUsed().AdjustToContents();
+                        wb.SaveAs(savefile.FileName);
+
+                        MessageBox.Show("Reporte Generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error al generar el reporte", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+
+
             }
         }
     }

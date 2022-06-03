@@ -419,6 +419,8 @@ namespace PROYECTOQAG5
             // Dgv_usuarios
             // 
             this.Dgv_usuarios.AllowUserToAddRows = false;
+            this.Dgv_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Dgv_usuarios.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -529,13 +531,14 @@ namespace PROYECTOQAG5
             // 
             // BtnDescargar
             // 
+            this.BtnDescargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDescargar.IconChar = FontAwesome.Sharp.IconChar.Download;
             this.BtnDescargar.IconColor = System.Drawing.Color.Green;
             this.BtnDescargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnDescargar.IconSize = 30;
-            this.BtnDescargar.Location = new System.Drawing.Point(1052, 901);
+            this.BtnDescargar.Location = new System.Drawing.Point(1052, 799);
             this.BtnDescargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDescargar.Name = "BtnDescargar";
             this.BtnDescargar.Size = new System.Drawing.Size(296, 46);

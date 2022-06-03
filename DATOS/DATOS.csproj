@@ -50,8 +50,11 @@
     <Compile Include="C_Permisos.cs" />
     <Compile Include="C_Productos.cs" />
     <Compile Include="C_Rol.cs" />
+    <Compile Include="C_UPP.cs" />
     <Compile Include="C_Usuarios.cs" />
+    <Compile Include="C_Vacunacion.cs" />
     <Compile Include="C_Ventas.cs" />
+    <Compile Include="C_VentasGanaderia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

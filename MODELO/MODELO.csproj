@@ -47,7 +47,10 @@
     <Compile Include="M_Permiso.cs" />
     <Compile Include="M_Producto.cs" />
     <Compile Include="M_Rol.cs" />
+    <Compile Include="M_UPP.cs" />
     <Compile Include="M_Usuario.cs" />
+    <Compile Include="M_Vacunacion.cs" />
+    <Compile Include="M_VentaGanaderia.cs" />
     <Compile Include="M_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

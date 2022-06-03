@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnagregarproducto = new FontAwesome.Sharp.IconButton();
             this.Btn_DetalleBovino = new FontAwesome.Sharp.IconButton();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
@@ -38,13 +38,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnbuscarproducto = new FontAwesome.Sharp.IconButton();
             this.Dgv_Ganado = new System.Windows.Forms.DataGridView();
-            this.txtindice = new System.Windows.Forms.TextBox();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdGanado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proposito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAretado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtindice = new System.Windows.Forms.TextBox();
+            this.txtid = new System.Windows.Forms.TextBox();
+            this.BtnDescargar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Ganado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,15 +170,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dgv_Ganado.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Ganado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Ganado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_Ganado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_Ganado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
@@ -190,42 +191,20 @@
             this.Dgv_Ganado.MultiSelect = false;
             this.Dgv_Ganado.Name = "Dgv_Ganado";
             this.Dgv_Ganado.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Ganado.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Ganado.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_Ganado.RowHeadersWidth = 16;
             this.Dgv_Ganado.RowTemplate.Height = 28;
-            this.Dgv_Ganado.Size = new System.Drawing.Size(1327, 709);
+            this.Dgv_Ganado.Size = new System.Drawing.Size(1327, 636);
             this.Dgv_Ganado.TabIndex = 118;
             this.Dgv_Ganado.TabStop = false;
             this.Dgv_Ganado.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.Dgv_Ganado_CellPainting);
-            // 
-            // txtindice
-            // 
-            this.txtindice.Location = new System.Drawing.Point(518, 13);
-            this.txtindice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtindice.Name = "txtindice";
-            this.txtindice.ReadOnly = true;
-            this.txtindice.Size = new System.Drawing.Size(47, 22);
-            this.txtindice.TabIndex = 120;
-            this.txtindice.TabStop = false;
-            this.txtindice.Text = "-1";
-            // 
-            // txtid
-            // 
-            this.txtid.Location = new System.Drawing.Point(571, 13);
-            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(47, 22);
-            this.txtid.TabIndex = 119;
-            this.txtid.TabStop = false;
-            this.txtid.Text = "0";
             // 
             // btnseleccionar
             // 
@@ -263,11 +242,54 @@
             this.FechaAretado.Name = "FechaAretado";
             this.FechaAretado.ReadOnly = true;
             // 
+            // txtindice
+            // 
+            this.txtindice.Location = new System.Drawing.Point(518, 13);
+            this.txtindice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtindice.Name = "txtindice";
+            this.txtindice.ReadOnly = true;
+            this.txtindice.Size = new System.Drawing.Size(47, 22);
+            this.txtindice.TabIndex = 120;
+            this.txtindice.TabStop = false;
+            this.txtindice.Text = "-1";
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(571, 13);
+            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtid.Name = "txtid";
+            this.txtid.ReadOnly = true;
+            this.txtid.Size = new System.Drawing.Size(47, 22);
+            this.txtid.TabIndex = 119;
+            this.txtid.TabStop = false;
+            this.txtid.Text = "0";
+            // 
+            // BtnDescargar
+            // 
+            this.BtnDescargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDescargar.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.BtnDescargar.IconColor = System.Drawing.Color.Green;
+            this.BtnDescargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnDescargar.IconSize = 30;
+            this.BtnDescargar.Location = new System.Drawing.Point(1043, 865);
+            this.BtnDescargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnDescargar.Name = "BtnDescargar";
+            this.BtnDescargar.Size = new System.Drawing.Size(296, 46);
+            this.BtnDescargar.TabIndex = 121;
+            this.BtnDescargar.Text = "Descargar Excel";
+            this.BtnDescargar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnDescargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnDescargar.UseVisualStyleBackColor = true;
+            this.BtnDescargar.Click += new System.EventHandler(this.BtnDescargar_Click);
+            // 
             // PGanado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1351, 922);
+            this.Controls.Add(this.BtnDescargar);
             this.Controls.Add(this.txtindice);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.Dgv_Ganado);
@@ -305,5 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Apodo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proposito;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAretado;
+        private FontAwesome.Sharp.IconButton BtnDescargar;
     }
 }

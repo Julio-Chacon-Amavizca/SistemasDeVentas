@@ -12,6 +12,7 @@ using CONTROLADOR;
 using DATOS;
 using MODELO;
 using PROYECTOQAG5.Utilidad;
+using ClosedXML.Excel;
 
 namespace PROYECTOQAG5
 {
@@ -58,76 +59,11 @@ namespace PROYECTOQAG5
 
             });
             }
-
-
-
-                /*SqlConnection oconenexion = new SqlConnection(Conexion.cadena);
-            string query = "select Idganado, Apodo, Proposito, FechaAretado, UPP from GANADO";
-            SqlCommand cmd = new SqlCommand(query, oconenexion);
-            SqlDataAdapter data = new SqlDataAdapter(cmd);
-            DataTable tabla = new DataTable();
-            data.Fill(tabla);
-            Dgv_Ganado.AutoSizeColumnsMode =
-            DataGridViewAutoSizeColumnsMode.Fill;
-
-            Dgv_Ganado.DataSource = tabla;*/
         }
 
         private void Dgv_Ganado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {/*
-            if (Dgv_Ganado.Columns[e.ColumnIndex].Name == "btnseleccionar")
-            {
-                int indice = e.RowIndex;
-                if (indice >= 0)
-                {
-                    Ganado objganado = new Ganado();
-                    /* Usuario objusuario = new Usuario()
-                     {
-                         IdUsuario = Convert.ToInt32(txtid.Text),
-                         Documento = txtUsuario.Text,
-                         NombreCompleto = txtNombrecompleto.Text,
-                         Correo = txtcorreo.Text,
-                         Clave = txtContraseña.Text,
-                         oRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)cbxrolusuario.SelectedItem).valor) },
-                         Estado = Convert.ToInt32(((OpcionCombo)cbxestadousuario.SelectedItem).valor) == 1 ? true : false
-                     };
+        {
 
-                    objganado.IdGanado = int.Parse(Dgv_Ganado.Rows[indice].Cells["IdGanado"].Value.ToString());
-                    objganado.Apodo = Dgv_Ganado.Rows[indice].Cells["Apodo"].Value.ToString();
-                    objganado.Proposito = Dgv_Ganado.Rows[indice].Cells["Proposito"].Value.ToString();
-                    objganado.FechaAretado = Dgv_Ganado.Rows[indice].Cells["FechaAretado"].Value.ToString();
-
-
-                    using (var form = new pModificarUsuario(objganado))
-                    {
-                        var result = form.ShowDialog();
-                        if (result == DialogResult.OK)
-                        {
-                            //Aqui se tiene que recargar el DataGrid
-                            Dgv_usuarios.Rows.Clear();
-                            List<Usuario> listaUsuario = new M_Usuario().Listar();
-                            foreach (Usuario item in listaUsuario)
-                            {
-                                Dgv_usuarios.Rows.Add(new object[] {
-                                    "",
-                                    item.IdUsuario,
-                                    item.Documento,
-                                    item.NombreCompleto,
-                                    item.Correo,
-                                    item.Clave,
-                                    item.oRol.IdRol,
-                                    item.oRol.Descripcion,
-                                    item.Estado==true ?1:0,
-                                    item.Estado==true ?"Activo":"No Activo"
-
-                                });
-                            }
-                        }
-                    }
-
-                }
-
-            }*/
         }
 
         private void Dgv_Ganado_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -169,6 +105,61 @@ namespace PROYECTOQAG5
 
                     }
                 }
+
+            }
+        }
+
+        private void BtnDescargar_Click(object sender, EventArgs e)
+        {
+            if (Dgv_Ganado.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay datos para exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                foreach (DataGridViewColumn columna in Dgv_Ganado.Columns)
+                {
+                    if (columna.HeaderText != "" && columna.Visible)
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                }
+
+                foreach (DataGridViewRow Row in Dgv_Ganado.Rows)
+                {
+                    if (Row.Visible)
+                        dt.Rows.Add(new object[]{
+                            Row.Cells[2].Value.ToString(),
+                            Row.Cells[3].Value.ToString(),
+                            Row.Cells[4].Value.ToString(),
+                            Row.Cells[6].Value.ToString(),
+                            Row.Cells[7].Value.ToString(),
+                            Row.Cells[8].Value.ToString(),
+                            Row.Cells[10].Value.ToString()
+                    });
+                }
+
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format("ReporteProducto_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+                savefile.Filter = "Excel Files | *.xlsx";
+
+                if (savefile.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        XLWorkbook wb = new XLWorkbook();
+                        var hoja = wb.Worksheets.Add(dt, "Informe");
+                        hoja.ColumnsUsed().AdjustToContents();
+                        wb.SaveAs(savefile.FileName);
+
+                        MessageBox.Show("Reporte Generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error al generar el reporte", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+
 
             }
         }
