@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btneliminar = new FontAwesome.Sharp.IconButton();
             this.btnlimpiardatos = new FontAwesome.Sharp.IconButton();
             this.btnguardar = new FontAwesome.Sharp.IconButton();
@@ -50,14 +52,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtindice = new System.Windows.Forms.TextBox();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtindice);
+            this.groupBox1.Controls.Add(this.txtid);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btneliminar);
@@ -89,6 +93,25 @@
             this.groupBox1.TabIndex = 136;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion General";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(361, 108);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(296, 32);
+            this.textBox3.TabIndex = 154;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(367, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 23);
+            this.label5.TabIndex = 155;
+            this.label5.Text = "Fecha Aretado";
             // 
             // btneliminar
             // 
@@ -152,6 +175,7 @@
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnguardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // textBox4
             // 
@@ -335,24 +359,29 @@
             this.txtnombre.Size = new System.Drawing.Size(296, 32);
             this.txtnombre.TabIndex = 120;
             // 
-            // textBox3
+            // txtindice
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(361, 108);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(296, 32);
-            this.textBox3.TabIndex = 154;
+            this.txtindice.Location = new System.Drawing.Point(737, 24);
+            this.txtindice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtindice.Name = "txtindice";
+            this.txtindice.ReadOnly = true;
+            this.txtindice.Size = new System.Drawing.Size(47, 22);
+            this.txtindice.TabIndex = 157;
+            this.txtindice.TabStop = false;
+            this.txtindice.Text = "-1";
+            this.txtindice.Visible = false;
             // 
-            // label5
+            // txtid
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(367, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 23);
-            this.label5.TabIndex = 155;
-            this.label5.Text = "Fecha Aretado";
+            this.txtid.Location = new System.Drawing.Point(790, 24);
+            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtid.Name = "txtid";
+            this.txtid.ReadOnly = true;
+            this.txtid.Size = new System.Drawing.Size(47, 22);
+            this.txtid.TabIndex = 156;
+            this.txtid.TabStop = false;
+            this.txtid.Text = "0";
+            this.txtid.Visible = false;
             // 
             // PAgregarGanado
             // 
@@ -395,5 +424,7 @@
         private FontAwesome.Sharp.IconButton btnguardar;
         public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtindice;
+        private System.Windows.Forms.TextBox txtid;
     }
 }

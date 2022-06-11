@@ -29,8 +29,8 @@ namespace PROYECTOQAG5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@ namespace PROYECTOQAG5
             this.txtbusqueda.Location = new System.Drawing.Point(787, 86);
             this.txtbusqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbusqueda.Name = "txtbusqueda";
-            this.txtbusqueda.Size = new System.Drawing.Size(217, 26);
+            this.txtbusqueda.Size = new System.Drawing.Size(217, 30);
             this.txtbusqueda.TabIndex = 11;
             this.txtbusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbusqueda_KeyPress);
             // 
@@ -90,7 +90,7 @@ namespace PROYECTOQAG5
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(781, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 56;
             this.label2.Text = "BUSCAR";
             // 
@@ -100,7 +100,7 @@ namespace PROYECTOQAG5
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(504, 57);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 20);
+            this.label6.Size = new System.Drawing.Size(152, 25);
             this.label6.TabIndex = 53;
             this.label6.Text = "BUSCAR POR";
             // 
@@ -110,15 +110,15 @@ namespace PROYECTOQAG5
             this.Dgv_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dgv_usuarios.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
@@ -136,14 +136,14 @@ namespace PROYECTOQAG5
             this.Dgv_usuarios.MultiSelect = false;
             this.Dgv_usuarios.Name = "Dgv_usuarios";
             this.Dgv_usuarios.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_usuarios.RowHeadersWidth = 16;
             this.Dgv_usuarios.RowTemplate.Height = 28;
             this.Dgv_usuarios.Size = new System.Drawing.Size(959, 514);
@@ -156,6 +156,7 @@ namespace PROYECTOQAG5
             // 
             this.btnseleccionar.FillWeight = 120F;
             this.btnseleccionar.HeaderText = "";
+            this.btnseleccionar.MinimumWidth = 6;
             this.btnseleccionar.Name = "btnseleccionar";
             this.btnseleccionar.ReadOnly = true;
             this.btnseleccionar.Width = 40;
@@ -164,6 +165,7 @@ namespace PROYECTOQAG5
             // 
             this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Id.HeaderText = "IdUsuario";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Visible = false;
@@ -172,6 +174,7 @@ namespace PROYECTOQAG5
             // 
             this.Usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Usuario.HeaderText = "Usuario";
+            this.Usuario.MinimumWidth = 6;
             this.Usuario.Name = "Usuario";
             this.Usuario.ReadOnly = true;
             // 
@@ -179,6 +182,7 @@ namespace PROYECTOQAG5
             // 
             this.NombreCompleto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NombreCompleto.HeaderText = "Nombre Completo";
+            this.NombreCompleto.MinimumWidth = 6;
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
             // 
@@ -186,6 +190,7 @@ namespace PROYECTOQAG5
             // 
             this.Correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 6;
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
             // 
@@ -193,6 +198,7 @@ namespace PROYECTOQAG5
             // 
             this.Contraseña.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Contraseña.HeaderText = "Contraseña";
+            this.Contraseña.MinimumWidth = 6;
             this.Contraseña.Name = "Contraseña";
             this.Contraseña.ReadOnly = true;
             this.Contraseña.Visible = false;
@@ -201,6 +207,7 @@ namespace PROYECTOQAG5
             // 
             this.IdRol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.IdRol.HeaderText = "IdRol";
+            this.IdRol.MinimumWidth = 6;
             this.IdRol.Name = "IdRol";
             this.IdRol.ReadOnly = true;
             this.IdRol.Visible = false;
@@ -209,20 +216,24 @@ namespace PROYECTOQAG5
             // 
             this.Rol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Rol.HeaderText = "Rol";
+            this.Rol.MinimumWidth = 6;
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
             // 
             // EstadoValor
             // 
             this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.MinimumWidth = 6;
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 125;
             // 
             // Estado
             // 
             this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
@@ -265,7 +276,7 @@ namespace PROYECTOQAG5
             this.label12.Location = new System.Drawing.Point(125, 191);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(16, 20);
+            this.label12.Size = new System.Drawing.Size(21, 25);
             this.label12.TabIndex = 115;
             this.label12.Text = "*";
             // 
@@ -278,7 +289,7 @@ namespace PROYECTOQAG5
             this.label1.Location = new System.Drawing.Point(235, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 20);
+            this.label1.Size = new System.Drawing.Size(21, 25);
             this.label1.TabIndex = 62;
             this.label1.Text = "*";
             // 
@@ -312,7 +323,7 @@ namespace PROYECTOQAG5
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(113, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 25);
+            this.label7.Size = new System.Drawing.Size(165, 31);
             this.label7.TabIndex = 114;
             this.label7.Text = "USUARIOS";
             // 
@@ -322,6 +333,7 @@ namespace PROYECTOQAG5
             this.btnguardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnguardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnguardar.ForeColor = System.Drawing.Color.White;
             this.btnguardar.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.btnguardar.IconColor = System.Drawing.Color.White;
@@ -344,7 +356,7 @@ namespace PROYECTOQAG5
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(25, 548);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 20);
+            this.label11.Size = new System.Drawing.Size(86, 25);
             this.label11.TabIndex = 110;
             this.label11.Text = "Estado:";
             // 
@@ -356,7 +368,7 @@ namespace PROYECTOQAG5
             this.cbxestadousuario.Location = new System.Drawing.Point(29, 578);
             this.cbxestadousuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxestadousuario.Name = "cbxestadousuario";
-            this.cbxestadousuario.Size = new System.Drawing.Size(296, 28);
+            this.cbxestadousuario.Size = new System.Drawing.Size(296, 33);
             this.cbxestadousuario.TabIndex = 6;
             // 
             // txtcorreo
@@ -365,7 +377,7 @@ namespace PROYECTOQAG5
             this.txtcorreo.Location = new System.Drawing.Point(29, 150);
             this.txtcorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(296, 26);
+            this.txtcorreo.Size = new System.Drawing.Size(296, 30);
             this.txtcorreo.TabIndex = 1;
             // 
             // label10
@@ -374,7 +386,7 @@ namespace PROYECTOQAG5
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(29, 121);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 20);
+            this.label10.Size = new System.Drawing.Size(85, 25);
             this.label10.TabIndex = 108;
             this.label10.Text = "Correo:";
             // 
@@ -385,7 +397,7 @@ namespace PROYECTOQAG5
             this.txtconfirmarcontraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtconfirmarcontraseña.Name = "txtconfirmarcontraseña";
             this.txtconfirmarcontraseña.PasswordChar = '*';
-            this.txtconfirmarcontraseña.Size = new System.Drawing.Size(296, 26);
+            this.txtconfirmarcontraseña.Size = new System.Drawing.Size(296, 30);
             this.txtconfirmarcontraseña.TabIndex = 4;
             // 
             // label9
@@ -394,7 +406,7 @@ namespace PROYECTOQAG5
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(29, 331);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(190, 20);
+            this.label9.Size = new System.Drawing.Size(231, 25);
             this.label9.TabIndex = 106;
             this.label9.Text = "Confirmar Contraseña:";
             // 
@@ -406,7 +418,7 @@ namespace PROYECTOQAG5
             this.cbxrolusuario.Location = new System.Drawing.Point(29, 507);
             this.cbxrolusuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxrolusuario.Name = "cbxrolusuario";
-            this.cbxrolusuario.Size = new System.Drawing.Size(296, 28);
+            this.cbxrolusuario.Size = new System.Drawing.Size(296, 33);
             this.cbxrolusuario.TabIndex = 5;
             // 
             // txtContraseña
@@ -416,7 +428,7 @@ namespace PROYECTOQAG5
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(296, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(296, 30);
             this.txtContraseña.TabIndex = 3;
             // 
             // txtUsuario
@@ -425,7 +437,7 @@ namespace PROYECTOQAG5
             this.txtUsuario.Location = new System.Drawing.Point(29, 222);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(296, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(296, 30);
             this.txtUsuario.TabIndex = 2;
             // 
             // label3
@@ -434,7 +446,7 @@ namespace PROYECTOQAG5
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(29, 258);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.Size = new System.Drawing.Size(131, 25);
             this.label3.TabIndex = 98;
             this.label3.Text = "Contraseña:";
             // 
@@ -444,7 +456,7 @@ namespace PROYECTOQAG5
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(29, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 99;
             this.label5.Text = "Usuario:";
             // 
@@ -454,7 +466,7 @@ namespace PROYECTOQAG5
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(25, 476);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.Size = new System.Drawing.Size(50, 25);
             this.label4.TabIndex = 100;
             this.label4.Text = "Rol:";
             // 
@@ -464,7 +476,7 @@ namespace PROYECTOQAG5
             this.txtNombrecompleto.Location = new System.Drawing.Point(29, 86);
             this.txtNombrecompleto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombrecompleto.Name = "txtNombrecompleto";
-            this.txtNombrecompleto.Size = new System.Drawing.Size(296, 26);
+            this.txtNombrecompleto.Size = new System.Drawing.Size(296, 30);
             this.txtNombrecompleto.TabIndex = 0;
             this.txtNombrecompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombrecompleto_KeyPress);
             // 
@@ -474,7 +486,7 @@ namespace PROYECTOQAG5
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(29, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 20);
+            this.label8.Size = new System.Drawing.Size(192, 25);
             this.label8.TabIndex = 102;
             this.label8.Text = "Nombre Completo:";
             // 
@@ -487,7 +499,7 @@ namespace PROYECTOQAG5
             this.cbxbusquedas.Location = new System.Drawing.Point(508, 84);
             this.cbxbusquedas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxbusquedas.Name = "cbxbusquedas";
-            this.cbxbusquedas.Size = new System.Drawing.Size(217, 28);
+            this.cbxbusquedas.Size = new System.Drawing.Size(217, 33);
             this.cbxbusquedas.TabIndex = 10;
             // 
             // Btnlimpiar

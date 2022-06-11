@@ -81,7 +81,7 @@ namespace PROYECTOQAG5
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1664, 41);
+            this.panel1.Size = new System.Drawing.Size(1540, 41);
             this.panel1.TabIndex = 6;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -95,7 +95,7 @@ namespace PROYECTOQAG5
             this.btn_minimizar.IconColor = System.Drawing.Color.White;
             this.btn_minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_minimizar.IconSize = 20;
-            this.btn_minimizar.Location = new System.Drawing.Point(1576, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(1452, 0);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(44, 41);
@@ -114,7 +114,7 @@ namespace PROYECTOQAG5
             this.Btn_close.IconColor = System.Drawing.Color.White;
             this.Btn_close.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_close.IconSize = 20;
-            this.Btn_close.Location = new System.Drawing.Point(1620, 0);
+            this.Btn_close.Location = new System.Drawing.Point(1496, 0);
             this.Btn_close.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_close.Name = "Btn_close";
             this.Btn_close.Size = new System.Drawing.Size(44, 41);
@@ -143,7 +143,7 @@ namespace PROYECTOQAG5
             this.panel2.Location = new System.Drawing.Point(0, 41);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 969);
+            this.panel2.Size = new System.Drawing.Size(292, 804);
             this.panel2.TabIndex = 7;
             // 
             // Btn_negocio
@@ -151,7 +151,7 @@ namespace PROYECTOQAG5
             this.Btn_negocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_negocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_negocio.ForeColor = System.Drawing.Color.White;
-            this.Btn_negocio.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.Btn_negocio.IconChar = FontAwesome.Sharp.IconChar.Desktop;
             this.Btn_negocio.IconColor = System.Drawing.Color.White;
             this.Btn_negocio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_negocio.IconSize = 40;
@@ -170,7 +170,7 @@ namespace PROYECTOQAG5
             this.Btn_categorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_categorias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_categorias.ForeColor = System.Drawing.Color.White;
-            this.Btn_categorias.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.Btn_categorias.IconChar = FontAwesome.Sharp.IconChar.BoxOpen;
             this.Btn_categorias.IconColor = System.Drawing.Color.White;
             this.Btn_categorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_categorias.IconSize = 40;
@@ -189,7 +189,7 @@ namespace PROYECTOQAG5
             this.Btn_producto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_producto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_producto.ForeColor = System.Drawing.Color.White;
-            this.Btn_producto.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.Btn_producto.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.Btn_producto.IconColor = System.Drawing.Color.White;
             this.Btn_producto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_producto.IconSize = 40;
@@ -208,7 +208,7 @@ namespace PROYECTOQAG5
             this.Btn_usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_usuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_usuarios.ForeColor = System.Drawing.Color.White;
-            this.Btn_usuarios.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.Btn_usuarios.IconChar = FontAwesome.Sharp.IconChar.User;
             this.Btn_usuarios.IconColor = System.Drawing.Color.White;
             this.Btn_usuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_usuarios.IconSize = 40;
@@ -227,7 +227,7 @@ namespace PROYECTOQAG5
             this.Btn_contabilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_contabilidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_contabilidad.ForeColor = System.Drawing.Color.White;
-            this.Btn_contabilidad.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.Btn_contabilidad.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
             this.Btn_contabilidad.IconColor = System.Drawing.Color.White;
             this.Btn_contabilidad.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_contabilidad.IconSize = 40;
@@ -246,7 +246,7 @@ namespace PROYECTOQAG5
             this.Btn_ganaderia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ganaderia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ganaderia.ForeColor = System.Drawing.Color.White;
-            this.Btn_ganaderia.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.Btn_ganaderia.IconChar = FontAwesome.Sharp.IconChar.HatCowboy;
             this.Btn_ganaderia.IconColor = System.Drawing.Color.White;
             this.Btn_ganaderia.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_ganaderia.IconSize = 40;
@@ -287,7 +287,7 @@ namespace PROYECTOQAG5
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 54;
-            this.iconPictureBox1.Location = new System.Drawing.Point(28, 835);
+            this.iconPictureBox1.Location = new System.Drawing.Point(28, 670);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(73, 54);
@@ -303,7 +303,7 @@ namespace PROYECTOQAG5
             this.MenuAcercade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.MenuAcercade.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuAcercade.ForeColor = System.Drawing.Color.Gainsboro;
-            this.MenuAcercade.Location = new System.Drawing.Point(108, 835);
+            this.MenuAcercade.Location = new System.Drawing.Point(108, 670);
             this.MenuAcercade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuAcercade.Name = "MenuAcercade";
             this.MenuAcercade.Size = new System.Drawing.Size(167, 54);
@@ -353,7 +353,7 @@ namespace PROYECTOQAG5
             this.btn_cerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrarSesion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_cerrarSesion.Location = new System.Drawing.Point(0, 904);
+            this.btn_cerrarSesion.Location = new System.Drawing.Point(0, 739);
             this.btn_cerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cerrarSesion.Name = "btn_cerrarSesion";
             this.btn_cerrarSesion.Size = new System.Drawing.Size(292, 65);
@@ -369,7 +369,7 @@ namespace PROYECTOQAG5
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(222, 679);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(247, 679);
             this.toolStripContainer1.Location = new System.Drawing.Point(5, 103);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -382,6 +382,7 @@ namespace PROYECTOQAG5
             // 
             this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.menuStrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuVentas,
             this.MenuGanaderia,
@@ -553,14 +554,14 @@ namespace PROYECTOQAG5
             this.PanelContenedor.Location = new System.Drawing.Point(292, 41);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1372, 969);
+            this.PanelContenedor.Size = new System.Drawing.Size(1248, 804);
             this.PanelContenedor.TabIndex = 8;
             // 
             // PPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1664, 1010);
+            this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

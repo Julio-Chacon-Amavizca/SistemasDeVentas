@@ -78,9 +78,8 @@ namespace PROYECTOQAG5
             this.MenuVacas.IconSize = 50;
             this.MenuVacas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuVacas.Name = "MenuVacas";
-            this.MenuVacas.Size = new System.Drawing.Size(122, 62);
+            this.MenuVacas.Size = new System.Drawing.Size(152, 62);
             this.MenuVacas.Text = "VACAS";
-            this.MenuVacas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MenuVacas.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
             // MenuGanados
@@ -89,7 +88,7 @@ namespace PROYECTOQAG5
             this.MenuGanados.IconColor = System.Drawing.Color.Black;
             this.MenuGanados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MenuGanados.Name = "MenuGanados";
-            this.MenuGanados.Size = new System.Drawing.Size(150, 22);
+            this.MenuGanados.Size = new System.Drawing.Size(224, 26);
             this.MenuGanados.Text = "GANADO";
             this.MenuGanados.Click += new System.EventHandler(this.MenuGanados_Click);
             // 
@@ -99,21 +98,21 @@ namespace PROYECTOQAG5
             this.iconMenuItem2.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem2.Name = "iconMenuItem2";
-            this.iconMenuItem2.Size = new System.Drawing.Size(150, 22);
+            this.iconMenuItem2.Size = new System.Drawing.Size(224, 26);
             this.iconMenuItem2.Text = "VACUNA";
             this.iconMenuItem2.Click += new System.EventHandler(this.iconMenuItem2_Click);
             // 
             // uPPToolStripMenuItem
             // 
             this.uPPToolStripMenuItem.Name = "uPPToolStripMenuItem";
-            this.uPPToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.uPPToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.uPPToolStripMenuItem.Text = "UPP";
             this.uPPToolStripMenuItem.Click += new System.EventHandler(this.uPPToolStripMenuItem_Click);
             // 
             // hACERVENTAToolStripMenuItem
             // 
             this.hACERVENTAToolStripMenuItem.Name = "hACERVENTAToolStripMenuItem";
-            this.hACERVENTAToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.hACERVENTAToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.hACERVENTAToolStripMenuItem.Text = "HACER VENTA";
             // 
             // MenuManejo
@@ -128,14 +127,14 @@ namespace PROYECTOQAG5
             this.MenuManejo.IconSize = 50;
             this.MenuManejo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuManejo.Name = "MenuManejo";
-            this.MenuManejo.Size = new System.Drawing.Size(122, 62);
+            this.MenuManejo.Size = new System.Drawing.Size(150, 62);
             this.MenuManejo.Text = "MANEJOS";
             this.MenuManejo.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
             // fERTILIDADToolStripMenuItem
             // 
             this.fERTILIDADToolStripMenuItem.Name = "fERTILIDADToolStripMenuItem";
-            this.fERTILIDADToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fERTILIDADToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fERTILIDADToolStripMenuItem.Text = "PARTOS";
             this.fERTILIDADToolStripMenuItem.Click += new System.EventHandler(this.fERTILIDADToolStripMenuItem_Click);
             // 
@@ -149,7 +148,7 @@ namespace PROYECTOQAG5
             this.MenuAvisos.IconSize = 50;
             this.MenuAvisos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuAvisos.Name = "MenuAvisos";
-            this.MenuAvisos.Size = new System.Drawing.Size(122, 62);
+            this.MenuAvisos.Size = new System.Drawing.Size(150, 62);
             this.MenuAvisos.Text = "AVISOS";
             this.MenuAvisos.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -159,20 +158,20 @@ namespace PROYECTOQAG5
             this.MenuReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vENTASToolStripMenuItem});
             this.MenuReportes.ForeColor = System.Drawing.Color.White;
-            this.MenuReportes.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.MenuReportes.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
             this.MenuReportes.IconColor = System.Drawing.Color.White;
             this.MenuReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MenuReportes.IconSize = 50;
             this.MenuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuReportes.Name = "MenuReportes";
-            this.MenuReportes.Size = new System.Drawing.Size(122, 62);
+            this.MenuReportes.Size = new System.Drawing.Size(150, 62);
             this.MenuReportes.Text = "REPORTES";
             this.MenuReportes.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
             // vENTASToolStripMenuItem
             // 
             this.vENTASToolStripMenuItem.Name = "vENTASToolStripMenuItem";
-            this.vENTASToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.vENTASToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.vENTASToolStripMenuItem.Text = "VENTAS";
             this.vENTASToolStripMenuItem.Click += new System.EventHandler(this.vENTASToolStripMenuItem_Click);
             // 
